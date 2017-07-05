@@ -1,0 +1,10 @@
+.grid{
+    max-width: 1300px;
+}
+.category>div{
+    margin: 10%;
+    background-color: lightblue;
+    border: 1px solid black;
+    padding: 40%;
+    border-radius: 5%;
+}

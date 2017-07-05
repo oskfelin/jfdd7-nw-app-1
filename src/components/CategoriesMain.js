@@ -1,21 +1,22 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
+
+import {Col, Grid} from 'react-bootstrap'
+import './Categories.css'
 
 export default class CategoriesMain extends React.Component {
 
-render() {
-  return(
-    <grid>
-      <Col xs={6} md={4}>Kategoria 1</Col>
-      <Col xs={6} md={4}>Kategoria 2</Col>
-      <Col xs={6} md={4}>Kategoria 3</Col>
-      <Col xs={6} md={4}>Kategoria 4</Col>
-      <Col xs={6} md={4}>Kategoria 5</Col>
-      <Col xs={6} md={4}>Kategoria 6</Col>
-
-
-
-    </grid>
-  )
-}
+  render() {
+    return (
+      <Grid fluid>
+        <Grid>
+          <Col xs={6} md={4} className="category"><div>Kategoria 1</div></Col>
+          <Col xs={6} md={4} className="category"><div>Kategoria 2</div></Col>
+          <Col xs={6} md={4} className="category"><div>Kategoria 3</div></Col>
+          <Col xs={6} md={4} className="category"><div>Kategoria 4</div></Col>
+          <Col xs={6} md={4} className="category"><div>Kategoria 5</div></Col>
+          <Col xs={6} md={4} className="category"><div>Kategoria 6</div></Col>
+        </Grid>
+      </Grid>
+    )
+  }
 }
