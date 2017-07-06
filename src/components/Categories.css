@@ -1,10 +1,17 @@
 .grid{
     max-width: 1300px;
 }
-.category>div{
-    margin: 10%;
-    background-color: lightblue;
-    border: 1px solid black;
-    padding: 40%;
-    border-radius: 5%;
+.category{
+    position: relative;
+    /*max-width: 350px;*/
+    /*max-height: 350px;*/
+    /*border-radius: 5%;*/
+    /*background-image: url("../images/MobilePhone.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: contain;*/
+    /*text-align: center;*/
+}
+
+.category>p{
+
 }
