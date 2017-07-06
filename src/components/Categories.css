@@ -3,8 +3,9 @@
 }
 .category{
     position: relative;
-    /*max-width: 350px;*/
-    /*max-height: 350px;*/
+    max-height: 350px;
+    max-width: 350px;
+    margin: 10px;
     /*border-radius: 5%;*/
     /*background-image: url("../images/MobilePhone.jpg");*/
     /*background-repeat: no-repeat;*/
@@ -13,5 +14,10 @@
 }
 
 .category>p{
-
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #2b3042;
+    color: white;
+    opacity: 50%;
 }
