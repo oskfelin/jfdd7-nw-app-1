@@ -1,6 +1,7 @@
 import React from 'react'
 
 import CategoriesMain from './CategoriesMain'
+
 import ResultView from './ResultsView'
 
 
