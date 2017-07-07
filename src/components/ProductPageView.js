@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Grid, Col, Row, ListGroup, ListGroupItem, Carousel} from 'react-bootstrap'
+import {Grid, Col, Row, ListGroup, ListGroupItem, Carousel, Well, Button} from 'react-bootstrap'
 
 export default class ProductPageView extends React.Component {
 
@@ -25,6 +25,43 @@ export default class ProductPageView extends React.Component {
             </Carousel>
           </Col>
           <Col xs={6}>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+            <Well>
+              <Button>Przejdź do sklepu</Button>
+            </Well>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={7}>
             <ListGroup>
               <ListGroupItem>Właściwość 1</ListGroupItem>
               <ListGroupItem>Właściwość 2</ListGroupItem>
