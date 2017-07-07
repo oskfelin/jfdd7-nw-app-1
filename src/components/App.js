@@ -1,15 +1,19 @@
 import React from 'react'
-
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
 import CategoriesMain from './CategoriesMain'
-export default class App extends React.Component{
+export default class App extends React.Component {
 
 
-
-  render(){
-    return(
-      <div>
-        <CategoriesMain/>
-      </div>
+  render() {
+    return (
+      <Router>
+        <div>
+          <CategoriesMain/>
+        </div>
+      </Router>
     )
   }
 }
