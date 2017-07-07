@@ -6,6 +6,10 @@
     max-height: 350px;
     max-width: 350px;
     margin: 10px;
+    cursor: pointer;
+}
+.category:hover{
+    zoom: 1.2;
 }
 
 .category>h1{
