@@ -6,7 +6,8 @@ import {
   DropdownButton,
   MenuItem,
   Button,
-  Col
+  Col,
+  Grid
 } from 'react-bootstrap'
 
 import './SearchMain.css'
@@ -15,7 +16,7 @@ export default class SearchMain extends React.Component {
 
   render() {
     return (
-
+<Grid>
       <Col mdOffset={2} md={8}>
       <FormGroup>
         <InputGroup>
@@ -35,7 +36,7 @@ export default class SearchMain extends React.Component {
         </InputGroup>
       </FormGroup>
       </Col>
-
+</Grid>
     )
   }
 }
