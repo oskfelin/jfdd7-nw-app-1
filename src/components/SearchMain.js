@@ -2,14 +2,11 @@ import React from 'react'
 import {
   FormGroup,
   FormControl,
-  ButtonGroup,
   InputGroup,
   DropdownButton,
   MenuItem,
   Button,
-  Grid,
-  Col,
-  Row
+  Col
 } from 'react-bootstrap'
 
 import './SearchMain.css'
@@ -38,6 +35,7 @@ export default class SearchMain extends React.Component {
         </InputGroup>
       </FormGroup>
       </Col>
+
     )
   }
 }
