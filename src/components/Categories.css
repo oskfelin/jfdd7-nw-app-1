@@ -1,0 +1,21 @@
+.grid{
+    max-width: 1300px;
+}
+.category{
+    position: relative;
+    max-height: 350px;
+    max-width: 350px;
+    margin: 10px;
+    cursor: pointer;
+}
+.category:hover{
+    zoom: 1.2;
+}
+
+.category>h1{
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    color: white;
+    opacity: 0.8;
+    }
