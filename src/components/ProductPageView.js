@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Grid, Col, Row, Image, ListGroup, ListGroupItem, Carousel} from 'react-bootstrap'
+import {Grid, Col, Row, ListGroup, ListGroupItem, Carousel} from 'react-bootstrap'
 
 export default class ProductPageView extends React.Component {
 
@@ -12,7 +12,6 @@ export default class ProductPageView extends React.Component {
       <Grid fluid>
         <Row>
           <Col xs={6}>
-            {/*<Image src={process.env.PUBLIC_URL + '/img/spinner.jpg'} responsive/>*/}
             <Carousel>
               <Carousel.Item>
                 <img width={900} height={500} alt="900x500" src={process.env.PUBLIC_URL + '/img/spinner1.jpg'}/>
