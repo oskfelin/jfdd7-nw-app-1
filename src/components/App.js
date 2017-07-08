@@ -6,6 +6,7 @@ import CategoriesMain from './CategoriesMain'
 import Home from './Home'
 
 import SearchMain from './SearchMain'
+import Footer from './Footer'
 export default class App extends React.Component {
 
 
@@ -18,6 +19,7 @@ export default class App extends React.Component {
           <SearchMain />
           <Route exact path="/" component={CategoriesMain}/>
           <Route path="/product-page-view" component={ProductPageView}/>
+          <Footer />
         </div>
       </Router>
     )
