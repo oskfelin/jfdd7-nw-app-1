@@ -8,7 +8,6 @@ import {
   Button,
   Col,
   Grid,
-  Image
 } from 'react-bootstrap'
 
 import './SearchMain.css'

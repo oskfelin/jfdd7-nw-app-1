@@ -1,14 +1,6 @@
 import React from 'react'
 import {
-  FormGroup,
-  FormControl,
-  InputGroup,
-  DropdownButton,
-  MenuItem,
-  Button,
   Col,
-  Grid,
-  Image
 } from 'react-bootstrap'
 
 import './Footer.css'
