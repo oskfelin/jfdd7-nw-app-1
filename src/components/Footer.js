@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
     return (
       <footer className="footer">
         <div className="container">
-          <div className="text-center biznes">
+          <div className="text-center container-list">
             <Col xs={6}>
               <a className="hvr-underline-from-left footer-list" href="#">Reklama w serwisie</a>
             </Col>
@@ -26,7 +26,7 @@ export default class Footer extends React.Component {
             </Col>
 
           </div>
-          <p className="text-center znajdz">Znajdziesz nas na:</p>
+          <p className="text-center find-us">Znajdziesz nas na:</p>
 
           <div
             className="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4 text-center social-media img-responsive">
@@ -42,7 +42,7 @@ export default class Footer extends React.Component {
 
           </div>
           <div className="col-xs-12 text-center">
-            <span className="prawa">2017 © Nie Wiem Team - Jarosław Michalski / Marcin Kopystyński / Oskar Feliński / Mateusz Targowski. Wszelkie prawa zastrzeżone. </span>
+            <span className="allrights">2017 © Nie Wiem Team - Jarosław Michalski / Marcin Kopystyński / Oskar Feliński / Mateusz Targowski. Wszelkie prawa zastrzeżone. </span>
           </div>
         </div>
       </footer>
