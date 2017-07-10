@@ -12,7 +12,7 @@ import './Result.css'
 const Result = (props) => (
   <div className="Result">
     <Row>
-        <div col> Search Photo </div>
+        <div> Search Photo </div>
 
         <div>
             <h1>Name</h1>
