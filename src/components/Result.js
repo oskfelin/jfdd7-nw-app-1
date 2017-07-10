@@ -11,7 +11,6 @@ import './Result.css'
 
 const Result = (props) => (
   <div className="Result">
-    <Row>
         <div> Search Photo </div>
 
         <div>
@@ -21,7 +20,6 @@ const Result = (props) => (
 
         <div>Price</div>
 
-    </Row>
   </div>
 
 )
