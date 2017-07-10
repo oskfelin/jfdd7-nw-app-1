@@ -10,16 +10,18 @@ import './Result.css'
 const Result = (props) => (
   <div className="Result">
     <Grid>
-        <Col sm={4}>
-        <div> Search Photo </div>
+        <Col sm={2} className="resultBorder">
+        <div > Search Photo </div>
         </Col>
-         <Col sm={4}>
+         <Col sm={8}>
         <div>
-            <h1>Name</h1>
-            <button>INFO</button>
+            <h1 className="resultName">Name</h1>
+
+            <button className="resultButton">INFO</button>
+
         </div>
          </Col>
-          <Col sm={4}>
+          <Col sm={2} className="resultBorder">
         <div>Price</div>
           </Col>
 
