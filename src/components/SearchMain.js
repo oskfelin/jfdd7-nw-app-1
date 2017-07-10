@@ -7,7 +7,7 @@ import {
   MenuItem,
   Button,
   Col,
-  Grid,
+  Grid
 } from 'react-bootstrap'
 
 import './SearchMain.css'
@@ -36,7 +36,7 @@ export default class SearchMain extends React.Component {
             <MenuItem key="4">Kategoria5</MenuItem>
           </DropdownButton>
           <InputGroup.Button>
-            <Button bsSize="large"><img src={process.env.PUBLIC_URL + '/images/magnifier.png'} height="20"/></Button>
+            <Button bsSize="large"><img src={process.env.PUBLIC_URL + '/images/magnifier.png'} alt="" height="20"/></Button>
 
           </InputGroup.Button>
         </InputGroup>
