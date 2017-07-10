@@ -5,10 +5,7 @@ import {
   Col
 } from 'react-bootstrap'
 
-
 import './Result.css'
-
-
 
 const Result = (props) => (
   <div className="Result">
