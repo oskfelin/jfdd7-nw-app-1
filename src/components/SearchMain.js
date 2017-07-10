@@ -8,7 +8,6 @@ import {
   Button,
   Col,
   Grid,
-  Image
 } from 'react-bootstrap'
 
 import './SearchMain.css'
@@ -47,5 +46,6 @@ export default class SearchMain extends React.Component {
     )
   }
 }
+
 
 
