@@ -1,3 +1,23 @@
-.shop {
-    margin-top: 20px;
+.panel {
+    text-align: center;
+    padding: 10px 0;
+}
+
+div.panel.panel-default {
+    background-color: #e8e8e8;
+}
+
+div.panel.panel-default:hover {
+    background-color: #eee;
+}
+
+.carousel-inner {
+    margin-bottom: 20px;
+}
+.oferts {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.7em;
 }
