@@ -9,7 +9,7 @@
     cursor: pointer;
 }
 .category:hover{
-    zoom: 1.2;
+    transform: scale(1.1)
 }
 
 .category>h1{
