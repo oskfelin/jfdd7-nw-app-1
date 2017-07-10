@@ -1,4 +1,5 @@
 import React from 'react'
+import uniqBy from 'lodash.uniqby'
 
 import {
   Grid,
@@ -35,11 +36,11 @@ export default class ResultsView extends React.Component {
       <div className="Result">
 
         {
-          this.state.shops.map(
+          uniqBy(this.state.shops.map(
             shop => shop.products
           ).reduce(
             (total, next) => total.concat(next), []
-          ).map(
+          ), 'name').map(
             product =><Grid>
                 <Col sm={2} className="resultBorder">
                     <div > FOTO </div>
