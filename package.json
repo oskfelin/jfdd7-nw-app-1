@@ -20,6 +20,7 @@
     "react-scripts": "1.0.10"
   },
   "scripts": {
+    "preinstall": "npm config set package-lock false",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
