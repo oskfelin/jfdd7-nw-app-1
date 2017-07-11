@@ -23,19 +23,18 @@ export default connect(
 class ResultsView extends React.Component {
 
   componentWillMount() {
-    this.props.shops()
+    this.props.fetchShops()
   }
 
 
   render(){
-
-
-
+    const { data, fetching, error } = this.props.shops
     return (
       <div className="Result">
-
+        { error === null ? null : <p>{error.message}</p> }
+        { fetching === false ? null : <p>Fetching data...</p>}
         {
-          uniqBy(this.state.shops.map(
+          data !== null && uniqBy(data.map(
             shop => shop.products
           ).reduce(
             (total, next) => total.concat(next), []

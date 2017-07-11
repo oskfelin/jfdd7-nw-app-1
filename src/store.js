@@ -4,7 +4,6 @@ import shops from './state/shops'
 
 const reducer = combineReducers({
   shops
-
 })
 
 
