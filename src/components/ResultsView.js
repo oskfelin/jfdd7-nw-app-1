@@ -42,15 +42,15 @@ export default class ResultsView extends React.Component {
             (total, next) => total.concat(next), []
           ), 'name').map(
             product =><Grid>
-                <Col sm={2} className="resultPhoto">
+                <Col sm={3} className="resultPhoto">
                     <div></div>
                 </Col>
-                <Col sm={8}>
+                <Col sm={6}>
                     <div>
                         <h1 className="resultName">{product.name} </h1>
                     </div>
                 </Col>
-                <Col sm={2} className="resultPrice">
+                <Col sm={3} className="resultPrice">
                     <div>{product.price + ' zł'}</div>
                      <button className="resultButton">INFO</button>
                 </Col>
