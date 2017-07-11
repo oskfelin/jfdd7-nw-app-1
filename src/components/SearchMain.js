@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {Link} from 'react-router-dom'
 import {
   FormGroup,
   FormControl,
@@ -8,7 +9,7 @@ import {
   MenuItem,
   Button,
   Col,
-  Grid
+  Grid,
 } from 'react-bootstrap'
 
 import './SearchMain.css'
@@ -54,8 +55,9 @@ export default connect(
             <MenuItem key="5">Kategoria5</MenuItem>
           </DropdownButton>
           <InputGroup.Button>
+            <Link to="/result-view">
             <Button bsSize="large"><img alt="" src={process.env.PUBLIC_URL + '/images/magnifier.png'} height="20"/></Button>
-
+            </Link>
           </InputGroup.Button>
         </InputGroup>
       </FormGroup>
