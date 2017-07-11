@@ -9,10 +9,10 @@ import './ResultsView.css'
 import { fetchShops } from '../state/shops'
 
 
-
 export default connect(
   state => ({
-    shops: state.shops
+    shops: state.shops,
+    searchPhrase: state.searchEngine.searchPhrase
   }),
   dispatch => ({
     fetchShops: () => dispatch(fetchShops())
@@ -38,7 +38,7 @@ class ResultsView extends React.Component {
             shop => shop.products
           ).reduce(
             (total, next) => total.concat(next), []
-          ), 'name').map(
+          ), 'name').filter(product => product.name.includes(this.props.searchPhrase)).map(
             product =><Grid>
                 <Col sm={3} className="resultPhoto">
                     <div></div>
