@@ -5,7 +5,7 @@ import {
   Grid,
   Col
 } from 'react-bootstrap'
-import './Result.css'
+import './ResultsView.css'
 import { fetchShops } from '../state/shops'
 
 
@@ -40,19 +40,17 @@ class ResultsView extends React.Component {
             (total, next) => total.concat(next), []
           ), 'name').map(
             product =><Grid>
-                <Col sm={2} className="resultBorder">
-                    <div > FOTO </div>
+                <Col sm={3} className="resultPhoto">
+                    <div></div>
                 </Col>
-                <Col sm={8}>
+                <Col sm={6}>
                     <div>
                         <h1 className="resultName">{product.name} </h1>
-
-                        <button className="resultButton">INFO</button>
-
                     </div>
                 </Col>
-                <Col sm={2} className="resultBorder">
+                <Col sm={3} className="resultPrice">
                     <div>{product.price + ' zł'}</div>
+                     <button className="resultButton">INFO</button>
                 </Col>
 
             </Grid>
