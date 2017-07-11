@@ -1,10 +1,615 @@
-[{"id":1,"name":"Trippledex","city":"Cibeureum Kidul","lon":"108.7246","lat":"-7.0504","email":"pscutter0@odnoklassniki.ru","products":[{"name":"smartphone1","price":48.1,"screenSize":5.6,"camera":21.6,"memory":63.1,"slotSd":true,"category":"smartphones"},{"name":"smartphone3","price":16.93,"screenSize":4.7,"camera":18.1,"memory":35.6,"slotSd":false,"category":"smartphones"},{"name":"smartphone6","price":29.29,"screenSize":4.8,"camera":17.8,"memory":41.8,"slotSd":false,"category":"smartphones"},{"name":"smartphone1","price":42.26,"screenSize":4.7,"camera":5.3,"memory":62.6,"slotSd":true,"category":"smartphones"},{"name":"smartphone4","price":26.92,"screenSize":4.5,"camera":14.1,"memory":30.9,"slotSd":true,"category":"smartphones"},{"name":"smartphone3","price":29.27,"screenSize":4.8,"camera":14.6,"memory":22.6,"slotSd":true,"category":"smartphones"}]},
-{"id":2,"name":"Zaam-Dox","city":"Gaogongdao","lon":"119.475","lat":"34.69583","email":"mtoll1@ezinearticles.com","products":[{"name":"smartphone3","price":1.93,"screenSize":4.3,"camera":9.0,"memory":8.2,"slotSd":false,"category":"smartphones"},{"name":"smartphone5","price":82.42,"screenSize":4.8,"camera":20.2,"memory":19.3,"slotSd":true,"category":"smartphones"},{"name":"smartphone4","price":50.14,"screenSize":4.1,"camera":5.9,"memory":10.2,"slotSd":true,"category":"smartphones"},{"name":"smartphone3","price":55.89,"screenSize":4.7,"camera":4.6,"memory":51.6,"slotSd":true,"category":"smartphones"},{"name":"smartphone5","price":56.77,"screenSize":5.7,"camera":23.5,"memory":10.6,"slotSd":false,"category":"smartphones"},{"name":"smartphone1","price":1.9,"screenSize":4.2,"camera":5.3,"memory":8.4,"slotSd":false,"category":"smartphones"}]},
-{"id":3,"name":"Redhold","city":"Magitang","lon":"102.02968","lat":"35.93859","email":"cbettis2@instagram.com","products":[{"name":"smartphone2","price":76.62,"screenSize":6.0,"camera":4.6,"memory":9.3,"slotSd":true,"category":"smartphones"},{"name":"smartphone6","price":72.96,"screenSize":4.5,"camera":20.5,"memory":60.4,"slotSd":false,"category":"smartphones"},{"name":"smartphone2","price":99.8,"screenSize":5.2,"camera":8.8,"memory":11.6,"slotSd":true,"category":"smartphones"},{"name":"smartphone6","price":93.57,"screenSize":4.6,"camera":3.3,"memory":61.9,"slotSd":true,"category":"smartphones"},{"name":"smartphone2","price":50.61,"screenSize":4.6,"camera":7.9,"memory":14.8,"slotSd":true,"category":"smartphones"},{"name":"smartphone2","price":57.29,"screenSize":4.5,"camera":15.2,"memory":40.0,"slotSd":false,"category":"smartphones"}]},
-{"id":4,"name":"Bamity","city":"Seabra","lon":"-41.77028","lat":"-12.41861","email":"tdolton3@wired.com","products":[{"name":"smartphone6","price":75.13,"screenSize":5.6,"camera":21.5,"memory":16.2,"slotSd":false,"category":"smartphones"},{"name":"smartphone2","price":70.82,"screenSize":4.8,"camera":11.3,"memory":10.0,"slotSd":true,"category":"smartphones"},{"name":"smartphone6","price":15.41,"screenSize":5.8,"camera":12.7,"memory":15.3,"slotSd":false,"category":"smartphones"},{"name":"smartphone4","price":38.01,"screenSize":5.7,"camera":13.4,"memory":60.2,"slotSd":false,"category":"smartphones"},{"name":"smartphone2","price":24.14,"screenSize":4.6,"camera":6.5,"memory":12.9,"slotSd":false,"category":"smartphones"},{"name":"smartphone6","price":67.15,"screenSize":5.1,"camera":13.7,"memory":8.2,"slotSd":false,"category":"smartphones"}]},
-{"id":5,"name":"Bamity","city":"Neni","lon":"7.02235","lat":"6.08466","email":"mbrosel4@businesswire.com","products":[{"name":"smartphone5","price":44.43,"screenSize":4.1,"camera":14.5,"memory":58.7,"slotSd":false,"category":"smartphones"},{"name":"smartphone2","price":26.99,"screenSize":5.4,"camera":18.4,"memory":49.9,"slotSd":false,"category":"smartphones"},{"name":"smartphone2","price":2.66,"screenSize":5.5,"camera":3.8,"memory":7.0,"slotSd":false,"category":"smartphones"},{"name":"smartphone5","price":38.42,"screenSize":5.5,"camera":15.7,"memory":48.9,"slotSd":false,"category":"smartphones"},{"name":"smartphone3","price":21.66,"screenSize":5.3,"camera":16.4,"memory":18.7,"slotSd":false,"category":"smartphones"},{"name":"smartphone4","price":24.21,"screenSize":5.7,"camera":21.6,"memory":52.1,"slotSd":false,"category":"smartphones"}]},
-{"id":6,"name":"Otcom","city":"Tushi","lon":"108.86704","lat":"28.91746","email":"akermitt5@cocolog-nifty.com","products":[{"name":"smartphone6","price":27.35,"screenSize":4.3,"camera":20.5,"memory":53.3,"slotSd":true,"category":"smartphones"},{"name":"smartphone3","price":31.02,"screenSize":5.7,"camera":16.6,"memory":53.7,"slotSd":true,"category":"smartphones"},{"name":"smartphone3","price":18.01,"screenSize":4.1,"camera":11.6,"memory":7.0,"slotSd":true,"category":"smartphones"},{"name":"smartphone1","price":72.69,"screenSize":5.0,"camera":8.7,"memory":47.1,"slotSd":false,"category":"smartphones"},{"name":"smartphone6","price":17.87,"screenSize":4.3,"camera":12.5,"memory":41.2,"slotSd":true,"category":"smartphones"}]},
-{"id":7,"name":"Quo Lux","city":"Fangxian","lon":"119.73409","lat":"32.00104","email":"tkoenen6@slashdot.org","products":[{"name":"smartphone6","price":65.61,"screenSize":4.6,"camera":13.4,"memory":41.6,"slotSd":true,"category":"smartphones"},{"name":"smartphone4","price":65.5,"screenSize":5.7,"camera":3.3,"memory":15.9,"slotSd":true,"category":"smartphones"},{"name":"smartphone1","price":66.02,"screenSize":4.4,"camera":17.8,"memory":14.5,"slotSd":true,"category":"smartphones"},{"name":"smartphone6","price":28.06,"screenSize":5.2,"camera":14.3,"memory":47.9,"slotSd":false,"category":"smartphones"},{"name":"smartphone6","price":95.75,"screenSize":5.3,"camera":22.5,"memory":13.4,"slotSd":true,"category":"smartphones"}]},
-{"id":8,"name":"Andalax","city":"Charleston","lon":"-81.5547","lat":"38.2968","email":"jsandall7@bloglines.com","products":[{"name":"smartphone5","price":36.39,"screenSize":5.1,"camera":8.0,"memory":37.4,"slotSd":true,"category":"smartphones"},{"name":"smartphone1","price":28.18,"screenSize":5.1,"camera":18.0,"memory":61.2,"slotSd":false,"category":"smartphones"},{"name":"smartphone5","price":58.08,"screenSize":4.9,"camera":23.9,"memory":13.0,"slotSd":false,"category":"smartphones"},{"name":"smartphone3","price":92.31,"screenSize":5.2,"camera":5.6,"memory":20.3,"slotSd":false,"category":"smartphones"},{"name":"smartphone5","price":12.73,"screenSize":4.5,"camera":10.8,"memory":48.0,"slotSd":false,"category":"smartphones"},{"name":"smartphone5","price":74.46,"screenSize":5.1,"camera":23.0,"memory":44.2,"slotSd":true,"category":"smartphones"}]},
-{"id":9,"name":"Flexidy","city":"Funchalinho","lon":"-9.2","lat":"38.6667","email":"gdreschler8@newyorker.com","products":[{"name":"smartphone5","price":8.33,"screenSize":5.2,"camera":5.1,"memory":14.1,"slotSd":false,"category":"smartphones"},{"name":"smartphone6","price":63.51,"screenSize":5.1,"camera":10.4,"memory":33.5,"slotSd":true,"category":"smartphones"},{"name":"smartphone1","price":34.51,"screenSize":4.4,"camera":7.0,"memory":6.4,"slotSd":false,"category":"smartphones"},{"name":"smartphone1","price":12.95,"screenSize":5.5,"camera":4.6,"memory":13.3,"slotSd":false,"category":"smartphones"},{"name":"smartphone6","price":30.23,"screenSize":5.6,"camera":23.8,"memory":61.3,"slotSd":true,"category":"smartphones"},{"name":"smartphone2","price":2.94,"screenSize":5.3,"camera":9.0,"memory":47.0,"slotSd":false,"category":"smartphones"}]},
-{"id":10,"name":"Biodex","city":"Simpang","lon":"107.0033","lat":"-7.1406","email":"lloudyan9@studiopress.com","products":[{"name":"smartphone5","price":10.17,"screenSize":4.7,"camera":13.3,"memory":43.1,"slotSd":true,"category":"smartphones"},{"name":"smartphone6","price":66.94,"screenSize":4.7,"camera":21.1,"memory":39.4,"slotSd":false,"category":"smartphones"},{"name":"smartphone3","price":36.96,"screenSize":5.0,"camera":22.3,"memory":63.7,"slotSd":false,"category":"smartphones"},{"name":"smartphone2","price":15.74,"screenSize":5.3,"camera":16.2,"memory":61.0,"slotSd":false,"category":"smartphones"},{"name":"smartphone5","price":45.51,"screenSize":5.2,"camera":13.4,"memory":20.8,"slotSd":false,"category":"smartphones"}]}]
+[
+  {
+    "id": 1,
+    "name": "Trippledex",
+    "city": "Cibeureum Kidul",
+    "lon": "108.7246",
+    "lat": "-7.0504",
+    "email": "pscutter0@odnoklassniki.ru",
+    "products": [
+      {
+        "name": "smartphone1",
+        "price": 48.1,
+        "screenSize": 5.6,
+        "camera": 21.6,
+        "memory": 63.1,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone3",
+        "price": 16.93,
+        "screenSize": 4.7,
+        "camera": 18.1,
+        "memory": 35.6,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 29.29,
+        "screenSize": 4.8,
+        "camera": 17.8,
+        "memory": 41.8,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone1",
+        "price": 42.26,
+        "screenSize": 4.7,
+        "camera": 5.3,
+        "memory": 62.6,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone4",
+        "price": 26.92,
+        "screenSize": 4.5,
+        "camera": 14.1,
+        "memory": 30.9,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone3",
+        "price": 29.27,
+        "screenSize": 4.8,
+        "camera": 14.6,
+        "memory": 22.6,
+        "slotSd": true,
+        "category": "smartphones"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Zaam-Dox",
+    "city": "Gaogongdao",
+    "lon": "119.475",
+    "lat": "34.69583",
+    "email": "mtoll1@ezinearticles.com",
+    "products": [
+      {
+        "name": "smartphone3",
+        "price": 1.93,
+        "screenSize": 4.3,
+        "camera": 9.0,
+        "memory": 8.2,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone5",
+        "price": 82.42,
+        "screenSize": 4.8,
+        "camera": 20.2,
+        "memory": 19.3,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone4",
+        "price": 50.14,
+        "screenSize": 4.1,
+        "camera": 5.9,
+        "memory": 10.2,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone3",
+        "price": 55.89,
+        "screenSize": 4.7,
+        "camera": 4.6,
+        "memory": 51.6,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone5",
+        "price": 56.77,
+        "screenSize": 5.7,
+        "camera": 23.5,
+        "memory": 10.6,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone1",
+        "price": 1.9,
+        "screenSize": 4.2,
+        "camera": 5.3,
+        "memory": 8.4,
+        "slotSd": false,
+        "category": "smartphones"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Redhold",
+    "city": "Magitang",
+    "lon": "102.02968",
+    "lat": "35.93859",
+    "email": "cbettis2@instagram.com",
+    "products": [
+      {
+        "name": "smartphone2",
+        "price": 76.62,
+        "screenSize": 6.0,
+        "camera": 4.6,
+        "memory": 9.3,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 72.96,
+        "screenSize": 4.5,
+        "camera": 20.5,
+        "memory": 60.4,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone2",
+        "price": 99.8,
+        "screenSize": 5.2,
+        "camera": 8.8,
+        "memory": 11.6,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 93.57,
+        "screenSize": 4.6,
+        "camera": 3.3,
+        "memory": 61.9,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone2",
+        "price": 50.61,
+        "screenSize": 4.6,
+        "camera": 7.9,
+        "memory": 14.8,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone2",
+        "price": 57.29,
+        "screenSize": 4.5,
+        "camera": 15.2,
+        "memory": 40.0,
+        "slotSd": false,
+        "category": "smartphones"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Bamity",
+    "city": "Seabra",
+    "lon": "-41.77028",
+    "lat": "-12.41861",
+    "email": "tdolton3@wired.com",
+    "products": [
+      {
+        "name": "smartphone6",
+        "price": 75.13,
+        "screenSize": 5.6,
+        "camera": 21.5,
+        "memory": 16.2,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone2",
+        "price": 70.82,
+        "screenSize": 4.8,
+        "camera": 11.3,
+        "memory": 10.0,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 15.41,
+        "screenSize": 5.8,
+        "camera": 12.7,
+        "memory": 15.3,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone4",
+        "price": 38.01,
+        "screenSize": 5.7,
+        "camera": 13.4,
+        "memory": 60.2,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone2",
+        "price": 24.14,
+        "screenSize": 4.6,
+        "camera": 6.5,
+        "memory": 12.9,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 67.15,
+        "screenSize": 5.1,
+        "camera": 13.7,
+        "memory": 8.2,
+        "slotSd": false,
+        "category": "smartphones"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Bamity",
+    "city": "Neni",
+    "lon": "7.02235",
+    "lat": "6.08466",
+    "email": "mbrosel4@businesswire.com",
+    "products": [
+      {
+        "name": "smartphone5",
+        "price": 44.43,
+        "screenSize": 4.1,
+        "camera": 14.5,
+        "memory": 58.7,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone2",
+        "price": 26.99,
+        "screenSize": 5.4,
+        "camera": 18.4,
+        "memory": 49.9,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone2",
+        "price": 2.66,
+        "screenSize": 5.5,
+        "camera": 3.8,
+        "memory": 7.0,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone5",
+        "price": 38.42,
+        "screenSize": 5.5,
+        "camera": 15.7,
+        "memory": 48.9,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone3",
+        "price": 21.66,
+        "screenSize": 5.3,
+        "camera": 16.4,
+        "memory": 18.7,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone4",
+        "price": 24.21,
+        "screenSize": 5.7,
+        "camera": 21.6,
+        "memory": 52.1,
+        "slotSd": false,
+        "category": "smartphones"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Otcom",
+    "city": "Tushi",
+    "lon": "108.86704",
+    "lat": "28.91746",
+    "email": "akermitt5@cocolog-nifty.com",
+    "products": [
+      {
+        "name": "smartphone6",
+        "price": 27.35,
+        "screenSize": 4.3,
+        "camera": 20.5,
+        "memory": 53.3,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone3",
+        "price": 31.02,
+        "screenSize": 5.7,
+        "camera": 16.6,
+        "memory": 53.7,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone3",
+        "price": 18.01,
+        "screenSize": 4.1,
+        "camera": 11.6,
+        "memory": 7.0,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone1",
+        "price": 72.69,
+        "screenSize": 5.0,
+        "camera": 8.7,
+        "memory": 47.1,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 17.87,
+        "screenSize": 4.3,
+        "camera": 12.5,
+        "memory": 41.2,
+        "slotSd": true,
+        "category": "smartphones"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Quo Lux",
+    "city": "Fangxian",
+    "lon": "119.73409",
+    "lat": "32.00104",
+    "email": "tkoenen6@slashdot.org",
+    "products": [
+      {
+        "name": "smartphone6",
+        "price": 65.61,
+        "screenSize": 4.6,
+        "camera": 13.4,
+        "memory": 41.6,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone4",
+        "price": 65.5,
+        "screenSize": 5.7,
+        "camera": 3.3,
+        "memory": 15.9,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone1",
+        "price": 66.02,
+        "screenSize": 4.4,
+        "camera": 17.8,
+        "memory": 14.5,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 28.06,
+        "screenSize": 5.2,
+        "camera": 14.3,
+        "memory": 47.9,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 95.75,
+        "screenSize": 5.3,
+        "camera": 22.5,
+        "memory": 13.4,
+        "slotSd": true,
+        "category": "smartphones"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Andalax",
+    "city": "Charleston",
+    "lon": "-81.5547",
+    "lat": "38.2968",
+    "email": "jsandall7@bloglines.com",
+    "products": [
+      {
+        "name": "smartphone5",
+        "price": 36.39,
+        "screenSize": 5.1,
+        "camera": 8.0,
+        "memory": 37.4,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone1",
+        "price": 28.18,
+        "screenSize": 5.1,
+        "camera": 18.0,
+        "memory": 61.2,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone5",
+        "price": 58.08,
+        "screenSize": 4.9,
+        "camera": 23.9,
+        "memory": 13.0,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone3",
+        "price": 92.31,
+        "screenSize": 5.2,
+        "camera": 5.6,
+        "memory": 20.3,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone5",
+        "price": 12.73,
+        "screenSize": 4.5,
+        "camera": 10.8,
+        "memory": 48.0,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone5",
+        "price": 74.46,
+        "screenSize": 5.1,
+        "camera": 23.0,
+        "memory": 44.2,
+        "slotSd": true,
+        "category": "smartphones"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Flexidy",
+    "city": "Funchalinho",
+    "lon": "-9.2",
+    "lat": "38.6667",
+    "email": "gdreschler8@newyorker.com",
+    "products": [
+      {
+        "name": "smartphone5",
+        "price": 8.33,
+        "screenSize": 5.2,
+        "camera": 5.1,
+        "memory": 14.1,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 63.51,
+        "screenSize": 5.1,
+        "camera": 10.4,
+        "memory": 33.5,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone1",
+        "price": 34.51,
+        "screenSize": 4.4,
+        "camera": 7.0,
+        "memory": 6.4,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone1",
+        "price": 12.95,
+        "screenSize": 5.5,
+        "camera": 4.6,
+        "memory": 13.3,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 30.23,
+        "screenSize": 5.6,
+        "camera": 23.8,
+        "memory": 61.3,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone2",
+        "price": 2.94,
+        "screenSize": 5.3,
+        "camera": 9.0,
+        "memory": 47.0,
+        "slotSd": false,
+        "category": "smartphones"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Biodex",
+    "city": "Simpang",
+    "lon": "107.0033",
+    "lat": "-7.1406",
+    "email": "lloudyan9@studiopress.com",
+    "products": [
+      {
+        "name": "smartphone5",
+        "price": 10.17,
+        "screenSize": 4.7,
+        "camera": 13.3,
+        "memory": 43.1,
+        "slotSd": true,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone6",
+        "price": 66.94,
+        "screenSize": 4.7,
+        "camera": 21.1,
+        "memory": 39.4,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone3",
+        "price": 36.96,
+        "screenSize": 5.0,
+        "camera": 22.3,
+        "memory": 63.7,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone2",
+        "price": 15.74,
+        "screenSize": 5.3,
+        "camera": 16.2,
+        "memory": 61.0,
+        "slotSd": false,
+        "category": "smartphones"
+      },
+      {
+        "name": "smartphone5",
+        "price": 45.51,
+        "screenSize": 5.2,
+        "camera": 13.4,
+        "memory": 20.8,
+        "slotSd": false,
+        "category": "smartphones"
+      }
+    ]
+  }
+]
