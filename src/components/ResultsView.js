@@ -43,7 +43,7 @@ export default class ResultsView extends React.Component {
           ), 'name').map(
             product =><Grid>
                 <Col sm={2} className="resultPhoto">
-                    <div > FOTO </div>
+                    <div></div>
                 </Col>
                 <Col sm={8}>
                     <div>
