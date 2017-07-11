@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import uniqBy from 'lodash.uniqby'
 
 import {
@@ -6,37 +7,36 @@ import {
   Col
 } from 'react-bootstrap'
 import './ResultsView.css'
+import { fetchShops } from '../state/shops'
 
 export default class ResultsView extends React.Component {
 
-  state = {
-    shops: []
-  }
+
+export default connect(
+  state => ({
+    shops: state.shops
+  }),
+  dispatch => ({
+    fetchShops: () => dispatch(fetchShops())
+  })
+)(
+
+
+class ResultsView extends React.Component {
 
   componentWillMount() {
-    fetch(
-      process.env.PUBLIC_URL + '/data/shops.json'
-    ).then(
-      response => response.json()
-    ).then(
-      data => this.setState({
-        shops: data
-      })
-    ).catch(
-      error => console.log(error.message)
-    )
+    this.props.fetchShops()
   }
 
 
   render(){
-
-
-
+    const { data, fetching, error } = this.props.shops
     return (
       <div className="Result">
-
+        { error === null ? null : <p>{error.message}</p> }
+        { fetching === false ? null : <p>Fetching data...</p>}
         {
-          uniqBy(this.state.shops.map(
+          data !== null && uniqBy(data.map(
             shop => shop.products
           ).reduce(
             (total, next) => total.concat(next), []
@@ -48,6 +48,9 @@ export default class ResultsView extends React.Component {
                 <Col sm={6}>
                     <div>
                         <h1 className="resultName">{product.name} </h1>
+
+                        <button className="resultButton">INFO</button>
+
                     </div>
                 </Col>
                 <Col sm={3} className="resultPrice">
@@ -64,3 +67,4 @@ export default class ResultsView extends React.Component {
     )
   }
 }
+)
