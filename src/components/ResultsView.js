@@ -1,30 +1,29 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import uniqBy from 'lodash.uniqby'
-
 import {
   Grid,
   Col
 } from 'react-bootstrap'
 import './Result.css'
+import { fetchShops } from '../state/shops'
 
-export default class ResultsView extends React.Component {
 
-  state = {
-    shops: []
-  }
+
+export default connect(
+  state => ({
+    shops: state.shops
+  }),
+  dispatch => ({
+    fetchShops: () => dispatch(fetchShops())
+  })
+)(
+
+
+class ResultsView extends React.Component {
 
   componentWillMount() {
-    fetch(
-      process.env.PUBLIC_URL + '/data/shops.json'
-    ).then(
-      response => response.json()
-    ).then(
-      data => this.setState({
-        shops: data
-      })
-    ).catch(
-      error => console.log(error.message)
-    )
+    this.props.shops()
   }
 
 
@@ -66,3 +65,4 @@ export default class ResultsView extends React.Component {
     )
   }
 }
+)

@@ -1,10 +1,9 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-
-
+import shops from './state/shops'
 
 const reducer = combineReducers({
-
+  shops
 
 })
 
