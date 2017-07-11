@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import uniqBy from 'lodash.uniqby'
-
 import {
   Grid,
   Col
@@ -9,7 +8,6 @@ import {
 import './ResultsView.css'
 import { fetchShops } from '../state/shops'
 
-export default class ResultsView extends React.Component {
 
 
 export default connect(
@@ -48,9 +46,6 @@ class ResultsView extends React.Component {
                 <Col sm={6}>
                     <div>
                         <h1 className="resultName">{product.name} </h1>
-
-                        <button className="resultButton">INFO</button>
-
                     </div>
                 </Col>
                 <Col sm={3} className="resultPrice">
