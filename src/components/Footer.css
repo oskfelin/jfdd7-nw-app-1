@@ -20,6 +20,11 @@
     padding: 0 10px;
 }
 
+.find-us {
+    padding: 2em 0 0;
+    color: white;
+    font-size: 15px;
+}
 .size:hover {
     opacity: 0.8;
 
