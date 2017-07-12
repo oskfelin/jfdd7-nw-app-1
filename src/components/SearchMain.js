@@ -14,15 +14,18 @@ import {
 
 import './SearchMain.css'
 import { updateSearchPhrase } from '../state/searchEngine'
+import { activeFilter } from '../state/searchEngine'
 
 
 export default connect(
   state => ({
     shops: state.shops,
-    searchPhrase: state.searchEngine.searchPhrase
+    searchPhrase: state.searchEngine.searchPhrase,
+    activeFilter: state.searchEngine.activeFilter
   }),
   dispatch => ({
-    updateSearchPhrase: (event) => dispatch(updateSearchPhrase(event.target.value))
+    updateSearchPhrase: (event) => dispatch(updateSearchPhrase(event.target.value)),
+    activeFilter: (key) => dispatch(activeFilter(key))
   })
 )(
 
@@ -47,12 +50,13 @@ export default connect(
             title="Kategorie"
             style={{borderRadius: 0}}
             bsSize="large"
+            onSelect={this.props.activeFilter }
           >
-            <MenuItem key="1">Kategoria1</MenuItem>
-            <MenuItem key="2">Kategoria2</MenuItem>
-            <MenuItem key="3">Kategoria3</MenuItem>
-            <MenuItem key="4">Kategoria4</MenuItem>
-            <MenuItem key="5">Kategoria5</MenuItem>
+            <MenuItem eventKey="smartphones">Smartphony</MenuItem>
+            <MenuItem eventKey="smartphones2">Kategoria2</MenuItem>
+            <MenuItem eventKey="smartphones3">Kategoria3</MenuItem>
+            <MenuItem eventKey="smartphones4">Kategoria4</MenuItem>
+            <MenuItem eventKey="smartphones5">Kategoria5</MenuItem>
           </DropdownButton>
           <InputGroup.Button>
             <Link to="/result-view">
