@@ -43,7 +43,7 @@
       {
         "name": "smartphone1",
         "price": 42.26,
-        "screenSize": 4.7,
+        "screenSize": 5.6,
         "camera": 5.3,
         "memory": 62.6,
         "slotSd": true,
@@ -141,7 +141,7 @@
       {
         "name": "smartphone1",
         "price": 1.9,
-        "screenSize": 4.2,
+        "screenSize": 5.6,
         "camera": 5.3,
         "memory": 8.4,
         "slotSd": false,
