@@ -25,7 +25,7 @@ export default connect(
         <Grid>
           <Row>
             <Col xs={12}>
-              <h1>{this.props.match.params.productName}</h1>
+              <p className="oferts">{this.props.match.params.productName}</p>
             </Col>
             <Col xs={12} sm={6}>
               <Carousel>
@@ -44,9 +44,8 @@ export default connect(
             <Col xs={12} sm={6}>
               <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
                 <Tab eventKey={1} title="Cechy produktu">
-
                   <Table striped bordered condensed hover>
-                    <tbody>
+
                     { error === null ? null : <p>{error.message}</p> }
                     { fetching === false ? null : <p>Fetching data...</p>}
                     {
@@ -54,19 +53,26 @@ export default connect(
                         shop => shop.products
                       ).reduce(
                         (total, next) => total.concat(next), []
-                      ), 'screenSize', 'camera').filter(
+                      ), 'screenSize', 'camera', 'memory', 'slotSd').filter(
                         product => product.name === this.props.match.params.productName
                       ).map(
                         product =>
-                    <tr>
-                      <td>{product.screenSize}</td>
-                      <td>{product.camera}</td>
-                    </tr>
+                          <tbody>
+                          <tr>
+                            <td>Przekątna ekranu: {product.screenSize} cala</td>
+                          </tr>
+                          <tr>
+                            <td>Wbudowany aparat cyfrowy: {product.camera} Mpix</td>
+                          </tr>
+                          <tr>
+                            <td>Wbudowana pamięć: {product.memory} GB</td>
+                          </tr>
+                          <tr>
+                            <td>Obsługa kart pamięci: {product.slotSd}</td>
+                          </tr>
+                          </tbody>
                       )}
-                    </tbody>
-
                   </Table>
-
                 </Tab>
                 <Tab eventKey={2} title="Opis produktu">
                   Tab 2 content Tab 2 contentTab 2 contentTab 2 contentTab 2 contentTab 2 contentTab 2 contentTab 2

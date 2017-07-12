@@ -9,7 +9,7 @@
     "products": [
       {
         "name": "smartphone1",
-        "price": 48.1,
+        "price": 48.10,
         "screenSize": 5.6,
         "camera": 21.6,
         "memory": 63.1,
