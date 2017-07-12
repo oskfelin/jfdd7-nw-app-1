@@ -2,7 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Grid, Col, Row, Carousel, Tab, Tabs, Panel, Table} from 'react-bootstrap'
 import {fetchShops} from '../state/shops'
-import uniqBy from 'lodash.uniqby'
 import './ProductPageView.css'
 
 export default connect(
@@ -25,6 +24,7 @@ export default connect(
         <Grid>
           <Row>
             <Col xs={12} sm={6}>
+              <h1>{this.props.match.params.productName}</h1>
               <Carousel>
                 <Carousel.Item>
                   <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/spinner1.jpg'}/>
@@ -86,11 +86,13 @@ export default connect(
               <p>{error.message}</p> }
               { fetching === false ? null : <p>Fetching data...</p>}
               {
-                data !== null && uniqBy(data.map(
+                data !== null && data.map(
                   shop => shop.products
                 ).reduce(
                   (total, next) => total.concat(next), []
-                ), 'name').map(
+                ).filter(
+                  product => product.name === this.props.match.params.productName
+                ).map(
                   product =>
                     <Panel>
                       <Col xs={4}>
