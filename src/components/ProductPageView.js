@@ -59,7 +59,7 @@ export default connect(
                         product =>
                           <tbody>
                           <tr>
-                            <td>Przekątna ekranu: {product.screenSize} cala</td>
+                            <td>Przekątna ekranu: {product.screenSize} "</td>
                           </tr>
                           <tr>
                             <td>Wbudowany aparat cyfrowy: {product.camera} Mpix</td>
@@ -109,14 +109,14 @@ export default connect(
                   product =>
                     <Panel>
                       <Col xs={4}>
-                        <div>{product.price + ' zł'}</div>
+                        <div>Nazwa sklepu<br/>{product.shopName}</div>
                       </Col>
                       <Col xs={4}>
-                        <div>{product.shopCity}</div>
+                        <div>Lokalizacja<br/>{product.shopCity}</div>
                       </Col>
                       <Col xs={4}>
-                        <div>{product.shopName}</div>
-                      </Col>
+                      <div>Cena<br/>{product.price + ' zł'}</div>
+                    </Col>
                     </Panel>
                 )}
             </Col>
