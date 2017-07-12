@@ -12,7 +12,8 @@ import { fetchShops } from '../state/shops'
 export default connect(
   state => ({
     shops: state.shops,
-    searchPhrase: state.searchEngine.searchPhrase
+    searchPhrase: state.searchEngine.searchPhrase,
+    activeFilter: state.searchEngine.activeFilterName
   }),
   dispatch => ({
     fetchShops: () => dispatch(fetchShops())
@@ -40,7 +41,7 @@ class ResultsView extends React.Component {
             (total, next) => total.concat(next), []
           ), 'name').filter(
             product => product.name.includes(this.props.searchPhrase)
-          ).map(
+          ).filter(product => product.category === this.props.activeFilter).map(
             product =><Grid>
                 <Col sm={3} className="resultPhoto">
                     <div>{product.shopName}</div>

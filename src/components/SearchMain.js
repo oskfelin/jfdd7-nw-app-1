@@ -20,7 +20,8 @@ import { activeFilter } from '../state/searchEngine'
 export default connect(
   state => ({
     shops: state.shops,
-    searchPhrase: state.searchEngine.searchPhrase
+    searchPhrase: state.searchEngine.searchPhrase,
+    activeFilter: state.searchEngine.activeFilter
   }),
   dispatch => ({
     updateSearchPhrase: (event) => dispatch(updateSearchPhrase(event.target.value)),
@@ -51,11 +52,11 @@ export default connect(
             bsSize="large"
             onSelect={this.props.activeFilter }
           >
-            <MenuItem eventKey="Kategoria1">Kategoria1</MenuItem>
-            <MenuItem eventKey="Kategoria2">Kategoria2</MenuItem>
-            <MenuItem eventKey="Kategoria3">Kategoria3</MenuItem>
-            <MenuItem eventKey="Kategoria4">Kategoria4</MenuItem>
-            <MenuItem eventKey="Kategoria5">Kategoria5</MenuItem>
+            <MenuItem eventKey="smartphones">Smartphony</MenuItem>
+            <MenuItem eventKey="smartphones2">Kategoria2</MenuItem>
+            <MenuItem eventKey="smartphones3">Kategoria3</MenuItem>
+            <MenuItem eventKey="smartphones4">Kategoria4</MenuItem>
+            <MenuItem eventKey="smartphones5">Kategoria5</MenuItem>
           </DropdownButton>
           <InputGroup.Button>
             <Link to="/result-view">
