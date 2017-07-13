@@ -45,7 +45,6 @@ export default connect(
                 product => (
                   <Grid key={product.id}>
                     <Col sm={3} className="resultPhoto">
-                      <div>{product.shopName}</div>
                     </Col>
                     <Col sm={6}>
                       <div>
