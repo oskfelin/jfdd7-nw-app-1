@@ -83,7 +83,7 @@ export default connect(
               <p className="oferts">Najlepsze oferty znalezione przez nasz serwis</p>
               {
                 data !== null && data.map(
-                  shop => shop.products
+                  shop => shop.products.map(product => ({...product, shopName: shop.name, shopCity: shop.city }))
                 ).reduce(
                   (total, next) => total.concat(next), []
                 ).filter(
