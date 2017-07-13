@@ -43,10 +43,10 @@ export default connect(
                   <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>
                 </Carousel.Item>
                 <Carousel.Item>
-                  <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/spinner2.jpg'}/>
+                  <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>
                 </Carousel.Item>
                 <Carousel.Item>
-                  <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/spinner3.jpg'}/>
+                  <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>
                 </Carousel.Item>
 
               </Carousel>
