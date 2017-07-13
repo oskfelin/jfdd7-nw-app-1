@@ -1,8 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import uniqBy from 'lodash.uniqby'
 import {Grid, Col, Row, Carousel, Tab, Tabs, Panel, Table} from 'react-bootstrap'
 import {fetchShops} from '../state/shops'
-import uniqBy from 'lodash.uniqby'
 import './ProductPageView.css'
 
 export default connect(
@@ -24,6 +24,9 @@ export default connect(
       return (
         <Grid>
           <Row>
+            <Col xs={12}>
+              <p className="oferts">{this.props.match.params.productName}</p>
+            </Col>
             <Col xs={12} sm={6}>
               <Carousel>
                 <Carousel.Item>
@@ -42,23 +45,32 @@ export default connect(
               <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
                 <Tab eventKey={1} title="Cechy produktu">
                   <Table striped bordered condensed hover>
-                    <tbody>
-                    <tr>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>Table cell</td>
-                    </tr>
-                    <tr>
-                      <td>Table cell</td>
-                    </tr>
-                    </tbody>
+                    { error === null ? null : <p>{error.message}</p> }
+                    { fetching === false ? null : <p>Fetching data...</p>}
+                    {
+                      data !== null && uniqBy(data.map(
+                        shop => shop.products
+                      ).reduce(
+                        (total, next) => total.concat(next), []
+                      ), 'screenSize', 'camera', 'memory', 'slotSd').filter(
+                        product => product.name === this.props.match.params.productName
+                      ).map(
+                        product =>
+                          <tbody>
+                          <tr>
+                            <td>Przekątna ekranu: {product.screenSize} "</td>
+                          </tr>
+                          <tr>
+                            <td>Wbudowany aparat cyfrowy: {product.camera} Mpix</td>
+                          </tr>
+                          <tr>
+                            <td>Wbudowana pamięć: {product.memory} GB</td>
+                          </tr>
+                          <tr>
+                            <td>Obsługa kart pamięci: {product.slotSd}</td>
+                          </tr>
+                          </tbody>
+                      )}
                   </Table>
                 </Tab>
                 <Tab eventKey={2} title="Opis produktu">
@@ -82,26 +94,28 @@ export default connect(
               </Tabs>
             </Col>
             <Col xs={12}>
-              <p className="oferts">Najlepsze oferty znalezione przez nasz serwis</p>{ error === null ? null :
-              <p>{error.message}</p> }
+              <p className="oferts">Najlepsze oferty znalezione przez nasz serwis</p>
+              { error === null ? null : <p>{error.message}</p> }
               { fetching === false ? null : <p>Fetching data...</p>}
               {
-                data !== null && uniqBy(data.map(
+                data !== null && data.map(
                   shop => shop.products
                 ).reduce(
                   (total, next) => total.concat(next), []
-                ), 'name').map(
+                ).filter(
+                  product => product.name === this.props.match.params.productName
+                ).map(
                   product =>
                     <Panel>
                       <Col xs={4}>
-                        <div>{product.price + ' zł'}</div>
+                        <div>Nazwa sklepu<br/>{product.shopName}</div>
                       </Col>
                       <Col xs={4}>
-                        <div>{product.shopCity}</div>
+                        <div>Lokalizacja<br/>{product.shopCity}</div>
                       </Col>
                       <Col xs={4}>
-                        <div>{product.shopName}</div>
-                      </Col>
+                      <div>Cena<br/>{product.price + ' zł'}</div>
+                    </Col>
                     </Panel>
                 )}
             </Col>

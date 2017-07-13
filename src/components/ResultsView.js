@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import uniqBy from 'lodash.uniqby'
 import {
   Grid,
@@ -53,7 +54,7 @@ class ResultsView extends React.Component {
                 </Col>
                 <Col sm={3} className="resultPrice">
                     <div>{product.price + ' zł'}</div>
-                     <button className="resultButton">INFO</button>
+                  <Link to={'/product-page-view/' + product.name}><button className="resultButton">INFO</button></Link>
                 </Col>
 
             </Grid>
