@@ -29,7 +29,6 @@ export default connect(
       this.props.fetchShops()
     }
 
-
     render(){
       // const { data, fetching, error } = this.props.shops
       return (
