@@ -13,7 +13,8 @@ import { fetchShops } from '../state/shops'
 export default connect(
   state => ({
     shops: state.shops,
-    searchPhrase: state.searchEngine.searchPhrase
+    searchPhrase: state.searchEngine.searchPhrase,
+    activeFilter: state.searchEngine.activeFilterName
   }),
   dispatch => ({
     fetchShops: () => dispatch(fetchShops())
@@ -36,13 +37,15 @@ class ResultsView extends React.Component {
         { fetching === false ? null : <p>Fetching data...</p>}
         {
           data !== null && uniqBy(data.map(
-            shop => shop.products
+            shop => shop.products.map(product => ({...product, shopName: shop.name }))
           ).reduce(
             (total, next) => total.concat(next), []
-          ), 'name').filter(product => product.name.includes(this.props.searchPhrase)).map(
+          ), 'name').filter(
+            product => product.name.includes(this.props.searchPhrase)
+          ).filter(product => product.category === this.props.activeFilter).map(
             product =><Grid>
                 <Col sm={3} className="resultPhoto">
-                    <div></div>
+                    <div>{product.shopName}</div>
                 </Col>
                 <Col sm={6}>
                     <div>
