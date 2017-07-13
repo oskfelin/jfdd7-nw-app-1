@@ -21,11 +21,11 @@ export default connect(
   state => ({
     shops: state.shops,
     searchPhrase: state.searchEngine.searchPhrase,
-    activeFilter: state.searchEngine.activeFilter
+    activeFilterName: state.searchEngine.activeFilterName
   }),
   dispatch => ({
     updateSearchPhrase: (event) => dispatch(updateSearchPhrase(event.target.value)),
-    activeFilter: (key) => dispatch(activeFilter(key))
+    activateFilter: (key) => dispatch(activeFilter(key))
   })
 )(
 
@@ -47,10 +47,10 @@ export default connect(
           <DropdownButton
             componentClass={InputGroup.Button}
             id="input-dropdown-addon"
-            title="Kategorie"
+            title={this.props.activeFilterName || 'Kategorie'}
             style={{borderRadius: 0}}
             bsSize="large"
-            onSelect={this.props.activeFilter }
+            onSelect={this.props.activateFilter}
           >
             <MenuItem eventKey="smartphones">Smartphony</MenuItem>
             <MenuItem eventKey="smartphones2">Kategoria2</MenuItem>
