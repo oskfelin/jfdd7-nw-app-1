@@ -28,9 +28,19 @@ export default connect(
               <p className="oferts">{this.props.match.params.productName}</p>
             </Col>
             <Col xs={12} sm={6}>
+              {
+                data !== null && uniqBy(data.map(
+                  shop => shop.products
+                ).reduce(
+                  (total, next) => total.concat(next), []
+                ), 'screenSize', 'camera', 'memory', 'slotSd').filter(
+                  product => product.name === this.props.match.params.productName
+                ).map(
+                  product =>
               <Carousel>
+
                 <Carousel.Item>
-                  <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/spinner1.jpg'}/>
+                  <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>
                 </Carousel.Item>
                 <Carousel.Item>
                   <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/spinner2.jpg'}/>
@@ -38,7 +48,9 @@ export default connect(
                 <Carousel.Item>
                   <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/spinner3.jpg'}/>
                 </Carousel.Item>
+
               </Carousel>
+                  )}
             </Col>
             { error === null ? null : <p>{error.message}</p> }
             { fetching === false ? null : <p>Fetching data...</p>}
