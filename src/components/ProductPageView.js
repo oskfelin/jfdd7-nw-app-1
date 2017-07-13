@@ -104,7 +104,7 @@ export default connect(
                   (total, next) => total.concat(next), []
                 ).filter(
                   product => product.name === this.props.match.params.productName
-                ).map(
+                ).sort((a,b) => a.price > b.price).map(
                   product =>
                     <Panel>
                       <Col xs={4}>
