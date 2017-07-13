@@ -42,7 +42,8 @@ class ResultsView extends React.Component {
             (total, next) => total.concat(next), []
           ), 'name').filter(
             product => product.name.includes(this.props.searchPhrase)
-          ).filter(product => product.category === this.props.activeFilter).map(
+          ).filter(product => product.category === this.props.activeFilter)
+            .sort((a,b) => a.price > b.price).map(
             product =><Grid>
                 <Col sm={3} className="resultPhoto">
                     <div>{product.shopName}</div>
