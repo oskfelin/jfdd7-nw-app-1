@@ -31,7 +31,6 @@ export default connect(
     render() {
       const {data, fetching, error} = this.props.shops
       return (
-
         <div className="Result">
           <Grid>
           <Row>
