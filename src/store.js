@@ -6,7 +6,7 @@ import searchEngine from './state/searchEngine'
 
 const reducer = combineReducers({
   shops,
-  searchEngine
+  searchEngine,
 })
 
 
