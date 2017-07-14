@@ -51,7 +51,7 @@ export default connect(
             ).filter(product => product.category === this.props.activeFilter)
               .sort((a, b) => a.price > b.price).map(
                 product =>
-
+                  <Link to={'/product-page-view/' + product.name}>
                       <Row className="ResultItem">
                         <Col sm={2} className="resultPhoto">
                           <div>{product.shopName}</div>
@@ -67,7 +67,7 @@ export default connect(
                             <button className="resultButton">INFO</button>
                           </Link>
                         </Col>
-                      </Row>
+                      </Row>    </Link>
               )
           }
             </Col>
