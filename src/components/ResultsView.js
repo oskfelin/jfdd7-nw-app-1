@@ -54,7 +54,8 @@ export default connect(
 
                       <Row className="ResultItem">
                         <Col sm={2} className="resultPhoto">
-                          <div>{product.shopName}</div>
+                          <div>{product.shopName}
+                            <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/></div>
                         </Col>
                         <Col sm={7}>
                           <div>
