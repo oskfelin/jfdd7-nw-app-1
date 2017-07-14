@@ -1,17 +1,17 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
+import uniqBy from 'lodash.uniqby'
 import {
   ButtonGroup,
   DropdownButton,
   MenuItem
 } from 'react-bootstrap'
 
-import { fetchShops } from '../state/shops'
-import { activeFilter } from '../state/searchEngine'
+import {fetchShops} from '../state/shops'
+import {activateFilter} from '../state/productFilters'
 
 
-
-import Slider, { Range } from 'rc-slider';
+import {Range} from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 
@@ -23,27 +23,31 @@ export default connect(
   }),
   dispatch => ({
     fetchShops: () => dispatch(fetchShops()),
-    activateFilter: (key) => dispatch(activeFilter(key))
+    activateFilter: (key) => dispatch(activateFilter(key))
   })
 )(
-
-
   class ResultFilter extends React.Component {
 
     componentWillMount() {
       this.props.fetchShops()
     }
 
-    render(){
+    render() {
+
       return (
-        <div className="ResultFilter" >
+        <div className="ResultFilter">
           <ButtonGroup vertical block>
             <DropdownButton title="Producent"
                             id="bg-vertical-dropdown-1"
-                            onClick={() => this.props.activeFilter}> ??????????????
+                            onSelect={key => this.props.activateFilter(key)}>
 
-              <MenuItem eventKey="1">Dropdown link</MenuItem>
-              <MenuItem eventKey="2">Dropdown link</MenuItem>
+              <MenuItem eventKey="name_xiaomi">Xiaomi</MenuItem>
+              <MenuItem eventKey="name_lenovo">Lenovo</MenuItem>
+              <MenuItem eventKey="3">HTC</MenuItem>
+              <MenuItem eventKey="4">Iphone</MenuItem>
+              <MenuItem eventKey="5">LG</MenuItem>
+              <MenuItem eventKey="6">Samsung</MenuItem>
+              <MenuItem eventKey="7">Huawei</MenuItem>
             </DropdownButton>
             <DropdownButton title="Sklep" id="bg-vertical-dropdown-2">
               <MenuItem eventKey="1">Dropdown link</MenuItem>
@@ -65,7 +69,7 @@ export default connect(
 
           <div className="slider">
             <p>Zakres cenowy</p>
-          <Range defaultValue={[20, 80]}/>
+            <Range defaultValue={[20, 80]}/>
           </div>
         </div>
 

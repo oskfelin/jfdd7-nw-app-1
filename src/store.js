@@ -2,11 +2,13 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import shops from './state/shops'
 import searchEngine from './state/searchEngine'
+import productFilters from './state/productFilters'
 
 
 const reducer = combineReducers({
   shops,
   searchEngine,
+  productFilters
 })
 
 
