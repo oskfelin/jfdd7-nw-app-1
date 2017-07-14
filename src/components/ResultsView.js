@@ -1,6 +1,6 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import uniqBy from 'lodash.uniqby'
 import {
   Col,
@@ -70,6 +70,8 @@ export default connect(
                     (a, b) => a.price > b.price
                   ).map(
                     product => (
+                      <Link to={'/product-page-view/' + product.name}>
+
                       <Row className="ResultItem">
                         <Col sm={2} className="resultPhoto">
                           <div>{product.shopName}
@@ -83,11 +85,11 @@ export default connect(
                         </Col>
                         <Col sm={3} className="resultPrice">
                           <div>{product.price + ' zł'}</div>
-                          <Link to={'/product-page-view/' + product.name}>
                             <button className="resultButton">INFO</button>
-                          </Link>
+
                         </Col>
                       </Row>
+                      </Link>
                     )
                   )
                 }
