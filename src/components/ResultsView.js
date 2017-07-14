@@ -1,6 +1,6 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import uniqBy from 'lodash.uniqby'
 import {
   Col,
@@ -15,7 +15,8 @@ export default connect(
   state => ({
     shops: state.shops,
     searchPhrase: state.searchEngine.searchPhrase,
-    activeFilter: state.searchEngine.activeFilterName
+    activeFilter: state.searchEngine.activeFilterName,
+    activeFilterNames: state.productFilters.activeFilterNames
   }),
   dispatch => ({
     fetchShops: () => dispatch(fetchShops())
@@ -30,32 +31,50 @@ export default connect(
 
     render() {
       const {data, fetching, error} = this.props.shops
+      const shops = data === null ? [] : data
+      const filters = {
+        name_iphone: product => product.name === 'Iphone',
+        name_lenovo: product => product.name === 'Lenovo',
+        name_xiaomi: product => product.name === 'Xiaomi',
+      }
+      const allProducts = shops.map(
+        shop => shop.products.map(product => ({...product, shopName: shop.name}))
+      ).reduce(
+        (total, next) => total.concat(next), []
+      )
+      const uniqueProducts = uniqBy(allProducts, 'name')
+
       return (
         <div className="Result">
           <Grid>
-          <Row>
-            <Col sm={3}>
-              <ResultsFilter/>
-            </Col>
-            <Col sm={9}>
+            <Row>
+              <Col sm={3}>
+                <ResultsFilter/>
+              </Col>
+              <Col sm={9}>
 
-          { error === null ? null : <p>{error.message}</p> }
-          { fetching === false ? null : <p>Fetching data...</p>}
-          {
-            data !== null && uniqBy(data.map(
-              shop => shop.products.map(product => ({...product, shopName: shop.name}))
-            ).reduce(
-              (total, next) => total.concat(next), []
-            ), 'name').filter(
-              product => product.name.includes(this.props.searchPhrase)
-            ).filter(product => product.category === this.props.activeFilter)
-              .sort((a, b) => a.price > b.price).map(
-                product =>
-
+                { error === null ? null : <p>{error.message}</p> }
+                { fetching === false ? null : <p>Fetching data...</p>}
+                {
+                  uniqueProducts.filter(
+                    product => product.name.includes(this.props.searchPhrase)
+                  ).filter(
+                    product => product.category === this.props.activeFilter
+                  ).filter(
+                    product => this.props.activeFilterNames.map(
+                      filterName => filters[filterName] || (() => true)
+                    ).every(
+                      f => f(product) === true
+                    )
+                  ).sort(
+                    (a, b) => a.price > b.price
+                  ).map(
+                    product => (
                       <Row className="ResultItem">
                         <Col sm={2} className="resultPhoto">
                           <div>{product.shopName}
-                            <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/></div>
+                            <img width={500} alt=""
+                                 src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/></div>
                         </Col>
                         <Col sm={7}>
                           <div>
@@ -69,10 +88,11 @@ export default connect(
                           </Link>
                         </Col>
                       </Row>
-              )
-          }
-            </Col>
-          </Row>
+                    )
+                  )
+                }
+              </Col>
+            </Row>
           </Grid>
         </div>
       )
