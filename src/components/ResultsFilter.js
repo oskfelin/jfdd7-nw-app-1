@@ -55,6 +55,8 @@ export default connect(
                             onSelect={key => this.props.activateFilter(key)} >
               <MenuItem eventKey="name_biedronka">Biedronka</MenuItem>
               <MenuItem eventKey="name_lidl">Lidl</MenuItem>
+              <MenuItem eventKey="name_zabka">Żabka</MenuItem>
+              <MenuItem eventKey="name_lidl">Lidl</MenuItem>
               <MenuItem eventKey="2">Dropdown link</MenuItem>
             </DropdownButton>
 
@@ -81,7 +83,8 @@ export default connect(
 
 
 
-            <DropdownButton title="Przekątna ekranu (cale)" id="bg-vertical-dropdown-5">
+            <DropdownButton title="Przekątna ekranu (cale)" id="bg-vertical-dropdown-5"
+                            onSelect={key => this.props.activateFilter(key)}>
               <MenuItem eventKey="size_3p9">3.9</MenuItem>
               <MenuItem eventKey="size_4p2">4.2</MenuItem>
               <MenuItem eventKey="size_4p5">4.5</MenuItem>

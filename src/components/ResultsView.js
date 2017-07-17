@@ -58,7 +58,7 @@ export default connect(
         size_4p8: product => product.screenSize === 4.8,
         size_5p1: product => product.screenSize === 5.1,
         size_5p2: product => product.screenSize === 5.2,
-        size_6: product => product.screenSize === 6,
+        size_6: product => product.screenSize === 6
       }
       const allProducts = shops.map(
         shop => shop.products.map(product => ({...product, shopName: shop.name}))
