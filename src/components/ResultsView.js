@@ -97,7 +97,7 @@ export default connect(
 
                       <Row className="ResultItem">
                         <Col sm={2} className="resultPhoto">
-                          <div>{product.shopName}
+                          <div>
                             <img width={500} alt=""
                                  src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/></div>
                         </Col>

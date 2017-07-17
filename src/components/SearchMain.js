@@ -52,7 +52,7 @@ export default connect(
             bsSize="large"
             onSelect={this.props.activateFilter}
           >
-            <MenuItem eventKey="smartphones">Smartphony</MenuItem>
+            <MenuItem eventKey="Telefony">Telefony</MenuItem>
             <MenuItem eventKey="smartphones2">Kategoria2</MenuItem>
             <MenuItem eventKey="smartphones3">Kategoria3</MenuItem>
             <MenuItem eventKey="smartphones4">Kategoria4</MenuItem>
