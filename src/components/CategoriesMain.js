@@ -22,7 +22,7 @@ export default connect(
             <Col xs={12} sm={6} lg={4}>
               <Link
                 title={this.props.activeFilterName}
-                onClick={() => this.props.activateFilter('smartphones')}
+                onClick={() => this.props.activateFilter('Telefony')}
                 to="/result-view">
                 <div className="category">
                   <Image src={process.env.PUBLIC_URL + '/images/MobilePhone.jpg'} rounded responsive/>

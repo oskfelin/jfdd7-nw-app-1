@@ -41,6 +41,12 @@ export default connect(
         name_lg: product => product.name === 'LG',
         name_samsung: product => product.name === 'Samsung',
 
+        shopName_Zabka: product => product.shopName === 'Żabka',
+        shopName_Biedronka: product => product.shopName === 'Biedronka',
+        shopName_uMarcina: product => product.shopName === 'uMarcina',
+        shopName_Malpka: product => product.shopName === 'Małpka',
+        shopName_uJarka: product => product.shopName === 'uJarka',
+        shopName_uOskara: product => product.shopName === 'uOskara',
 
         camera_3p2: product => product.camera === 3.2,
         camera_4: product => product.camera === 4,
@@ -64,6 +70,18 @@ export default connect(
         shop => shop.products.map(product => ({...product, shopName: shop.name}))
       ).reduce(
         (total, next) => total.concat(next), []
+      ).filter(
+        product => product.name.includes(this.props.searchPhrase)
+      ).filter(
+        product => product.category === this.props.activeFilter
+      ).filter(
+        product => this.props.activeFilterNames.map(
+          filterName => filters[filterName] || (() => true)
+        ).every(
+          f => f(product) === true
+        )
+      ).sort(
+        (a, b) => a.price > b.price
       )
       const uniqueProducts = uniqBy(allProducts, 'name')
 
@@ -78,26 +96,13 @@ export default connect(
 
                 { error === null ? null : <p>{error.message}</p> }
                 { fetching === false ? null : <p>Fetching data...</p>}
-                {
-                  uniqueProducts.filter(
-                    product => product.name.includes(this.props.searchPhrase)
-                  ).filter(
-                    product => product.category === this.props.activeFilter
-                  ).filter(
-                    product => this.props.activeFilterNames.map(
-                      filterName => filters[filterName] || (() => true)
-                    ).every(
-                      f => f(product) === true
-                    )
-                  ).sort(
-                    (a, b) => a.price > b.price
-                  ).map(
+                { uniqueProducts.map(
                     product => (
                       <Link to={'/product-page-view/' + product.name}>
 
                       <Row className="ResultItem">
                         <Col sm={2} className="resultPhoto">
-                          <div>{product.shopName}
+                          <div>
                             <img width={500} alt=""
                                  src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/></div>
                         </Col>
