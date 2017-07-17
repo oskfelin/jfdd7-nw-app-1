@@ -52,11 +52,13 @@ export default connect(
             <DropdownButton title="Sklep"
                             id="bg-vertical-dropdown-2"
                             onSelect={key => this.props.activateFilter(key)} >
-              <MenuItem eventKey="name_biedronka">Biedronka</MenuItem>
-              <MenuItem eventKey="name_lidl">Lidl</MenuItem>
-              <MenuItem eventKey="name_zabka">Żabka</MenuItem>
-              <MenuItem eventKey="name_lidl">Lidl</MenuItem>
-              <MenuItem eventKey="2">Dropdown link</MenuItem>
+              <MenuItem eventKey="shopName_Biedronka">Biedronka</MenuItem>
+              <MenuItem eventKey="shopName_uMarcina">uMarcina</MenuItem>
+              <MenuItem eventKey="shopName_Zabka">Żabka</MenuItem>
+              <MenuItem eventKey="shopName_Malpka">Małpka</MenuItem>
+              <MenuItem eventKey="shopName_uJarka">uJarka</MenuItem>
+              <MenuItem eventKey="shopName_uOskara">uOskar</MenuItem>
+
             </DropdownButton>
 
 

@@ -70,6 +70,18 @@ export default connect(
         shop => shop.products.map(product => ({...product, shopName: shop.name}))
       ).reduce(
         (total, next) => total.concat(next), []
+      ).filter(
+        product => product.name.includes(this.props.searchPhrase)
+      ).filter(
+        product => product.category === this.props.activeFilter
+      ).filter(
+        product => this.props.activeFilterNames.map(
+          filterName => filters[filterName] || (() => true)
+        ).every(
+          f => f(product) === true
+        )
+      ).sort(
+        (a, b) => a.price > b.price
       )
       const uniqueProducts = uniqBy(allProducts, 'name')
 
@@ -84,20 +96,7 @@ export default connect(
 
                 { error === null ? null : <p>{error.message}</p> }
                 { fetching === false ? null : <p>Fetching data...</p>}
-                {
-                  uniqueProducts.filter(
-                    product => product.name.includes(this.props.searchPhrase)
-                  ).filter(
-                    product => product.category === this.props.activeFilter
-                  ).filter(
-                    product => this.props.activeFilterNames.map(
-                      filterName => filters[filterName] || (() => true)
-                    ).every(
-                      f => f(product) === true
-                    )
-                  ).sort(
-                    (a, b) => a.price > b.price
-                  ).map(
+                { uniqueProducts.map(
                     product => (
                       <Link to={'/product-page-view/' + product.name}>
 
