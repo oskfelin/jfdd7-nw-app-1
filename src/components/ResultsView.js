@@ -41,6 +41,12 @@ export default connect(
         name_lg: product => product.name === 'LG',
         name_samsung: product => product.name === 'Samsung',
 
+        shopName_Zabka: product => product.shopName === 'Żabka',
+        shopName_Biedronka: product => product.shopName === 'Biedronka',
+        shopName_uMarcina: product => product.shopName === 'uMarcina',
+        shopName_Malpka: product => product.shopName === 'Małpka',
+        shopName_uJarka: product => product.shopName === 'uJarka',
+        shopName_uOskara: product => product.shopName === 'uOskara',
 
         camera_3p2: product => product.camera === 3.2,
         camera_4: product => product.camera === 4,
