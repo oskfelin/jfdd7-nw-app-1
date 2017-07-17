@@ -36,6 +36,29 @@ export default connect(
         name_iphone: product => product.name === 'Iphone',
         name_lenovo: product => product.name === 'Lenovo',
         name_xiaomi: product => product.name === 'Xiaomi',
+        name_huawei: product => product.name === 'Huawei',
+        name_htc: product => product.name === 'HTC',
+        name_lg: product => product.name === 'LG',
+        name_samsung: product => product.name === 'Samsung',
+
+
+        camera_3p2: product => product.camera === 3.2,
+        camera_4: product => product.camera === 4,
+        camera_6: product => product.camera === 6,
+        camera_6p4: product => product.camera === 6.4,
+        camera_12: product => product.camera === 12,
+        camera_24: product => product.camera === 24,
+
+        slot_sd: product => product.slotSD === "Tak",
+        no_slot: product => product.slotSD === "Nie",
+
+        size_3p9: product => product.screenSize === 3.9,
+        size_4p2: product => product.screenSize === 4.2,
+        size_4p5: product => product.screenSize === 4.5,
+        size_4p8: product => product.screenSize === 4.8,
+        size_5p1: product => product.screenSize === 5.1,
+        size_5p2: product => product.screenSize === 5.2,
+        size_6: product => product.screenSize === 6
       }
       const allProducts = shops.map(
         shop => shop.products.map(product => ({...product, shopName: shop.name}))
