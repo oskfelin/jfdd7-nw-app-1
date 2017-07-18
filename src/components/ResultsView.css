@@ -23,7 +23,7 @@
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
 
-.Result .container:hover {
+.ResultItem:hover {
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 5px 9px rgba(0,0,0,0.5);
