@@ -15,14 +15,15 @@ import {add, remove } from '../state/comparedProducts'
 
 export default connect(
   state => ({
-    comparedProductNames: state.compareProducts.comparedProductNames,
+    comparedProductNames: state.comparedProducts.comparedProductNames,
     shops: state.shops,
     searchPhrase: state.searchEngine.searchPhrase,
     activeFilter: state.searchEngine.activeFilterName,
     activeFilterNames: state.productFilters.activeFilterNames
   }),
   dispatch => ({
-
+    addToCompare: name => dispatch(add(name)),
+    removeFromCompare: name => dispatch(remove(name)),
     fetchShops: () => dispatch(fetchShops())
   })
 )(
@@ -118,6 +119,9 @@ export default connect(
                         <Col sm={3} className="resultPrice">
                           <div>{product.price + ' zł'}</div>
                             <button className="resultButton">INFO</button>
+                          <button onClick={() => this.props.addToCompare(product.name)}>
+                            Add to compare
+                          </button>
 
                         </Col>
                       </Row>
