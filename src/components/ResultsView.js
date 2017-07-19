@@ -103,17 +103,17 @@ export default connect(
                       <Row className="ResultItem">
                         <Col sm={2} className="resultPhoto">
                           <div>
-                            <img width={500} alt=""
+                            <img width={200} alt=""
                                  src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/></div>
                         </Col>
                         <Col sm={7}>
+                        </Col>
+
+                        <Col sm={3}>
                           <div>
                             <h1 className="resultName">{product.name} </h1>
                           </div>
-                        </Col>
-                        <Col sm={3} className="resultPrice">
-                          <div>{product.price + ' zł'}</div>
-                            <button className="resultButton">INFO</button>
+                          <div className="resultPrice" >{product.price + ' zł'}</div>
 
                         </Col>
                       </Row>
