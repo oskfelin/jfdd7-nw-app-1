@@ -5,7 +5,8 @@ import uniqBy from 'lodash.uniqby'
 import {
   Col,
   Row,
-  Grid
+  Grid,
+  Image
 } from 'react-bootstrap'
 import './ResultsView.css'
 import {fetchShops} from '../state/shops'
@@ -103,7 +104,7 @@ export default connect(
                       <Row className="ResultItem">
                         <Col sm={2} className="resultPhoto">
                           <div>
-                            <img width={500} alt=""
+                            <Image width={400} height={300} alt=""
                                  src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/></div>
                         </Col>
                         <Col sm={7}>
