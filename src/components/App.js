@@ -8,6 +8,8 @@ import LogIn from './LogIn'
 import ResultView from './ResultsView'
 import SearchMain from './SearchMain'
 import Footer from './Footer'
+import ComparePreview from './ComparePreview'
+
 export default class App extends React.Component {
 
 
@@ -15,14 +17,14 @@ export default class App extends React.Component {
     return (
       <Router>
         <div>
-          <LogIn/>
-
-       <Home/>
-        <SearchMain />
-        <Route path="/result-view" component={ResultView}/>
-        <Route exact path="/" component={CategoriesMain}/>
-        <Route path="/product-page-view/:productName" component={ProductPageView}/>
-        <Footer />
+          <ComparePreview />
+          <LogIn />
+          <Home />
+          <SearchMain />
+          <Route path="/result-view" component={ResultView}/>
+          <Route exact path="/" component={CategoriesMain}/>
+          <Route path="/product-page-view/:productName" component={ProductPageView}/>
+          <Footer />
         </div>
       </Router>
     )
