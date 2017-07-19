@@ -5,7 +5,8 @@ import uniqBy from 'lodash.uniqby'
 import {
   Col,
   Row,
-  Grid
+  Grid,
+  Button
 } from 'react-bootstrap'
 import './ResultsView.css'
 import { fetchShops } from '../state/shops'
@@ -120,19 +121,20 @@ export default connect(
                         </Col>
                         <Col sm={3} className="resultPrice">
                           <div>{product.price + ' zł'}</div>
-                            <button className="resultButton">INFO</button>
-                          <button onClick={event => {
+
+                          <Button onClick={event => {
                             this.props.addToCompare(product)
                             event.preventDefault()
                           }}>
                             Add to compare
-                          </button>
-                          <button onClick={event => {
+                          </Button>
+                          <Button onClick={event => {
                             this.props.removeFromCompare(product)
                             event.preventDefault()
                           }}>
                             Remove from compare
-                          </button>
+                          </Button>
+
                         </Col>
                       </Row>
                       </Link>
