@@ -14,6 +14,7 @@
 }
 
 .ResultFilter{
+    background-color: #6a7879;
     position: fixed;
     padding: 5em 2em;
     border-radius: 1em;
@@ -22,8 +23,8 @@
 }
 
 .Result .ResultItem {
-    background-color: #a2adad;
-    color: #ffffff;
+    background-color: #6a7879;
+    color: #fffcdd;
     margin-bottom: 4em;
     border-radius: 1em;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
@@ -36,6 +37,7 @@
 }
 
 .resultName{
+    color:white;
     font-size: 2em;
     text-align: center;
     padding: 0;
