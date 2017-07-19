@@ -6,7 +6,8 @@ import {
   FormGroup,
   ControlLabel,
   FormControl,
-  Button
+  Button,
+  Grid
 } from 'react-bootstrap'
 
 import './login.css'
@@ -17,41 +18,41 @@ export default class LogIn extends React.Component {
 
     render() {
     return (
-      <div>
+      <Grid fluid>
         <Form horizontal>
           <FormGroup controlId="formHorizontalEmail">
-            <Col componentClass={ControlLabel} smOffset={4} sm={1}>
+            <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
               Email
             </Col>
-            <Col sm={3}>
+            <Col sm={4} lg={2}>
               <FormControl type="email" placeholder="Email" />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalPassword">
-            <Col componentClass={ControlLabel} smOffset={4} sm={1}>
+            <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
               Password
             </Col>
-            <Col sm={3}>
+            <Col sm={4} lg={2}>
               <FormControl type="password" placeholder="Password" />
             </Col>
           </FormGroup>
 
           <FormGroup>
-            <Col xsOffset={2} xs={10} smOffset={5} sm={7}>
+            <Col smOffset={4} sm={4} lgOffset={5} lg={2}>
               <Checkbox>Zapamiętaj dane do logowania</Checkbox>
             </Col>
           </FormGroup>
 
           <FormGroup>
-            <Col  smOffset={5} sm={3}>
+            <Col  smOffset={4} sm={4} lgOffset={5} lg={2}>
               <Button id="przycisk" bsStyle="success" type="submit"  block  center-block>
                 Zaloguj
               </Button>
             </Col>
           </FormGroup>
         </Form>
-      </div>
+      </Grid>
     )
   }
 }

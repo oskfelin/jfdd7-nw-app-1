@@ -5,6 +5,7 @@ import './Categories.css'
 
 import {activeFilter} from '../state/searchEngine'
 import {connect} from 'react-redux'
+
 export default connect(
   state => ({
     shops: state.shops,
