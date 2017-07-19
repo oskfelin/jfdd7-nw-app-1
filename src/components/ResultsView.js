@@ -8,17 +8,21 @@ import {
   Grid
 } from 'react-bootstrap'
 import './ResultsView.css'
-import {fetchShops} from '../state/shops'
+import { fetchShops } from '../state/shops'
 import ResultsFilter from './ResultsFilter'
+import {add, remove } from '../state/comparedProducts'
 
 export default connect(
   state => ({
+    comparedProductNames: state.comparedProducts.comparedProductNames,
     shops: state.shops,
     searchPhrase: state.searchEngine.searchPhrase,
     activeFilter: state.searchEngine.activeFilterName,
     activeFilterNames: state.productFilters.activeFilterNames
   }),
   dispatch => ({
+    addToCompare: product => dispatch(add(product)),
+    removeFromCompare: product => dispatch(remove(product)),
     fetchShops: () => dispatch(fetchShops())
   })
 )(
@@ -113,8 +117,22 @@ export default connect(
                           <div>
                             <h1 className="resultName">{product.name} </h1>
                           </div>
-                          <div className="resultPrice" >{product.price + ' zł'}</div>
-
+                        </Col>
+                        <Col sm={3} className="resultPrice">
+                          <div>{product.price + ' zł'}</div>
+                            <button className="resultButton">INFO</button>
+                          <button onClick={event => {
+                            this.props.addToCompare(product)
+                            event.preventDefault()
+                          }}>
+                            Add to compare
+                          </button>
+                          <button onClick={event => {
+                            this.props.removeFromCompare(product)
+                            event.preventDefault()
+                          }}>
+                            Remove from compare
+                          </button>
                         </Col>
                       </Row>
                       </Link>
