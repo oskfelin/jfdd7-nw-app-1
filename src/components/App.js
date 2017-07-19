@@ -17,9 +17,10 @@ export default class App extends React.Component {
     return (
       <Router>
         <div>
-          <ComparePreview />
+
           <LogIn />
           <Home />
+          <ComparePreview />
           <SearchMain />
           <Route path="/result-view" component={ResultView}/>
           <Route exact path="/" component={CategoriesMain}/>
