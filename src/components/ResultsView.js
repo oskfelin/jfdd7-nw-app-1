@@ -113,14 +113,11 @@ export default connect(
                         </Col>
                         <Col sm={7}>
                         </Col>
-
                         <Col sm={3}>
                           <div>
                             <h1 className="resultName">{product.name} </h1>
                           </div>
-                        </Col>
-                        <Col sm={3} className="resultPrice">
-                          <div>{product.price + ' zł'}</div>
+                          <div className="resultPrice">{product.price + ' zł'}</div>
 
                           <Button onClick={event => {
                             this.props.addToCompare(product)
