@@ -5,20 +5,25 @@ import uniqBy from 'lodash.uniqby'
 import {
   Col,
   Row,
-  Grid
+  Grid,
+  Image
 } from 'react-bootstrap'
 import './ResultsView.css'
-import {fetchShops} from '../state/shops'
+import { fetchShops } from '../state/shops'
 import ResultsFilter from './ResultsFilter'
+import {add, remove } from '../state/comparedProducts'
 
 export default connect(
   state => ({
+    comparedProductNames: state.comparedProducts.comparedProductNames,
     shops: state.shops,
     searchPhrase: state.searchEngine.searchPhrase,
     activeFilter: state.searchEngine.activeFilterName,
     activeFilterNames: state.productFilters.activeFilterNames
   }),
   dispatch => ({
+    addToCompare: product => dispatch(add(product)),
+    removeFromCompare: product => dispatch(remove(product)),
     fetchShops: () => dispatch(fetchShops())
   })
 )(
@@ -103,7 +108,7 @@ export default connect(
                       <Row className="ResultItem">
                         <Col sm={2} className="resultPhoto">
                           <div>
-                            <img width={500} alt=""
+                            <Image width={400} height={300} alt=""
                                  src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/></div>
                         </Col>
                         <Col sm={7}>
@@ -114,7 +119,18 @@ export default connect(
                         <Col sm={3} className="resultPrice">
                           <div>{product.price + ' zł'}</div>
                             <button className="resultButton">INFO</button>
-
+                          <button onClick={event => {
+                            this.props.addToCompare(product)
+                            event.preventDefault()
+                          }}>
+                            Add to compare
+                          </button>
+                          <button onClick={event => {
+                            this.props.removeFromCompare(product)
+                            event.preventDefault()
+                          }}>
+                            Remove from compare
+                          </button>
                         </Col>
                       </Row>
                       </Link>
