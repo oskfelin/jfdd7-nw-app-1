@@ -22,8 +22,8 @@ export default connect(
     activeFilterNames: state.productFilters.activeFilterNames
   }),
   dispatch => ({
-    addToCompare: name => dispatch(add(name)),
-    removeFromCompare: name => dispatch(remove(name)),
+    addToCompare: product => dispatch(add(product)),
+    removeFromCompare: product => dispatch(remove(product)),
     fetchShops: () => dispatch(fetchShops())
   })
 )(
@@ -119,10 +119,18 @@ export default connect(
                         <Col sm={3} className="resultPrice">
                           <div>{product.price + ' zł'}</div>
                             <button className="resultButton">INFO</button>
-                          <button onClick={() => this.props.addToCompare(product.name)}>
+                          <button onClick={event => {
+                            this.props.addToCompare(product)
+                            event.preventDefault()
+                          }}>
                             Add to compare
                           </button>
-
+                          <button onClick={event => {
+                            this.props.removeFromCompare(product)
+                            event.preventDefault()
+                          }}>
+                            Remove from compare
+                          </button>
                         </Col>
                       </Row>
                       </Link>
