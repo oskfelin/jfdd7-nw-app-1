@@ -9,17 +9,20 @@ import {
   Image
 } from 'react-bootstrap'
 import './ResultsView.css'
-import {fetchShops} from '../state/shops'
+import { fetchShops } from '../state/shops'
 import ResultsFilter from './ResultsFilter'
+import {add, remove } from '../state/comparedProducts'
 
 export default connect(
   state => ({
+    comparedProductNames: state.compareProducts.comparedProductNames,
     shops: state.shops,
     searchPhrase: state.searchEngine.searchPhrase,
     activeFilter: state.searchEngine.activeFilterName,
     activeFilterNames: state.productFilters.activeFilterNames
   }),
   dispatch => ({
+
     fetchShops: () => dispatch(fetchShops())
   })
 )(
