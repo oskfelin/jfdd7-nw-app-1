@@ -6,7 +6,7 @@ import {
   Col,
   Row,
   Grid,
-  Image
+  Button
 } from 'react-bootstrap'
 import './ResultsView.css'
 import { fetchShops } from '../state/shops'
@@ -108,29 +108,30 @@ export default connect(
                       <Row className="ResultItem">
                         <Col sm={2} className="resultPhoto">
                           <div>
-                            <Image width={400} height={300} alt=""
+                            <img width={200} height={200} alt=""
                                  src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/></div>
                         </Col>
                         <Col sm={7}>
+                        </Col>
+                        <Col sm={3}>
                           <div>
                             <h1 className="resultName">{product.name} </h1>
                           </div>
-                        </Col>
-                        <Col sm={3} className="resultPrice">
-                          <div>{product.price + ' zł'}</div>
-                            <button className="resultButton">INFO</button>
-                          <button onClick={event => {
+                          <div className="resultPrice">{product.price + ' zł'}</div>
+
+                          <Button onClick={event => {
                             this.props.addToCompare(product)
                             event.preventDefault()
                           }}>
                             Add to compare
-                          </button>
-                          <button onClick={event => {
+                          </Button>
+                          <Button onClick={event => {
                             this.props.removeFromCompare(product)
                             event.preventDefault()
                           }}>
                             Remove from compare
-                          </button>
+                          </Button>
+
                         </Col>
                       </Row>
                       </Link>

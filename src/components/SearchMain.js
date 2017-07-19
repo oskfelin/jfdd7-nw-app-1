@@ -32,9 +32,9 @@ export default connect(
  class SearchMain extends React.Component {
   render() {
     return (
-<Grid>
+<Grid className="searchbar">
       <Col mdOffset={2} md={8} >
-      <FormGroup >
+      <FormGroup>
         <InputGroup >
           <FormControl
             className="search-field"
