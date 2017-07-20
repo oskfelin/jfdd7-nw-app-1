@@ -23,14 +23,10 @@ export default connect(
   }),
   dispatch => ({
     toggleCompare: id => dispatch(toggle(id)),
-    fetchShops: () => dispatch(fetchShops())
+
   })
 )(
   class ResultsView extends React.Component {
-
-    componentWillMount() {
-      this.props.fetchShops()
-    }
 
 
     render() {

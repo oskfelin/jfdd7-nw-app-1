@@ -11,13 +11,16 @@ import {toggle} from '../state/comparedProducts'
 
 export default connect(
   state => ({
-    comparedProduct: state.comparedProducts.comparedProduct,
+    productsIds: state.comparedProducts.productsIds,
+    shops: state.shops
   }),
   dispatch => ({
-    toggleCompare: product => dispatch(toggle(product))
+    toggleCompare: id => dispatch(toggle(id)),
+
   })
 )(
   class Comparison extends React.Component {
+
     render() {
       return (
         <div>
