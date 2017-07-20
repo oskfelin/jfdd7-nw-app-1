@@ -11,7 +11,7 @@ import {
 import './ResultsView.css'
 import { fetchShops } from '../state/shops'
 import ResultsFilter from './ResultsFilter'
-import {add, remove } from '../state/comparedProducts'
+import {toggle } from '../state/comparedProducts'
 
 export default connect(
   state => ({
@@ -22,8 +22,7 @@ export default connect(
     activeFilterNames: state.productFilters.activeFilterNames
   }),
   dispatch => ({
-    addToCompare: product => dispatch(add(product)),
-    removeFromCompare: product => dispatch(remove(product)),
+    toggleCompare: product => dispatch(toggle(product)),
     fetchShops: () => dispatch(fetchShops())
   })
 )(
@@ -120,18 +119,11 @@ export default connect(
                           <div className="resultPrice">{product.price + ' zł'}</div>
 
                           <Button onClick={event => {
-                            this.props.addToCompare(product)
+                            this.props.toggleCompare(product)
                             event.preventDefault()
                           }}>
-                            Add to compare
+                            Porównaj
                           </Button>
-                          <Button onClick={event => {
-                            this.props.removeFromCompare(product)
-                            event.preventDefault()
-                          }}>
-                            Remove from compare
-                          </Button>
-
                         </Col>
                       </Row>
                       </Link>
