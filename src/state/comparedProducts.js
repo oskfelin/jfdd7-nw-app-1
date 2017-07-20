@@ -1,14 +1,14 @@
 const TOGGLE = 'comparedProduct/TOGGLE'
 
 
-export const toggle = productName => ({
+export const toggle = productId => ({
   type: TOGGLE,
-  productName
+  productId
 })
 
 
 const initialState = {
-  ComparedProductNames: []
+  productsIds: []
 }
 
 export default (state = initialState, action = {}) => {
@@ -16,11 +16,11 @@ export default (state = initialState, action = {}) => {
     case TOGGLE:
       return {
         ...state,
-        ComparedProductNames: state.ComparedProductNames.includes(action.productName) ?
-          state.ComparedProductNames.filter(
-          productName => action.productName !== productName
+        productsIds: state.productsIds.includes(action.productId) ?
+          state.productsIds.filter(
+          productId => action.productId !== productId
         ) :
-          state.ComparedProductNames.concat(action.productName)
+          state.productsIds.concat(action.productId)
       }
     default:
       return state

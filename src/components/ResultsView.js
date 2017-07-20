@@ -15,14 +15,14 @@ import {toggle } from '../state/comparedProducts'
 
 export default connect(
   state => ({
-    comparedProductNames: state.comparedProducts.comparedProductNames,
+    productsIds: state.comparedProducts.productsIds,
     shops: state.shops,
     searchPhrase: state.searchEngine.searchPhrase,
     activeFilter: state.searchEngine.activeFilterName,
     activeFilterNames: state.productFilters.activeFilterNames
   }),
   dispatch => ({
-    toggleCompare: product => dispatch(toggle(product)),
+    toggleCompare: id => dispatch(toggle(id)),
     fetchShops: () => dispatch(fetchShops())
   })
 )(
@@ -119,7 +119,7 @@ export default connect(
                           <div className="resultPrice">{product.price + ' zł'}</div>
 
                           <Button onClick={event => {
-                            this.props.toggleCompare(product)
+                            this.props.toggleCompare(product.id)
                             event.preventDefault()
                           }}>
                             Porównaj
