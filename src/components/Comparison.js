@@ -22,9 +22,21 @@ export default connect(
   class Comparison extends React.Component {
 
     render() {
+      const {data} = this.props.shops
       return (
-        <div>
+        <div>{
+          data.map(
+          shop => shop.products
+          ).reduce(
+          (total, next) => total.concat(next), []
+          ).filter(
+          product => product.id === this.props.match.params.productId
+          ).map(
+          product =>
+<p>{product.name}</p>
 
+
+          )}
         </div>
       )
     }

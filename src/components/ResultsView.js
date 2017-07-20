@@ -9,7 +9,6 @@ import {
   Button
 } from 'react-bootstrap'
 import './ResultsView.css'
-import { fetchShops } from '../state/shops'
 import ResultsFilter from './ResultsFilter'
 import {toggle } from '../state/comparedProducts'
 
