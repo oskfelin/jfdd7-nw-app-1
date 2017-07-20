@@ -3,12 +3,13 @@ import thunk from 'redux-thunk'
 import shops from './state/shops'
 import searchEngine from './state/searchEngine'
 import productFilters from './state/productFilters'
-
+import comparedProducts from './state/comparedProducts'
 
 const reducer = combineReducers({
   shops,
   searchEngine,
-  productFilters
+  productFilters,
+  comparedProducts
 })
 
 
