@@ -8,6 +8,11 @@
     padding-top: 2em;
     padding-bottom: 2em;
 }
+
+.ButtonCompare {
+    width: 100%;
+    text-align: center;
+}
 .Result .container{
     padding-left:0;
 }

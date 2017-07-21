@@ -119,17 +119,17 @@ export default connect(
                           </div>
                           <div className="resultPrice">{product.price + ' zł'}</div>
 
-                          <Button onClick={event => {
+                          <Button className="ButtonCompare" onClick={event => {
                             this.props.addToCompare(product)
                             event.preventDefault()
                           }}>
-                            Add to compare
+                            Add compare
                           </Button>
-                          <Button onClick={event => {
+                          <Button className="ButtonCompare" onClick={event => {
                             this.props.removeFromCompare(product)
                             event.preventDefault()
                           }}>
-                            Remove from compare
+                            Remove compare
                           </Button>
 
                         </Col>
