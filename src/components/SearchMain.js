@@ -9,6 +9,7 @@ import {
   MenuItem,
   Col,
   Grid,
+  Button
 } from 'react-bootstrap'
 
 import './SearchMain.css'
@@ -59,6 +60,7 @@ export default connect(
           </DropdownButton>
           <InputGroup.Button>
             <Link to="/result-view">
+              <Button bsSize="large"><img alt="" src={process.env.PUBLIC_URL + '/images/magnifier.png'} height="20"/></Button>
             </Link>
           </InputGroup.Button>
         </InputGroup>
