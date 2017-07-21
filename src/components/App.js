@@ -8,20 +8,20 @@ import Home from './Home'
 import ResultView from './ResultsView'
 import SearchMain from './SearchMain'
 import Footer from './Footer'
+import Comparison from './Comparison'
 export default class App extends React.Component {
-
 
   render() {
     return (
       <Router>
         <div>
-          <Home/>
-          <SearchMain />
-
-          <Route path="/result-view" component={ResultView}/>
-          <Route exact path="/" component={CategoriesMain}/>
-          <Route path="/product-page-view/:productName" component={ProductPageView}/>
-          <Footer />
+       <Home/>
+        <SearchMain />
+          <Route path="/comparison" component={Comparison}/>
+        <Route path="/result-view" component={ResultView}/>
+        <Route exact path="/" component={CategoriesMain}/>
+        <Route path="/product-page-view/:productName" component={ProductPageView}/>
+        <Footer />
         </div>
       </Router>
     )
