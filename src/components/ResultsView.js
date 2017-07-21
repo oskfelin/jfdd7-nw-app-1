@@ -9,29 +9,23 @@ import {
   Button
 } from 'react-bootstrap'
 import './ResultsView.css'
-import { fetchShops } from '../state/shops'
 import ResultsFilter from './ResultsFilter'
-import {add, remove } from '../state/comparedProducts'
+import {toggle } from '../state/comparedProducts'
 
 export default connect(
   state => ({
-    comparedProductNames: state.comparedProducts.comparedProductNames,
+    productsIds: state.comparedProducts.productsIds,
     shops: state.shops,
     searchPhrase: state.searchEngine.searchPhrase,
     activeFilter: state.searchEngine.activeFilterName,
     activeFilterNames: state.productFilters.activeFilterNames
   }),
   dispatch => ({
-    addToCompare: product => dispatch(add(product)),
-    removeFromCompare: product => dispatch(remove(product)),
-    fetchShops: () => dispatch(fetchShops())
+    toggleCompare: id => dispatch(toggle(id)),
+
   })
 )(
   class ResultsView extends React.Component {
-
-    componentWillMount() {
-      this.props.fetchShops()
-    }
 
 
     render() {
@@ -120,18 +114,11 @@ export default connect(
                           <div className="resultPrice">{product.price + ' zł'}</div>
 
                           <Button onClick={event => {
-                            this.props.addToCompare(product)
+                            this.props.toggleCompare(product.id)
                             event.preventDefault()
                           }}>
-                            Add to compare
+                            Porównaj
                           </Button>
-                          <Button onClick={event => {
-                            this.props.removeFromCompare(product)
-                            event.preventDefault()
-                          }}>
-                            Remove from compare
-                          </Button>
-
                         </Col>
                       </Row>
                       </Link>
