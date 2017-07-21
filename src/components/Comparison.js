@@ -1,12 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {
-  Col,
-  Row,
-  Grid,
-  Image
-} from 'react-bootstrap'
-import {connect} from 'react-redux'
 import {toggle} from '../state/comparedProducts'
 
 export default connect(
@@ -30,7 +23,7 @@ export default connect(
           ).reduce(
           (total, next) => total.concat(next), []
           ).filter(
-          product => product.id === this.props.match.params.productId
+          product => (product.id).toString === this.props.match.params.productId
           ).map(
           product =>
 <p>{product.name}</p>

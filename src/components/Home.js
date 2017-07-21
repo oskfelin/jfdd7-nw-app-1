@@ -10,6 +10,9 @@ const Home = (props) => (
     <Button>
       <Link to="/result-view">Results</Link>
     </Button>
+    <Button>
+      <Link to="/comparison">Comparison</Link>
+    </Button>
   </Grid>
 )
 

@@ -8,6 +8,7 @@ import LogIn from './LogIn'
 import ResultView from './ResultsView'
 import SearchMain from './SearchMain'
 import Footer from './Footer'
+import Comparison from './Comparison'
 export default class App extends React.Component {
 
 
@@ -19,7 +20,7 @@ export default class App extends React.Component {
 
        <Home/>
         <SearchMain />
-
+          <Route path="/comparison" component={Comparison}/>
         <Route path="/result-view" component={ResultView}/>
         <Route exact path="/" component={CategoriesMain}/>
         <Route path="/product-page-view/:productName" component={ProductPageView}/>
