@@ -7,7 +7,6 @@ import {
   InputGroup,
   DropdownButton,
   MenuItem,
-  Button,
   Col,
   Grid,
 } from 'react-bootstrap'
@@ -60,7 +59,6 @@ export default connect(
           </DropdownButton>
           <InputGroup.Button>
             <Link to="/result-view">
-            <Button bsSize="large"><img alt="" src={process.env.PUBLIC_URL + '/images/magnifier.png'} height="20"/></Button>
             </Link>
           </InputGroup.Button>
         </InputGroup>

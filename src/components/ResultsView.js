@@ -6,7 +6,7 @@ import {
   Col,
   Row,
   Grid,
-  Button
+  Button,
 } from 'react-bootstrap'
 import './ResultsView.css'
 import { fetchShops } from '../state/shops'
@@ -111,8 +111,10 @@ export default connect(
                             <img width={200} height={200} alt=""
                                  src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/></div>
                         </Col>
+
                         <Col sm={7}>
                         </Col>
+
                         <Col sm={3}>
                           <div>
                             <h1 className="resultName">{product.name} </h1>
