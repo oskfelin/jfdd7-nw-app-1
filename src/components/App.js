@@ -15,8 +15,6 @@ export default class App extends React.Component {
     return (
       <Router>
         <div>
-          <LogIn/>
-
           <Home/>
           <SearchMain />
 
