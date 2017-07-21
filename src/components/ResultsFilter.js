@@ -3,7 +3,8 @@ import {connect} from 'react-redux'
 import {
   ButtonGroup,
   DropdownButton,
-  MenuItem
+  MenuItem,
+  Checkbox
 } from 'react-bootstrap'
 
 import './ResultsFilter.css'
@@ -36,6 +37,9 @@ export default connect(
 
       return (
         <div className="ResultFilter">
+          <Checkbox>
+            Checkbox
+          </Checkbox>
           <ButtonGroup vertical block>
             <DropdownButton title="Producent"
                             id="bg-vertical-dropdown-1"

@@ -11,21 +11,57 @@ import {
 } from 'react-bootstrap'
 
 import './login.css'
+import firebase from 'firebase'
 
-export default class LogIn extends React.Component {
+class LogIn extends React.Component {
+  state = {
+    email: '',
+    password: ''
+  }
+
+  handleEmailChange = event => {
+    this.setState({
+      email: event.target.value
+    })
+  }
+
+  handlePasswordChange = event => {
+    this.setState({
+      password: event.target.value
+    })
+  }
+
+  handleSubmit = event => {
+    console.log(this.state)
+    event.preventDefault()
+    firebase.auth().signInWithEmailAndPassword(
+      this.state.email,
+      this.state.password
+    // ).then(
+    //   () => this.setState({ message: 'test' })
+    // ).catch(
+    //   error => this.setState({ message: error.message })
+    // )
+    )
+  }
 
 
 
     render() {
     return (
       <Grid fluid>
-        <Form horizontal>
+        <Form horizontal
+              onSubmit={this.handleSubmit}>
           <FormGroup controlId="formHorizontalEmail">
             <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
               Email
             </Col>
             <Col sm={4} lg={2}>
-              <FormControl type="email" placeholder="Email" />
+              <FormControl placeholder="Email"
+                           // type="email"
+                           type="text"
+                           value={this.state.email}
+                           onChange={this.handleEmailChange}/>
             </Col>
           </FormGroup>
 
@@ -34,7 +70,12 @@ export default class LogIn extends React.Component {
               Password
             </Col>
             <Col sm={4} lg={2}>
-              <FormControl type="password" placeholder="Password" />
+              <FormControl
+                placeholder="Password"
+                type="password"
+                value={this.state.password}
+                onChange={this.handlePasswordChange}
+              />
             </Col>
           </FormGroup>
 
@@ -56,3 +97,4 @@ export default class LogIn extends React.Component {
     )
   }
 }
+export default LogIn
