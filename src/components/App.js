@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import ProductPageView from "./ProductPageView"
 import CategoriesMain from './CategoriesMain'
 import Home from './Home'
-import LogIn from './LogIn'
+
 import ResultView from './ResultsView'
 import SearchMain from './SearchMain'
 import Footer from './Footer'
