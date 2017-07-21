@@ -7,8 +7,7 @@ export const updatePrice = price => ({
 })
 
 const initialState = {
-  price: 1,
-
+  price: [0, 20],
 }
 
 export default (state = initialState, action = {}) => {

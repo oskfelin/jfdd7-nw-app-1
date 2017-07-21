@@ -104,8 +104,8 @@ export default connect(
 
           <div className="slider">
             <p>Zakres cenowy</p>
-            <p>{this.props.price} zł</p>
-            <Range defaultValue={[1, 1000]} value={this.props.price} onChange={this.props.updatePrice}/>
+            <p>{this.props.price[0]} - {this.props.price[1]} zł</p>
+            <Range max={1000} value={this.props.price} onChange={this.props.updatePrice}/>
           </div>
         </div>
 
