@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {toggle} from '../state/comparedProducts'
+import {Table} from 'react-bootstrap'
 
 export default connect(
   state => ({
@@ -16,20 +17,30 @@ export default connect(
 
     render() {
       const {data} = this.props.shops
+
+      const dataToDisplay = data === null ? [] : data.map(
+        shop => shop.products
+      ).reduce(
+        (total, next) => total.concat(next), []
+      )
+
+      console.log(dataToDisplay)
       return (
-        <div>{
-          data.map(
-          shop => shop.products
-          ).reduce(
-          (total, next) => total.concat(next), []
-          ).filter(
-          product => (product.id).toString === this.props.match.params.productId
-          ).map(
-          product =>
-<p>{product.name}</p>
+        <div>
+          <Table>
+            {
+              dataToDisplay.filter(
+                product => this.props.productsIds.includes(product.id)
+              ).map(
+                product =>
+                  <tbody>
+                  <tr>
+                    <td>{product.name}</td>
+                  </tr>
 
-
-          )}
+                  </tbody>
+              )}
+          </Table>
         </div>
       )
     }
