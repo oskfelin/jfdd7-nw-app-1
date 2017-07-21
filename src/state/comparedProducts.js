@@ -1,36 +1,26 @@
-const ADD = 'comparedProduct/ADD'
-const REMOVE = 'comparedProduct/REMOVE'
+const TOGGLE = 'comparedProduct/TOGGLE'
 
-export const add = productName => ({
-  type: ADD,
-  productName
-})
 
-export const remove = productName => ({
-  type: REMOVE,
-  productName
+export const toggle = productId => ({
+  type: TOGGLE,
+  productId
 })
 
 
 const initialState = {
-  ComparedProductNames: []
+  productsIds: []
 }
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {
-    case ADD:
+    case TOGGLE:
       return {
         ...state,
-        ComparedProductNames: state.ComparedProductNames.filter(
-          productName => action.productName !== productName
-        ).concat(action.productName)
-      }
-    case REMOVE:
-      return {
-        ...state,
-        ComparedProductNames: state.ComparedProductNames.filter(
-          productName => action.productName !== productName
-        )
+        productsIds: state.productsIds.includes(action.productId) ?
+          state.productsIds.filter(
+          productId => action.productId !== productId
+        ) :
+          state.productsIds.concat(action.productId)
       }
     default:
       return state

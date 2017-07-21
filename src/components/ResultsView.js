@@ -6,32 +6,26 @@ import {
   Col,
   Row,
   Grid,
-  Button,
+  Button
 } from 'react-bootstrap'
 import './ResultsView.css'
-import { fetchShops } from '../state/shops'
 import ResultsFilter from './ResultsFilter'
-import {add, remove } from '../state/comparedProducts'
+import {toggle } from '../state/comparedProducts'
 
 export default connect(
   state => ({
-    comparedProductNames: state.comparedProducts.comparedProductNames,
+    productsIds: state.comparedProducts.productsIds,
     shops: state.shops,
     searchPhrase: state.searchEngine.searchPhrase,
     activeFilter: state.searchEngine.activeFilterName,
     activeFilterNames: state.productFilters.activeFilterNames
   }),
   dispatch => ({
-    addToCompare: product => dispatch(add(product)),
-    removeFromCompare: product => dispatch(remove(product)),
-    fetchShops: () => dispatch(fetchShops())
+    toggleCompare: id => dispatch(toggle(id)),
+
   })
 )(
   class ResultsView extends React.Component {
-
-    componentWillMount() {
-      this.props.fetchShops()
-    }
 
 
     render() {
@@ -111,10 +105,8 @@ export default connect(
                             <img width={200} height={200} alt=""
                                  src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/></div>
                         </Col>
-
                         <Col sm={7}>
                         </Col>
-
                         <Col sm={3}>
                           <div>
                             <h1 className="resultName">{product.name} </h1>
@@ -122,16 +114,10 @@ export default connect(
                           <div className="resultPrice">{product.price + ' zł'}</div>
 
                           <Button className="ButtonCompare" onClick={event => {
-                            this.props.addToCompare(product)
+                            this.props.toggleCompare(product.id)
                             event.preventDefault()
                           }}>
-                            Add compare
-                          </Button>
-                          <Button className="ButtonCompare" onClick={event => {
-                            this.props.removeFromCompare(product)
-                            event.preventDefault()
-                          }}>
-                            Remove compare
+                            Porównaj
                           </Button>
 
                         </Col>

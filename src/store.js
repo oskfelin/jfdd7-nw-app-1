@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import shops from './state/shops'
+import shops, {fetchShops} from './state/shops'
 import searchEngine from './state/searchEngine'
 import productFilters from './state/productFilters'
 import comparedProducts from './state/comparedProducts'
@@ -20,5 +20,7 @@ const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
     thunk
   )
 ))
+
+store.dispatch(fetchShops())
 
 export default store
