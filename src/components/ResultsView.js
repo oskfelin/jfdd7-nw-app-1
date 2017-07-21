@@ -103,7 +103,8 @@ export default connect(
                         <Col sm={2} className="resultPhoto">
                           <div>
                             <img width={200} height={200} alt=""
-                                 src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/></div>
+                                 src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/>
+                          </div>
                         </Col>
                         <Col sm={7}>
                         </Col>
