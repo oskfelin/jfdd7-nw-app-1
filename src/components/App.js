@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import ProductPageView from "./ProductPageView"
 import CategoriesMain from './CategoriesMain'
 import Home from './Home'
-import LogIn from './LogIn'
+
 import ResultView from './ResultsView'
 import SearchMain from './SearchMain'
 import Footer from './Footer'
@@ -15,15 +15,13 @@ export default class App extends React.Component {
     return (
       <Router>
         <div>
-          <LogIn/>
+          <Home/>
+          <SearchMain />
 
-       <Home/>
-        <SearchMain />
-
-        <Route path="/result-view" component={ResultView}/>
-        <Route exact path="/" component={CategoriesMain}/>
-        <Route path="/product-page-view/:productName" component={ProductPageView}/>
-        <Footer />
+          <Route path="/result-view" component={ResultView}/>
+          <Route exact path="/" component={CategoriesMain}/>
+          <Route path="/product-page-view/:productName" component={ProductPageView}/>
+          <Footer />
         </div>
       </Router>
     )
