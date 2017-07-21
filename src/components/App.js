@@ -1,6 +1,5 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-
 import ProductPageView from "./ProductPageView"
 import CategoriesMain from './CategoriesMain'
 import Home from './Home'
@@ -8,7 +7,6 @@ import LogIn from './LogIn'
 import ResultView from './ResultsView'
 import SearchMain from './SearchMain'
 import Footer from './Footer'
-import ComparePreview from './ComparePreview'
 
 export default class App extends React.Component {
 
@@ -17,10 +15,8 @@ export default class App extends React.Component {
     return (
       <Router>
         <div>
-
           <LogIn />
           <Home />
-          <ComparePreview />
           <SearchMain />
           <Route path="/result-view" component={ResultView}/>
           <Route exact path="/" component={CategoriesMain}/>
