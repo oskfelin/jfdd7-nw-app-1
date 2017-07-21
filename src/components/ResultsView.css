@@ -61,6 +61,7 @@
 .resultPhoto img{
     margin: 1em 1em 1em 0;
     border-radius: 1em;
+    text-align: center;
 }
 
 .slider {
