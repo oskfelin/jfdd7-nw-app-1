@@ -18,7 +18,8 @@ export default connect(
     shops: state.shops,
     searchPhrase: state.searchEngine.searchPhrase,
     activeFilter: state.searchEngine.activeFilterName,
-    activeFilterNames: state.productFilters.activeFilterNames
+    activeFilterNames: state.productFilters.activeFilterNames,
+    price: state.searchFilters.price,
   }),
   dispatch => ({
     toggleCompare: id => dispatch(toggle(id)),
@@ -81,7 +82,10 @@ export default connect(
         )
       ).sort(
         (a, b) => a.price > b.price
+      ).filter(
+        item => item.price < this.props.price[1] && item.price > this.props.price[0]
       )
+
       const uniqueProducts = uniqBy(allProducts, 'name')
 
       return (
