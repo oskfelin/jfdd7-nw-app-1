@@ -17,13 +17,13 @@ export default class App extends React.Component {
         <div>
           <LogIn/>
 
-       <Home/>
-        <SearchMain />
+          <Home/>
+          <SearchMain />
 
-        <Route path="/result-view" component={ResultView}/>
-        <Route exact path="/" component={CategoriesMain}/>
-        <Route path="/product-page-view/:productName" component={ProductPageView}/>
-        <Footer />
+          <Route path="/result-view" component={ResultView}/>
+          <Route exact path="/" component={CategoriesMain}/>
+          <Route path="/product-page-view/:productName" component={ProductPageView}/>
+          <Footer />
         </div>
       </Router>
     )
