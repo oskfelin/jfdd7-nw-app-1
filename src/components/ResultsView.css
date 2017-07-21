@@ -1,18 +1,12 @@
 .Result {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    margin: 1em;
+    padding: 2em 0;
 }
 
 .ButtonCompare {
     width: 100%;
     text-align: center;
-    margin: 2em 0;
+    margin: 2em;
 }
 .Result .container{
     padding-left:0;
@@ -21,7 +15,7 @@
 .Result .ResultItem {
     background-color: #555C5C;
     color: #fffcdd;
-    margin-bottom: 4em;
+    margin:0 0 4em 0;
     border-radius: 1em;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
