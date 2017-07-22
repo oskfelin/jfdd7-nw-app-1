@@ -8,6 +8,7 @@ import Home from './Home'
 import ResultView from './ResultsView'
 import SearchMain from './SearchMain'
 import Footer from './Footer'
+import SignUp from './SignUp'
 export default class App extends React.Component {
 
 
@@ -17,7 +18,7 @@ export default class App extends React.Component {
         <div>
           <Home/>
           <SearchMain />
-
+          <Route path="/SignUp" component={SignUp}/>
           <Route path="/result-view" component={ResultView}/>
           <Route exact path="/" component={CategoriesMain}/>
           <Route path="/product-page-view/:productName" component={ProductPageView}/>

@@ -15,6 +15,9 @@ const Home = (props) => (
       onClick={() => firebase.auth().signOut()}>
       Wyloguj
     </button>
+    <Link to="/SignUp" className="login">
+    <Button bsStyle="primary" bsSize="large" >SignUp</Button>
+    </Link>
   </Grid>
 )
 
