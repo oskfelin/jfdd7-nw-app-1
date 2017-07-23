@@ -41,19 +41,19 @@ class SignUp extends React.Component {
   render() {
     return (
 
-      <Grid fluid>
+      <Grid fluid >
         <div className="main">
           <p className="main-info">Nie masz jeszcze konta ? <br />Utworz je w 10 sekund!</p>
         </div>
         <p className="okno">Zarejestruj się</p>
-        <Form horizontal className="marcin"
+        <Form horizontal className="datalog"
               onSubmit={this.handleSubmit}>
-          <FormGroup controlId="formHorizontalEmail">
+          <FormGroup controlId="formHorizontalEmail"  className="text-form">
             <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
               Email
             </Col>
             <Col sm={4} lg={2}>
-              <FormControl placeholder="Email"
+              <FormControl  placeholder="Email"
                            type="text"
                            value={this.state.email}
                            onChange={this.handleEmailChange}
@@ -77,7 +77,7 @@ class SignUp extends React.Component {
 
           <FormGroup>
             <Col  smOffset={4} sm={4} lgOffset={5} lg={2}>
-              <Button id="przycisk" bsStyle="success" type="submit"  block  center-block>
+              <Button id="przycisk" bsStyle="primary" type="submit"  block  center-block>
                 Zaloguj
               </Button>
             </Col>

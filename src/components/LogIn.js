@@ -49,9 +49,9 @@ class LogIn extends React.Component {
         <p className="main-info">Szukasz najlepszych ofert w sieci ? <br />Świetnie trafiłeś - wystarczy tylko się zalogować!</p>
         </div>
         <p className="okno">Zaloguj się</p>
-        <Form horizontal
+        <Form horizontal className="datalog"
               onSubmit={this.handleSubmit}>
-          <FormGroup controlId="formHorizontalEmail">
+          <FormGroup controlId="formHorizontalEmail" className="text-form">
             <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
               Email
             </Col>
@@ -78,15 +78,15 @@ class LogIn extends React.Component {
             </Col>
           </FormGroup>
 
-          <FormGroup>
-            <Col smOffset={4} sm={4} lgOffset={5} lg={2}>
-              <Checkbox>Zapamiętaj dane do logowania</Checkbox>
+          <FormGroup >
+            <Col className="datalog" smOffset={4} sm={4} lgOffset={5} lg={2}>
+              <Checkbox >Zapamiętaj dane do logowania</Checkbox>
             </Col>
           </FormGroup>
 
           <FormGroup>
             <Col  smOffset={4} sm={4} lgOffset={5} lg={2}>
-              <Button id="button" bsStyle="success" type="submit"  block  center-block>
+              <Button id="button" bsStyle="primary" type="submit"  block  center-block>
                 Zaloguj
               </Button>
             </Col>
