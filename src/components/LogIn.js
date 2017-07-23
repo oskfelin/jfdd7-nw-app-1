@@ -45,7 +45,9 @@ class LogIn extends React.Component {
     render() {
     return (
       <Grid fluid >
-        <p className="main-info">Szukasz najlepszych ofert w sieci ? <br />Świetnie trafiłeś - wystarczy tylko się zalogowąć!</p>
+        <div className="main">
+        <p className="main-info">Szukasz najlepszych ofert w sieci ? <br />Świetnie trafiłeś - wystarczy tylko się zalogować!</p>
+        </div>
         <p className="okno">Zaloguj się</p>
         <Form horizontal
               onSubmit={this.handleSubmit}>

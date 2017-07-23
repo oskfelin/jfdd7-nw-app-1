@@ -41,7 +41,10 @@ class SignUp extends React.Component {
   render() {
     return (
 
-      <Grid fluid className="marcin">
+      <Grid fluid>
+        <div className="main">
+          <p className="main-info">Nie masz jeszcze konta ? <br />Utworz je w 10 sekund!</p>
+        </div>
         <p className="okno">Zarejestruj się</p>
         <Form horizontal className="marcin"
               onSubmit={this.handleSubmit}>
@@ -80,6 +83,7 @@ class SignUp extends React.Component {
             </Col>
           </FormGroup>
         </Form>
+
       </Grid>
 
     )
