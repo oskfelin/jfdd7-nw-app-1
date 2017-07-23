@@ -22,24 +22,35 @@ export default connect(
         shop => shop.products
       ).reduce(
         (total, next) => total.concat(next), []
+      ).filter(
+        product => this.props.productsIds.includes(product.id)
       )
 
       console.log(dataToDisplay)
+
+
+      const attributes = Object.keys(dataToDisplay[0])
+
       return (
         <div>
           <Table>
+            <tbody>
             {
-              dataToDisplay.filter(
-                product => this.props.productsIds.includes(product.id)
-              ).map(
-                product =>
-                  <tbody>
+              attributes.map(
+                attribute => (
                   <tr>
-                    <td>{product.name}</td>
+                    {
+                      dataToDisplay.map(
+                        product => (
+                          <td>{product[attribute]}</td>
+                        )
+                      )
+                    }
                   </tr>
-
-                  </tbody>
-              )}
+                )
+              )
+            }
+            </tbody>
           </Table>
         </div>
       )
