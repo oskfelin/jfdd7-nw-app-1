@@ -37,11 +37,6 @@ class LogIn extends React.Component {
     firebase.auth().signInWithEmailAndPassword(
       this.state.email,
       this.state.password
-    // ).then(
-    //   () => this.setState({ message: 'test' })
-    // ).catch(
-    //   error => this.setState({ message: error.message })
-    // )
     )
   }
 
@@ -49,7 +44,9 @@ class LogIn extends React.Component {
 
     render() {
     return (
-      <Grid fluid>
+      <Grid fluid >
+        <p className="main-info">Szukasz najlepszych ofert w sieci ? <br />Świetnie trafiłeś - wystarczy tylko się zalogowąć!</p>
+        <p className="okno">Zaloguj się</p>
         <Form horizontal
               onSubmit={this.handleSubmit}>
           <FormGroup controlId="formHorizontalEmail">
@@ -87,7 +84,7 @@ class LogIn extends React.Component {
 
           <FormGroup>
             <Col  smOffset={4} sm={4} lgOffset={5} lg={2}>
-              <Button id="przycisk" bsStyle="success" type="submit"  block  center-block>
+              <Button id="button" bsStyle="success" type="submit"  block  center-block>
                 Zaloguj
               </Button>
             </Col>

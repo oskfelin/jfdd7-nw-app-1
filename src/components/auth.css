@@ -1,0 +1,6 @@
+.container-first-page {
+    background-image: url('/images/background-first-page.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 950px;
+}

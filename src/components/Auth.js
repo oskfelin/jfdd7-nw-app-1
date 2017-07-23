@@ -5,19 +5,15 @@ import SignUp from './SignUp'
 import {
   Button,
 } from 'react-bootstrap'
-import {Link} from 'react-router-dom'
+
+import './auth.css'
 
 const Auth = ({ user, children }) => (
   user !== null ?
     children :
-    <div>
+    <div className="container-first-page">
       <LogIn/>
-
-      {/*<Link to="/SignUp" className="login">*/}
-        {/*<Button bsStyle="primary" bsSize="large" >SignUp</Button>*/}
-      {/*</Link>*/}
-
-      {/*<SignUp/>*/}
+      <SignUp/>
     </div>
 )
 
