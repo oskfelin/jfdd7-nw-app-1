@@ -10,7 +10,6 @@ export default connect(
   }),
   dispatch => ({
     toggleCompare: id => dispatch(toggle(id)),
-
   })
 )(
   class ComparePreview extends React.Component {
@@ -35,7 +34,6 @@ export default connect(
                   <tr>
                     <td>{product.name}</td>
                   </tr>
-
                   </tbody>
               )}
           </Table>

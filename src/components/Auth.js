@@ -1,14 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import LogIn from './LogIn'
-// import SignUpForm from './SignUpForm'
+import AuthFormWrapper from './AuthFormWrapper'
+
+import './auth.css'
 
 const Auth = ({ user, children }) => (
   user !== null ?
     children :
-    <div>
-      <LogIn/>
-      {/*<SignUpForm/>*/}
+    <div className="container-first-page">
+      <AuthFormWrapper/>
     </div>
 )
 

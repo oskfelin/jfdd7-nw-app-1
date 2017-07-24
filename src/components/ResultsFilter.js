@@ -10,7 +10,7 @@ import {
 import './ResultsFilter.css'
 import {fetchShops} from '../state/shops'
 import {activateFilter} from '../state/productFilters'
-
+import { updatePrice } from '../state/searchFilters'
 
 import {Range} from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -19,12 +19,13 @@ import 'rc-slider/assets/index.css';
 export default connect(
   state => ({
     shops: state.shops,
-
+    price: state.searchFilters.price,
     activeFilter: state.searchEngine.activeFilterName
   }),
   dispatch => ({
     fetchShops: () => dispatch(fetchShops()),
-    activateFilter: (key) => dispatch(activateFilter(key))
+    activateFilter: (key) => dispatch(activateFilter(key)),
+    updatePrice: (price) => dispatch(updatePrice(price))
   })
 )(
   class ResultFilter extends React.Component {
@@ -103,7 +104,8 @@ export default connect(
 
           <div className="slider">
             <p>Zakres cenowy</p>
-            <Range defaultValue={[20, 80]}/>
+            <p>{this.props.price[0]} - {this.props.price[1]} zł</p>
+            <Range max={1000} value={this.props.price} onChange={this.props.updatePrice}/>
           </div>
         </div>
 
