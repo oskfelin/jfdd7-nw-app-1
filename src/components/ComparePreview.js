@@ -1,7 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {toggle} from '../state/comparedProducts'
-import {Table} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
+
+import { Panel, Grid, Button, Col, Image } from 'react-bootstrap'
 
 export default connect(
   state => ({
@@ -26,22 +28,31 @@ export default connect(
 
       console.log(dataToDisplay)
       return (
-        <div>
-          <Table>
+        <Grid>
+          <Panel>
             {
               dataToDisplay.filter(
                 product => this.props.productsIds.includes(product.id)
               ).map(
                 product =>
-                  <tbody>
-                  <tr>
-                    <td>{product.name}</td>
-                  </tr>
-
-                  </tbody>
+                <Panel style={{
+                  backgroundColor: "black"
+                }}>
+                    <img width={50} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>
+                  <p>{product.name}></p>
+                  <Button className="ButtonCompare" onClick={event => {
+                    this.props.toggleCompare(product.id)
+                    event.preventDefault()
+                  }}>
+                    Porównaj
+                  </Button>
+                  <Button>
+                    <Link to="/comparison">Comparison</Link>
+                  </Button>
+              </Panel>
               )}
-          </Table>
-        </div>
+          </Panel>
+        </Grid>
       )
     }
 
