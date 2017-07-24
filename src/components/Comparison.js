@@ -1,7 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import uniqBy from 'lodash.uniqby'
 import {toggle} from '../state/comparedProducts'
-import {Table} from 'react-bootstrap'
+import {Table, Grid} from 'react-bootstrap'
 
 export default connect(
   state => ({
@@ -18,7 +19,13 @@ export default connect(
     render() {
       const {data} = this.props.shops
 
-      const dataToDisplay = data === null ? [] : data.map(
+      if (data === null) {
+        return <p>Wczytywanie...</p>
+      }
+
+
+
+      const dataToDisplay = data.map(
         shop => shop.products
       ).reduce(
         (total, next) => total.concat(next), []
@@ -26,23 +33,32 @@ export default connect(
         product => this.props.productsIds.includes(product.id)
       )
 
-      console.log(dataToDisplay)
-
+      if (dataToDisplay.length === 0) {
+        return <p>Brak produktów do porównania</p>
+      }
 
       const attributes = Object.keys(dataToDisplay[0])
-
+console.log(dataToDisplay)
       return (
-        <div>
-          <Table>
+        <Grid>
+          <Table striped bordered condensed hover>
             <tbody>
             {
               attributes.map(
+                attribute => ({
+                  name: attribute,
+                  uniqueValues: uniqBy(dataToDisplay, attribute).length
+                })
+              ).sort(
+                (a, b) => a.uniqueValues - b.uniqueValues
+              ).map(
                 attribute => (
-                  <tr>
+                  <tr style={{background: attribute.uniqueValues === 1 ? 'lightgreen' : '#FF5659'}}>
+                    <td>{attribute.name}</td>
                     {
                       dataToDisplay.map(
                         product => (
-                          <td>{product[attribute]}</td>
+                          <td>{product[attribute.name]}</td>
                         )
                       )
                     }
@@ -52,7 +68,7 @@ export default connect(
             }
             </tbody>
           </Table>
-        </div>
+        </Grid>
       )
     }
 
