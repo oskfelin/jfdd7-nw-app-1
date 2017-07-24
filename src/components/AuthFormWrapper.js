@@ -17,16 +17,17 @@ class AuthFormWrapper extends React.Component {
     return (
       <div>
         <div className="background-window">
-        <LogIn/>
-        <div className="main" onClick={() => this.setState({ showSignUp: !this.state.showSignUp })}>
-          <span className="btn-singup">Nie posiadasz konta?</span>
-        </div>
-      </div>
+          <LogIn/>
+          <div className="main" onClick={() => this.setState({showSignUp: !this.state.showSignUp})}>
+            <p className="signup">Nie posiadasz konta?</p>
+          </div>
+
         <CSSTransitionGroup transitionName="example">
-        {
-          this.state.showSignUp === false ? null : <SignUp/>
-        }
+          {
+            this.state.showSignUp === false ? null : <SignUp/>
+          }
         </CSSTransitionGroup>
+        </div>
       </div>
     )
   }
