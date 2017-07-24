@@ -34,7 +34,7 @@ export default connect(
                   product =>
                     <Col xs={3}>
                       <Image
-                        alt="50x50"
+                        width="30%"
                         href=""
                         src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive thumbnail/>
                       <div>{product.name}</div>
