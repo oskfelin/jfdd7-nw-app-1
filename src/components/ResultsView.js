@@ -83,7 +83,7 @@ export default connect(
       ).sort(
         (a, b) => a.price > b.price
       ).filter(
-        item => item.price < this.props.price[1] && item.price > this.props.price[0]
+        item => item.price < this.props.price[1] && item.price2 > this.props.price[0]
       )
 
       const uniqueProducts = uniqBy(allProducts, 'name')
