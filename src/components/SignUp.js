@@ -1,7 +1,7 @@
 import React from 'react'
 import firebase from 'firebase'
-import { connect } from 'react-redux'
-import { syncUser } from '../state/auth'
+import {connect} from 'react-redux'
+import {syncUser} from '../state/auth'
 import {
   Col,
   Form,
@@ -40,50 +40,48 @@ class SignUp extends React.Component {
 
   render() {
     return (
+      <Grid fluid>
 
-      <Grid fluid >
+          <p className="okno">Zarejestruj się</p>
+          <Form horizontal className="datalog"
+                onSubmit={this.handleSubmit}>
+            <FormGroup controlId="formHorizontalEmail" className="text-form">
+              <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
+                <span className="form-desription"> Email</span>
+              </Col>
+              <Col sm={4} lg={2}>
+                <FormControl placeholder="Email"
+                             type="text"
+                             value={this.state.email}
+                             onChange={this.handleEmailChange}
+                />
+              </Col>
+            </FormGroup>
 
-        <p className="okno">Zarejestruj się</p>
-        <Form horizontal className="datalog"
-              onSubmit={this.handleSubmit}>
-          <FormGroup controlId="formHorizontalEmail"  className="text-form">
-            <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
-              <span className="form-desription"> Email</span>
-            </Col>
-            <Col sm={4} lg={2}>
-              <FormControl  placeholder="Email"
-                           type="text"
-                           value={this.state.email}
-                           onChange={this.handleEmailChange}
-              />
-            </Col>
-          </FormGroup>
+            <FormGroup controlId="formHorizontalPassword">
+              <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
+                <span className="form-desription"> Password</span>
+              </Col>
+              <Col sm={4} lg={2}>
+                <FormControl
+                  placeholder="Password"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.handlePasswordChange}
+                />
+              </Col>
+            </FormGroup>
 
-          <FormGroup controlId="formHorizontalPassword">
-            <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
-              <span className="form-desription"> Password</span>
-            </Col>
-            <Col sm={4} lg={2}>
-              <FormControl
-                placeholder="Password"
-                type="password"
-                value={this.state.password}
-                onChange={this.handlePasswordChange}
-              />
-            </Col>
-          </FormGroup>
+            <FormGroup>
+              <Col smOffset={4} sm={4} lgOffset={5} lg={2}>
+                <Button id="przycisk" bsStyle="primary" type="submit" block center-block>
+                  Zaloguj
+                </Button>
+              </Col>
+            </FormGroup>
+          </Form>
 
-          <FormGroup>
-            <Col  smOffset={4} sm={4} lgOffset={5} lg={2}>
-              <Button id="przycisk" bsStyle="primary" type="submit"  block  center-block>
-                Zaloguj
-              </Button>
-            </Col>
-          </FormGroup>
-        </Form>
-
-      </Grid>
-
+        </Grid>
     )
   }
 }
