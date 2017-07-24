@@ -42,7 +42,21 @@ console.log(dataToDisplay)
       return (
         <Grid>
           <Table striped bordered condensed hover>
-            <tbody>
+            {/*<thead>*/}
+            {/*<tr>*/}
+            {/*<td>*/}
+              {/*123*/}
+            {/*</td>*/}
+              {/*<td>*/}
+                {/*<img width={300} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>*/}
+              {/*</td>*/}
+              {/*<td>*/}
+                {/*<img width={300} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>*/}
+              {/*</td>*/}
+            {/*</tr>*/}
+
+            {/*</thead>*/}
+            <tbody >
             {
               attributes.map(
                 attribute => ({
@@ -50,7 +64,7 @@ console.log(dataToDisplay)
                   uniqueValues: uniqBy(dataToDisplay, attribute).length
                 })
               ).sort(
-                (a, b) => a.uniqueValues - b.uniqueValues
+                (a, b) => a.uniqueValues < b.uniqueValues
               ).map(
                 attribute => (
                   <tr style={{background: attribute.uniqueValues === 1 ? 'lightgreen' : '#FF5659'}}>
