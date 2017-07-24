@@ -4,6 +4,7 @@ import ProductPageView from "./ProductPageView"
 import CategoriesMain from './CategoriesMain'
 import ComparePreview from './ComparePreview'
 import Comparison from './Comparison'
+import Menu from './Menu'
 import Home from './Home'
 
 import ResultView from './ResultsView'
@@ -17,6 +18,7 @@ export default class App extends React.Component {
     return (
       <Router>
         <div>
+          <Menu />
           <Home/>
           <ComparePreview/>
           <SearchMain/>

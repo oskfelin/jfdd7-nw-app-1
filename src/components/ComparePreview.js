@@ -22,7 +22,6 @@ export default connect(
       ).reduce(
         (total, next) => total.concat(next), []
       )
-      console.log(dataToDisplay)
       return (
         <Grid>
           <Panel>
