@@ -52,21 +52,22 @@ class LogIn extends React.Component {
         <Form horizontal className="datalog"
               onSubmit={this.handleSubmit}>
           <FormGroup controlId="formHorizontalEmail" className="text-form">
-            <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
-              Email
+            <Col  componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
+              <span className="form-desription"> Email</span>
             </Col>
             <Col sm={4} lg={2}>
               <FormControl placeholder="Email"
                            // type="email"
                            type="text"
                            value={this.state.email}
-                           onChange={this.handleEmailChange}/>
+                           onChange={this.handleEmailChange}
+              />
             </Col>
           </FormGroup>
 
           <FormGroup controlId="formHorizontalPassword">
             <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
-              Password
+              <span className="form-desription"> Password</span>
             </Col>
             <Col sm={4} lg={2}>
               <FormControl
@@ -80,7 +81,7 @@ class LogIn extends React.Component {
 
           <FormGroup >
             <Col className="datalog" smOffset={4} sm={4} lgOffset={5} lg={2}>
-              <Checkbox >Zapamiętaj dane do logowania</Checkbox>
+              <Checkbox ><span className="form-desription">Zapamiętaj dane do logowania</span></Checkbox>
             </Col>
           </FormGroup>
 

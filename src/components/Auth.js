@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import LogIn from './LogIn'
-import SignUp from './SignUp'
+import AuthFormWrapper from './AuthFormWrapper'
 import {
   Button,
 } from 'react-bootstrap'
@@ -12,8 +11,7 @@ const Auth = ({ user, children }) => (
   user !== null ?
     children :
     <div className="container-first-page">
-      <LogIn/>
-      <SignUp/>
+      <AuthFormWrapper/>
     </div>
 )
 
