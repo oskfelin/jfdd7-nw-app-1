@@ -9,6 +9,7 @@ import SearchMain from './SearchMain'
 import Footer from './Footer'
 
 import Comparison from './Comparison'
+import ComparePreview from './ComparePreview'
 export default class App extends React.Component {
 
   render() {
@@ -16,6 +17,7 @@ export default class App extends React.Component {
       <Router>
         <div>
        <Home/>
+          <ComparePreview />
         <SearchMain />
           <Route path="/comparison" component={Comparison}/>
         <Route path="/result-view" component={ResultView}/>
