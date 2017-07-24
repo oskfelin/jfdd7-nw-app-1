@@ -42,14 +42,14 @@ class SignUp extends React.Component {
     return (
       <Grid fluid>
 
-          <p className="okno">Zarejestruj się</p>
+          <p className="main-window">Zarejestruj się</p>
           <Form horizontal className="datalog"
                 onSubmit={this.handleSubmit}>
             <FormGroup controlId="formHorizontalEmail" className="text-form">
-              <Col componentClass={ControlLabel} smOffset={3} sm={1} lgOffset={4} lg={1}>
+              <Col componentClass={ControlLabel} smOffset={2} sm={1} lgOffset={4} lg={1}>
                 <span className="form-desription"> Email</span>
               </Col>
-              <Col sm={4} lg={2}>
+              <Col sm={6} lg={2}>
                 <FormControl placeholder="Email"
                              type="text"
                              value={this.state.email}
