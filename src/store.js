@@ -24,7 +24,7 @@ const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
   applyMiddleware(
     thunk
   ),
-  localstorage(['auth'], { key: 'LogInUser'})
+  localstorage(['auth', 'comparedProducts'], { key: 'LogInUser'})
 ))
 
 store.dispatch(fetchShops())
