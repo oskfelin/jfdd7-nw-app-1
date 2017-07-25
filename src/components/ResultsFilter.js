@@ -3,8 +3,7 @@ import {connect} from 'react-redux'
 import {
   ButtonGroup,
   DropdownButton,
-  MenuItem,
-  Checkbox
+  MenuItem
 } from 'react-bootstrap'
 
 import './ResultsFilter.css'

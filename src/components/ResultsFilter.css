@@ -23,3 +23,10 @@
     background-color: #ffb822;
     background-image: none;
 }
+
+.ResultFilter .btn-default:focus{
+    color: black;
+    text-shadow: none;
+    background-color: #ffb822;
+    background-image: none;
+}
