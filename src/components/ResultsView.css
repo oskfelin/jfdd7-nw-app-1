@@ -4,25 +4,25 @@
 }
 
 
-/*.ButtonCompare.btn-default,*/
-/*.ButtonCompare.btn-default:active,*/
-/*.ButtonCompare.btn-default:focus,*/
-/*.ButtonCompare.btn-default:active:focus{*/
-    /*width: 100%;*/
-    /*text-align: center;*/
-    /*margin-bottom: 2em;*/
-    /*background-image: none;*/
-    /*background-color: #ffca25;*/
-    /*color: black;*/
-    /*text-shadow: none;*/
-/*}*/
-
-.ButtonCompare.btn-default:hover,
-.ButtonCompare.btn-default.active:hover,
-.ButtonCompare.btn-default:active:hover{
-   background-color: #ffb822;
+.ButtonCompare.btn-default,
+.ButtonCompare.btn-default:active,
+.ButtonCompare.btn-default:focus,
+.ButtonCompare.btn-default:active:focus{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
     background-image: none;
+    background-color: #ffca25;
+    color: black;
+    text-shadow: none;
 }
+
+/*.ButtonCompare.btn-default:hover,*/
+/*.ButtonCompare.btn-default.active:hover,*/
+/*.ButtonCompare.btn-default:active:hover{*/
+   /*background-color: #ffb822;*/
+    /*background-image: none;*/
+/*}*/
 
 
 
