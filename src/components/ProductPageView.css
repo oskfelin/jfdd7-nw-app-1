@@ -1,12 +1,14 @@
 .panel {
     text-align: center;
     padding: 10px 0;
+    border: 2px solid #ffb822;
 }
 div.panel.panel-default {
-    background-color: #e8e8e8;
+    background-color: white;
 }
 div.panel.panel-default:hover {
-    background-color: #eee;
+    background-color: white;
+
 }
 .carousel-inner {
     margin-bottom: 20px;
@@ -14,7 +16,7 @@ div.panel.panel-default:hover {
 .oferts {
     text-align: center;
     font-size: 3em;
-    background-color: lightgray;
+    border: 2px solid  #ffb822;
     border-radius: 0.2em;
     color: black;
 

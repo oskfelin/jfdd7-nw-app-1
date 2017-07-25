@@ -6,6 +6,7 @@ import {
   MenuItem
 } from 'react-bootstrap'
 
+
 import './ResultsFilter.css'
 import {fetchShops} from '../state/shops'
 import {activateFilter} from '../state/productFilters'
