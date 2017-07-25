@@ -46,10 +46,10 @@ class SignUp extends React.Component {
                 onSubmit={this.handleSubmit}>
             <FormGroup controlId="formHorizontalEmail" className="text-form">
               <Col componentClass={ControlLabel}  sm={3}>
-                <span className="form-desription"> Email</span>
+                <span className="form-desription">E-mail</span>
               </Col>
               <Col sm={6}>
-                <FormControl placeholder="Email"
+                <FormControl placeholder="email@exmaple.com"
                              type="text"
                              value={this.state.email}
                              onChange={this.handleEmailChange}
@@ -59,11 +59,11 @@ class SignUp extends React.Component {
 
             <FormGroup controlId="formHorizontalPassword">
               <Col componentClass={ControlLabel}  sm={3}>
-                <span className="form-desription"> Password</span>
+                <span className="form-desription">Hasło</span>
               </Col>
               <Col sm={6}>
                 <FormControl
-                  placeholder="Password"
+                  placeholder="Twoje hasło"
                   type="password"
                   value={this.state.password}
                   onChange={this.handlePasswordChange}

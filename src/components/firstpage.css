@@ -4,34 +4,21 @@
     background-repeat: no-repeat;
     min-height: 100vh;
     background-position: center;
-    padding: 10vh 0;
+
 }
 
 .main h1, .main p {
-    /*font-family: 'Anton', sans-serif;*/
     text-align: center;
-}
-
-.main h1 {
-
 }
 
 .main p {
-
-}
-
-.main-info {
-    color: white;
-    font-size: 23px;
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-    text-shadow: 1px 1px black;
+    font-size: 18px;
 }
 
 .main {
     background-color: #ff4a2f;
     max-width: 700px;
-    margin: 15px -15px;
+    margin: 0 -15px 20px -15px;
     padding: 20px;
 }
 
@@ -39,33 +26,23 @@
     font-weight: 800;
     text-align: center;
     font-size: 16px;
-
 }
 
 .datalog {
     color: #566b70;
     font-weight: 800 !important;
     font-size: 16px;
-
 }
 
 .form-desription {
     color: black;
-
 }
 
 .background-window {
-    /*background: #fefcea; !* Old browsers *!*/
-    /*background: -moz-linear-gradient(top, #fefcea 0%, #f1da36 100%); !* FF3.6-15 *!*/
-    /*background: -webkit-linear-gradient(top, #fefcea 0%,#f1da36 100%); !* Chrome10-25,Safari5.1-6 *!*/
-    /*background: linear-gradient(to bottom, #fefcea 0%,#f1da36 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
-
     background: #fff;
-
-
     margin: 0 auto;
     border-radius: 7px;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.75);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75);
 }
 
 .main .signup {
@@ -78,20 +55,15 @@
 }
 
 .main .signup:hover {
-cursor: pointer;
- }
+    cursor: pointer;
+}
 
 .form-group .btns-firstpage {
-    background-color: #ffb822;
+    background-color: #ff4a2f;
     color: black;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
-
-    /*    background-image: -webkit-linear-gradient(top, #ffb822 0%, #ff4a2f 100%);
-        background-image: -o-linear-gradient(top, #ffb822 0%, #ff4a2f 100%);
-        background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb822), to(#ff4a2f));
-        background-image: linear-gradient(to bottom, #ffb822 0%, #ff4a2f 100%);*/
     border: 0;
 }
 
@@ -100,15 +72,9 @@ cursor: pointer;
 .form-group .btns-firstpage:active:focus {
     background-color: #ffa124;
     color: black;
-/*
-    background-image: -webkit-linear-gradient(top, #ffa124 0%, #ff4a2f 100%);
-    background-image: -o-linear-gradient(top, #ffb822 0%, #ff4a2f 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb822), to(#ff4a2f));
-    background-image: linear-gradient(to bottom, #ffb822 0%, #ff4a2f 100%);*/
 }
 
-
-.datalog.form-horizontal .checkbox{
+.datalog.form-horizontal .checkbox {
     padding-top: 0;
 }
 
@@ -116,8 +82,47 @@ cursor: pointer;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 15px;
+    font-weight: 800;
 }
 
 .btn-signup:hover {
     cursor: pointer;
 }
+
+.nowe {
+    display: flex;
+    justify-Content: center;
+    min-Height: 100vh;
+
+}
+
+.nowe2 {
+    display: flex;
+    align-Self: center;
+    direction: inherit;
+    background-color: white;
+    box-shadow: 0px 11px 38px -10px rgba(0, 0, 0, 0.75);
+}
+
+.nowe3 {
+    min-Width: 300px;
+    background: #000;
+    font-Size: 32px;
+    display: flex;
+    justify-Content: center;
+    align-Items: center;
+    text-Align: center;
+    background-image: url('/images/for_you.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
+
+.nowe3 p {
+    align-self: flex-end;
+    font-family: 'Allura', cursive;
+    color: white;
+
+}
+

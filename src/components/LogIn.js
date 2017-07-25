@@ -48,14 +48,15 @@ class LogIn extends React.Component {
           <h1>Szukasz najlepszych ofert w sieci ? </h1>
           <p>Świetnie trafiłeś - wystarczy tylko się zalogować!</p>
         </div>
+
         <Form horizontal className="datalog"
               onSubmit={this.handleSubmit}>
           <FormGroup controlId="formHorizontalEmail" className="text-form">
             <Col componentClass={ControlLabel} sm={3}>
-              <span className="form-desription"> Email</span>
+              <span className="form-desription"> E-mail</span>
             </Col>
             <Col sm={6}>
-              <FormControl placeholder="Email"
+              <FormControl placeholder="email@exmaple.com"
                            type="text"
                            value={this.state.email}
                            onChange={this.handleEmailChange}
@@ -65,11 +66,11 @@ class LogIn extends React.Component {
 
           <FormGroup controlId="formHorizontalPassword">
             <Col componentClass={ControlLabel} sm={3}>
-              <span className="form-desription"> Password</span>
+              <span className="form-desription">Hasło</span>
             </Col>
             <Col sm={6}>
               <FormControl
-                placeholder="Password"
+                placeholder="Twoje hasło"
                 type="password"
                 value={this.state.password}
                 onChange={this.handlePasswordChange}
