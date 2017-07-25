@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import uniqBy from 'lodash.uniqby'
 import {toggle} from '../state/comparedProducts'
-import {Table, Grid, Image} from 'react-bootstrap'
+import {Table, Grid, Image, Button} from 'react-bootstrap'
 import './comparison.css'
 
 export default connect(
@@ -41,7 +41,8 @@ export default connect(
       console.log(dataToDisplay)
       return (
         <Grid>
-          <Table condensed hover>
+
+          <Table condensed hover striped bordered>
 
             <thead>
             <tr>
@@ -59,7 +60,7 @@ export default connect(
                 )}
             </tr>
             </thead>
-
+            <Button className="ShowDifferences">Podświetl różnice</Button>
             <tbody className="tableComparison">
             {
               attributes.map(
@@ -71,8 +72,7 @@ export default connect(
                 (a, b) => a.uniqueValues < b.uniqueValues
               ).map(
                 attribute => (
-                  <tr style={{background: attribute.uniqueValues === 1 ? '#e3ffd4' :
-                    '#ffc0be'}}>
+                  <tr style={{background: attribute.uniqueValues === 1 ? '#e3ffd4': 'white' }}>
                     <td>{attribute.name}</td>
                     {
                       dataToDisplay.map(
