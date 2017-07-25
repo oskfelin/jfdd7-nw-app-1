@@ -2,7 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import uniqBy from 'lodash.uniqby'
 import {toggle} from '../state/comparedProducts'
-import {Table, Grid, Image, Col} from 'react-bootstrap'
+import {Table, Grid, Image} from 'react-bootstrap'
+import './comparison.css'
 
 export default connect(
   state => ({
@@ -44,15 +45,15 @@ export default connect(
 
             <thead>
             <tr>
-              <td> </td>
+              <td></td>
               {
                 dataToDisplay.filter(
                   product => this.props.productsIds.includes(product.id)
                 ).map(
                   product =>
                     <td>
-                      <Image  alt=""
-                           src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive/>
+                      <Image className="productImgComparison" alt=""
+                             src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive/>
 
                     </td>
                 )}
