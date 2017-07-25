@@ -9,6 +9,7 @@
 
 .main h1, .main p {
     text-align: center;
+
 }
 
 .main p {
@@ -16,7 +17,7 @@
 }
 
 .main {
-    background-color: #ff4a2f;
+    background-color: #F78E69;
     max-width: 700px;
     margin: 0 -15px 20px -15px;
     padding: 20px;
@@ -59,7 +60,7 @@
 }
 
 .form-group .btns-firstpage {
-    background-color: #ff4a2f;
+    background-color: #F78E69;
     color: black;
     text-transform: uppercase;
     font-weight: bold;
@@ -70,7 +71,7 @@
 .form-group .btns-firstpage:hover,
 .form-group .btns-firstpage:focus,
 .form-group .btns-firstpage:active:focus {
-    background-color: #ffa124;
+    background-color: #F7EF99;
     color: black;
 }
 
