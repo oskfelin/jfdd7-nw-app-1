@@ -1,28 +1,52 @@
+.container-first-page {
+    background-image: url('/images/background-first-page.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center;
+    padding: 10vh 0;
+}
+
+.main h1, .main p {
+    /*font-family: 'Anton', sans-serif;*/
+    text-align: center;
+}
+
+.main h1 {
+
+}
+
+.main p {
+
+}
+
 .main-info {
     color: white;
-    font-size: 22px;
+    font-size: 23px;
     text-align: center;
     font-family: 'Anton', sans-serif;
+    text-shadow: 1px 1px black;
 }
 
 .main {
-    background-color: #337ab7;
+    background-color: #ff4a2f;
     max-width: 700px;
-    margin: 15px auto;
-    padding: 3px;
-    letter-spacing: 1px;
+    margin: 15px -15px;
+    padding: 20px;
 }
 
 .text-form {
     font-weight: 800;
     text-align: center;
     font-size: 16px;
+
 }
 
 .datalog {
-    color: #337ab7;
+    color: #566b70;
     font-weight: 800 !important;
     font-size: 16px;
+
 }
 
 .form-desription {
@@ -31,16 +55,69 @@
 }
 
 .background-window {
-    background: -moz-linear-gradient(-45deg, rgba(254,255,255,1) 0%, rgba(221,241,249,1) 35%, rgba(160,216,239,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, rgba(254,255,255,1) 0%,rgba(221,241,249,1) 35%,rgba(160,216,239,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, rgba(254,255,255,1) 0%,rgba(221,241,249,1) 35%,rgba(160,216,239,1) 100%);
-    max-width: 560px;
+    /*background: #fefcea; !* Old browsers *!*/
+    /*background: -moz-linear-gradient(top, #fefcea 0%, #f1da36 100%); !* FF3.6-15 *!*/
+    /*background: -webkit-linear-gradient(top, #fefcea 0%,#f1da36 100%); !* Chrome10-25,Safari5.1-6 *!*/
+    /*background: linear-gradient(to bottom, #fefcea 0%,#f1da36 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
+
+    background: #fff;
+
+
     margin: 0 auto;
-    border-radius: 22px;
+    border-radius: 7px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.75);
 }
 
 .main .signup {
     color: white;
     text-align: center;
     margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+.main .signup:hover {
+cursor: pointer;
+ }
+
+.form-group .btns-firstpage {
+    background-color: #ffb822;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    /*    background-image: -webkit-linear-gradient(top, #ffb822 0%, #ff4a2f 100%);
+        background-image: -o-linear-gradient(top, #ffb822 0%, #ff4a2f 100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb822), to(#ff4a2f));
+        background-image: linear-gradient(to bottom, #ffb822 0%, #ff4a2f 100%);*/
+    border: 0;
+}
+
+.form-group .btns-firstpage:hover,
+.form-group .btns-firstpage:focus,
+.form-group .btns-firstpage:active:focus {
+    background-color: #ffa124;
+    color: black;
+/*
+    background-image: -webkit-linear-gradient(top, #ffa124 0%, #ff4a2f 100%);
+    background-image: -o-linear-gradient(top, #ffb822 0%, #ff4a2f 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb822), to(#ff4a2f));
+    background-image: linear-gradient(to bottom, #ffb822 0%, #ff4a2f 100%);*/
+}
+
+
+.datalog.form-horizontal .checkbox{
+    padding-top: 0;
+}
+
+.btn-signup {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.btn-signup:hover {
+    cursor: pointer;
 }

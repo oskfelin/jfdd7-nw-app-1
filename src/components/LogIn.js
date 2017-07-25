@@ -41,17 +41,17 @@ class LogIn extends React.Component {
   }
 
 
-
-    render() {
+  render() {
     return (
-      <Grid fluid >
+      <Grid fluid>
         <div className="main">
-        <p className="main-info">Szukasz najlepszych ofert w sieci ? <br />Świetnie trafiłeś - wystarczy tylko się zalogować!</p>
+          <h1>Szukasz najlepszych ofert w sieci ? </h1>
+          <p>Świetnie trafiłeś - wystarczy tylko się zalogować!</p>
         </div>
         <Form horizontal className="datalog"
               onSubmit={this.handleSubmit}>
           <FormGroup controlId="formHorizontalEmail" className="text-form">
-            <Col  componentClass={ControlLabel} sm={3} >
+            <Col componentClass={ControlLabel} sm={3}>
               <span className="form-desription"> Email</span>
             </Col>
             <Col sm={6}>
@@ -64,10 +64,10 @@ class LogIn extends React.Component {
           </FormGroup>
 
           <FormGroup controlId="formHorizontalPassword">
-            <Col componentClass={ControlLabel} sm={3} >
+            <Col componentClass={ControlLabel} sm={3}>
               <span className="form-desription"> Password</span>
             </Col>
-            <Col sm={6} >
+            <Col sm={6}>
               <FormControl
                 placeholder="Password"
                 type="password"
@@ -78,14 +78,14 @@ class LogIn extends React.Component {
           </FormGroup>
 
           <FormGroup >
-            <Col className="datalog" smOffset={3} sm={6} >
+            <Col className="datalog" smOffset={3} sm={6}>
               <Checkbox ><span className="form-desription">Zapamiętaj dane do logowania</span></Checkbox>
             </Col>
           </FormGroup>
 
           <FormGroup>
-            <Col  smOffset={4} sm={4} >
-              <Button id="button" bsStyle="primary" type="submit"  block  center-block>
+            <Col smOffset={4} sm={4}>
+              <Button className="btns-firstpage" bsStyle="primary" type="submit" block center-block>
                 Zaloguj
               </Button>
             </Col>

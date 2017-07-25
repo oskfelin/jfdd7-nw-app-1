@@ -10,9 +10,7 @@ import './auth.css'
 const Auth = ({ user, children }) => (
   user !== null ?
     children :
-    <div className="container-first-page">
-      <AuthFormWrapper/>
-    </div>
+    <AuthFormWrapper/>
 )
 
 export default connect(

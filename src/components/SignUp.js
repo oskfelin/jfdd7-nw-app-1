@@ -73,7 +73,7 @@ class SignUp extends React.Component {
 
             <FormGroup>
               <Col smOffset={4} sm={4}>
-                <Button id="przycisk" bsStyle="primary" type="submit" block center-block>
+                <Button className="btns-firstpage" bsStyle="primary" type="submit" block center-block>
                   Zarejestruj
                 </Button>
               </Col>
