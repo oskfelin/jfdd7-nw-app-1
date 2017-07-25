@@ -41,7 +41,7 @@ export default connect(
       console.log(dataToDisplay)
       return (
         <Grid>
-          <Table striped bordered condensed hover>
+          <Table condensed hover>
 
             <thead>
             <tr>
@@ -60,7 +60,7 @@ export default connect(
             </tr>
             </thead>
 
-            <tbody >
+            <tbody className="tableComparison">
             {
               attributes.map(
                 attribute => ({
@@ -71,12 +71,13 @@ export default connect(
                 (a, b) => a.uniqueValues < b.uniqueValues
               ).map(
                 attribute => (
-                  <tr style={{background: attribute.uniqueValues === 1 ? 'lightgreen' : '#FF5659'}}>
+                  <tr style={{background: attribute.uniqueValues === 1 ? '#e3ffd4' :
+                    '#ffc0be'}}>
                     <td>{attribute.name}</td>
                     {
                       dataToDisplay.map(
                         product => (
-                          <td>{product[attribute.name]}</td>
+                          <td className="zupa">{product[attribute.name]}</td>
                         )
                       )
                     }

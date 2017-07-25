@@ -1,5 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap-theme.css'
+
 import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 import {Provider} from 'react-redux'
@@ -9,8 +13,7 @@ import Auth from './components/Auth'
 
 import { syncUser } from './state/auth'
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/css/bootstrap-theme.css'
+
 
 
 firebase.initializeApp({
