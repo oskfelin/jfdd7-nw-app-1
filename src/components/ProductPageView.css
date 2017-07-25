@@ -13,8 +13,9 @@ div.panel.panel-default:hover {
 }
 .oferts {
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2em;
+    font-size: 3em;
+    background-color: lightgray;
+    border-radius: 0.2em;
+    color: black;
+
 }

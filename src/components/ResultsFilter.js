@@ -38,9 +38,6 @@ export default connect(
 
       return (
         <div className="ResultFilter">
-          <Checkbox>
-            Checkbox
-          </Checkbox>
           <ButtonGroup vertical block>
             <DropdownButton title="Producent"
                             id="bg-vertical-dropdown-1"

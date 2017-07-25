@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import AuthFormWrapper from './AuthFormWrapper'
-import {
-  Button,
-} from 'react-bootstrap'
+// import {
+//   Button,
+// } from 'react-bootstrap'
 
 import './auth.css'
 

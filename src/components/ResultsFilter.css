@@ -1,10 +1,25 @@
 
 .ResultFilter{
-    background-color: #555C5C;
     padding: 5em 2em;
+    border: 1px solid #ff4a2f;
     border-radius: 1em;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
     text-align: center;
-    color: white;
+    color: #ff4a2f;
     margin-bottom: 4em;
+}
+
+.ResultFilter .btn-default{
+    background-image: none;
+    background-color: #ffca25;
+    color: black;
+    text-shadow: none;
+    border:
+}
+
+.ResultFilter .btn-default:hover{
+    color: black;
+    text-shadow: none;
+    background-color: #ffb822;
+    background-image: none;
 }

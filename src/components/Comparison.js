@@ -4,6 +4,8 @@ import uniqBy from 'lodash.uniqby'
 import {toggle} from '../state/comparedProducts'
 import {Table, Grid} from 'react-bootstrap'
 
+import './Comparison.css'
+
 export default connect(
   state => ({
     productsIds: state.comparedProducts.productsIds,
@@ -56,7 +58,7 @@ console.log(dataToDisplay)
             {/*</tr>*/}
 
             {/*</thead>*/}
-            <tbody >
+            <tbody className="tbodyCss">
             {
               attributes.map(
                 attribute => ({
