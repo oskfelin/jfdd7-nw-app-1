@@ -4,7 +4,6 @@ import ProductPageView from "./ProductPageView"
 import CategoriesMain from './CategoriesMain'
 import ComparePreview from './ComparePreview'
 import Comparison from './Comparison'
-import MenuWrapper from './MenuWrapper'
 import Home from './Home'
 import {Grid} from 'react-bootstrap'
 
@@ -18,9 +17,8 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
-        <MenuWrapper>
           <Grid>
-            <ComparePreview/>
+            <ComparePreview />
             <Home/>
             <SearchMain/>
             <Route exact path="/" component={CategoriesMain}/>
@@ -30,7 +28,6 @@ export default class App extends React.Component {
             <Route path="/product-page-view/:productName" component={ProductPageView}/>
             <Footer />
           </Grid>
-        </MenuWrapper>
       </Router>
     )
   }
