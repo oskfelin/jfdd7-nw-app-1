@@ -17,12 +17,12 @@
     text-shadow: none;
 }
 
-/*.ButtonCompare.btn-default:hover,*/
-/*.ButtonCompare.btn-default.active:hover,*/
-/*.ButtonCompare.btn-default:active:hover{*/
-   /*background-color: #ffb822;*/
-    /*background-image: none;*/
-/*}*/
+.ButtonCompare.btn-default:hover,
+.ButtonCompare.btn-default.active:hover,
+.ButtonCompare.btn-default:active:hover{
+   background-color: #ffb822;
+    background-image: none;
+}
 
 
 
