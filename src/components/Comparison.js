@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import uniqBy from 'lodash.uniqby'
 import {toggle} from '../state/comparedProducts'
-import {Table, Grid} from 'react-bootstrap'
+import {Table, Grid, Image, Col} from 'react-bootstrap'
 
 export default connect(
   state => ({
@@ -24,7 +24,6 @@ export default connect(
       }
 
 
-
       const dataToDisplay = data.map(
         shop => shop.products
       ).reduce(
@@ -38,24 +37,28 @@ export default connect(
       }
 
       const attributes = Object.keys(dataToDisplay[0])
-console.log(dataToDisplay)
+      console.log(dataToDisplay)
       return (
         <Grid>
           <Table striped bordered condensed hover>
-            {/*<thead>*/}
-            {/*<tr>*/}
-            {/*<td>*/}
-              {/*123*/}
-            {/*</td>*/}
-              {/*<td>*/}
-                {/*<img width={300} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>*/}
-              {/*</td>*/}
-              {/*<td>*/}
-                {/*<img width={300} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>*/}
-              {/*</td>*/}
-            {/*</tr>*/}
 
-            {/*</thead>*/}
+            <thead>
+            <tr>
+              <td> </td>
+              {
+                dataToDisplay.filter(
+                  product => this.props.productsIds.includes(product.id)
+                ).map(
+                  product =>
+                    <td>
+                      <Image  alt=""
+                           src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive/>
+
+                    </td>
+                )}
+            </tr>
+            </thead>
+
             <tbody >
             {
               attributes.map(
