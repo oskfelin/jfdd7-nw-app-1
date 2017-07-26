@@ -15,12 +15,14 @@ import { updatePrice } from '../state/searchFilters'
 import {Range} from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
+import filterNames from '../_utils/filterNames'
 
 export default connect(
   state => ({
     shops: state.shops,
     price: state.searchFilters.price,
-    activeFilter: state.searchEngine.activeFilterName
+    activeFilter: state.searchEngine.activeFilterName,
+    activeFilterNames: state.productFilters.activeFilterNames,
   }),
   dispatch => ({
     fetchShops: () => dispatch(fetchShops()),
@@ -36,54 +38,89 @@ export default connect(
 
     render() {
 
+      const selectedNameFilter = this.props.activeFilterNames.find(
+        name => filterNames[name] !== undefined && name.indexOf('name') === 0
+      )
+
+      const selectedShopNameFilter = this.props.activeFilterNames.find(
+        shop => filterNames[shop] !== undefined && shop.indexOf('shopName') === 0
+      )
+
+      const selectedCameraFilter = this.props.activeFilterNames.find(
+        camera => filterNames[camera] !== undefined && camera.indexOf('camera') === 0
+      )
+
+      const selectedSDslotFilter = this.props.activeFilterNames.find(
+        slot => filterNames[slot] !== undefined && slot.indexOf('slot') === 0
+      )
+
+
       return (
         <div className="ResultFilter">
 
           <ButtonGroup vertical block>
-            <DropdownButton title="Producent"
+            <DropdownButton title={selectedNameFilter ? filterNames[selectedNameFilter] : 'Producent'}
                             id="bg-vertical-dropdown-1"
                             onSelect={key => this.props.activateFilter(key)}>
 
-              <MenuItem eventKey="name_xiaomi">Xiaomi</MenuItem>
-              <MenuItem eventKey="name_lenovo">Lenovo</MenuItem>
-              <MenuItem eventKey="name_htc">HTC</MenuItem>
-              <MenuItem eventKey="name_iphone">Iphone</MenuItem>
-              <MenuItem eventKey="name_lg">LG</MenuItem>
-              <MenuItem eventKey="name_samsung">Samsung</MenuItem>
-              <MenuItem eventKey="name_huawei">Huawei</MenuItem>
+              {
+                Object.entries(filterNames).filter(
+                  ([key]) => key.indexOf('name') === 0
+                ).map(
+                  ([key, value]) => (
+                    <MenuItem eventKey={key}>{value}</MenuItem>
+                  )
+                )
+              }
             </DropdownButton>
 
-            <DropdownButton title="Sklep"
+            <DropdownButton title={selectedShopNameFilter ? filterNames[selectedShopNameFilter] : 'Sklep'}
                             id="bg-vertical-dropdown-2"
                             onSelect={key => this.props.activateFilter(key)} >
-              <MenuItem eventKey="shopName_Biedronka">Biedronka</MenuItem>
-              <MenuItem eventKey="shopName_uMarcina">uMarcina</MenuItem>
-              <MenuItem eventKey="shopName_Zabka">Żabka</MenuItem>
-              <MenuItem eventKey="shopName_Malpka">Małpka</MenuItem>
-              <MenuItem eventKey="shopName_uJarka">uJarka</MenuItem>
-              <MenuItem eventKey="shopName_uOskara">uOskar</MenuItem>
+              {
+                Object.entries(filterNames).filter(
+                  ([key]) => key.indexOf('shopName') === 0
+                ).map(
+                  ([key, value]) => (
+                    <MenuItem eventKey={key}>{value}</MenuItem>
+                  )
+                )
+              }
 
             </DropdownButton>
 
 
 
-            <DropdownButton title="Aparat"
+            <DropdownButton title={selectedCameraFilter ? filterNames[selectedCameraFilter] : 'Aparat'}
                             id="bg-vertical-dropdown-3"
                             onSelect={key => this.props.activateFilter(key)} >
-              <MenuItem eventKey="camera_3p2">3.2 mpx</MenuItem>
-              <MenuItem eventKey="camera_4">4 mpx</MenuItem>
-              <MenuItem eventKey="camera_6">6 mpx</MenuItem>
-              <MenuItem eventKey="camera_6p4">6.4 mpx</MenuItem>
-              <MenuItem eventKey="camera_12">12 mpx</MenuItem>
-              <MenuItem eventKey="camera_24">24 mpx</MenuItem>
+              {
+                Object.entries(filterNames).filter(
+                  ([key]) => key.indexOf('camera') === 0
+                ).map(
+                  ([key, value]) => (
+                    <MenuItem eventKey={key}>{value}</MenuItem>
+                  )
+                )
+              }
+
             </DropdownButton>
 
 
-            <DropdownButton title="Dodatkowa karta pamięci"
+            <DropdownButton title={selectedSDslotFilter ? filterNames[selectedSDslotFilter] : 'Dodatkowa karta pamięci'}
                             id="bg-vertical-dropdown-4"
                             onSelect={key => this.props.activateFilter(key)}>
-              <MenuItem eventKey="slot_sd">Tak</MenuItem>
-              <MenuItem eventKey="no_slot">Nie</MenuItem>
+              {
+                Object.entries(filterNames).filter(
+                  ([key]) => key.indexOf('slot') === 0
+                ).map(
+                  ([key, value]) => (
+                    <MenuItem eventKey={key}>{value}</MenuItem>
+                  )
+                )
+              }
+
+
             </DropdownButton>
 
 

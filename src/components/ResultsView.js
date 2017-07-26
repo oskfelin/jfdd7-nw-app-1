@@ -55,8 +55,8 @@ export default connect(
         camera_12: product => product.camera === 12,
         camera_24: product => product.camera === 24,
 
-        slot_sd: product => product.slotSD === "Tak",
-        no_slot: product => product.slotSD === "Nie",
+        slot_yes: product => product.slotSD === "Tak",
+        slot_no: product => product.slotSD === "Nie",
 
         size_3p9: product => product.screenSize === 3.9,
         size_4p2: product => product.screenSize === 4.2,
