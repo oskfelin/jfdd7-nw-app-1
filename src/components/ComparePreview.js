@@ -1,8 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {Grid, Col, Panel, Button, Image} from 'react-bootstrap'
+import {slide as Menu} from 'react-burger-menu'
+import {Grid, Button, Image} from 'react-bootstrap'
 import {toggle} from '../state/comparedProducts'
+import './ComparePreview.css'
+
 
 export default connect(
   state => ({
@@ -23,35 +26,37 @@ export default connect(
         (total, next) => total.concat(next), []
       )
       return (
-        <Grid>
-          <Panel>
-            <Panel>
-              {
-                dataToDisplay.filter(
-                  product => this.props.productsIds.includes(product.id)
-                ).map(
-                  product =>
-                    <Col xs={3}>
-                      <Image
-                        width="30%"
-                        href=""
-                        src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive thumbnail/>
+        <div>
+          <Menu noOverlay right width={ '20%' } customBurgerIcon={<span>ZUPA</span>}>
+            {
+              dataToDisplay.filter(
+                product => this.props.productsIds.includes(product.id)
+              ).map(
+                product =>
+                  <div key="product.id">
+                    <Grid fluid>
+                      <Link to={'/product-page-view/' + product.name}>
+                        <Image
+                          width="100"
+                          src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive
+                          thumbnail/>
+                      </Link>
                       <div>{product.name}</div>
                       <Button bsSize="xsmall"
                               onClick={event => {
-                        this.props.toggleCompare(product.id)
-                        event.preventDefault()
-                      }}>
-                        Nie porównuj
+                                this.props.toggleCompare(product.id)
+                                event.preventDefault()
+                              }}>
+                        Usuń z porównania
                       </Button>
-                    </Col>
-                )}
-            </Panel>
-            <Button bsSize="xsmall">
-              <Link to="/comparison">Przejdź do porównywarki</Link>
-            </Button>
-          </Panel>
-        </Grid>
+                    </Grid>
+                    <Button bsSize="xsmall">
+                      <Link to="/comparison">Przejdź do porównywarki</Link>
+                    </Button>
+                  </div>
+              )}
+          </Menu>
+        </div>
       )
     }
   }
