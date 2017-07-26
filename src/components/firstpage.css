@@ -1,13 +1,5 @@
-.container-first-page {
-    background-image: url('/images/background-first-page.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    background-position: center;
-
-}
-
-.main h1, .main p {
+.main-window {
+    padding: 20px 0;
     text-align: center;
 
 }
