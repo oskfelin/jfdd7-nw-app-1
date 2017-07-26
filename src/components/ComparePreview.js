@@ -26,15 +26,14 @@ export default connect(
         (total, next) => total.concat(next), []
       )
       return (
-        <div>
-          <Menu noOverlay right width={ '20%' } customBurgerIcon={<span>ZUPA</span>}>
+        <div id="outer-container">
+          <Menu pageWrapId={ "page-wrap" }  outerContainerId={ "outer-container" } right  customBurgerIcon={<Button>Dodane do porównania</Button>}>
             {
               dataToDisplay.filter(
                 product => this.props.productsIds.includes(product.id)
               ).map(
                 product =>
                   <div key="product.id">
-                    <Grid fluid>
                       <Link to={'/product-page-view/' + product.name}>
                         <Image
                           width="100"
@@ -49,13 +48,16 @@ export default connect(
                               }}>
                         Usuń z porównania
                       </Button>
-                    </Grid>
-                    <Button bsSize="xsmall">
-                      <Link to="/comparison">Przejdź do porównywarki</Link>
-                    </Button>
+
                   </div>
               )}
+            <Button bsSize="xsmall">
+              <Link to="/comparison">Przejdź do porównywarki</Link>
+            </Button>
           </Menu>
+          <main id="page-wrap">
+            {this.props.children}
+          </main>
         </div>
       )
     }
