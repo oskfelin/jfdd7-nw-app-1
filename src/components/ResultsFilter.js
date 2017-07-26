@@ -10,7 +10,7 @@ import {
 import './ResultsFilter.css'
 import {fetchShops} from '../state/shops'
 import {activateFilter} from '../state/productFilters'
-import { updatePrice } from '../state/searchFilters'
+import { updatePrice } from '../state/sliderPrice'
 
 import {Range} from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -20,7 +20,7 @@ import filterNames from '../_utils/filterNames'
 export default connect(
   state => ({
     shops: state.shops,
-    price: state.searchFilters.price,
+    price: state.sliderPrice.price,
     activeFilter: state.searchEngine.activeFilterName,
     activeFilterNames: state.productFilters.activeFilterNames,
   }),
@@ -138,8 +138,8 @@ export default connect(
           </ButtonGroup>
 
           <div className="slider">
-            <p>Zakres cenowy</p>
-            <p>{this.props.price[0]} - {this.props.price[1]} zł</p>
+            <span>Zakres cenowy</span>
+            <p className="slider-price">{this.props.price[0]} - {this.props.price[1]} zł</p>
             <Range max={1000} value={this.props.price} onChange={this.props.updatePrice}/>
           </div>
         </div>

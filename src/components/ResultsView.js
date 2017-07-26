@@ -19,7 +19,7 @@ export default connect(
     searchPhrase: state.searchEngine.searchPhrase,
     activeFilter: state.searchEngine.activeFilterName,
     activeFilterNames: state.productFilters.activeFilterNames,
-    price: state.searchFilters.price,
+    price: state.sliderPrice.price,
   }),
   dispatch => ({
     toggleCompare: id => dispatch(toggle(id)),
