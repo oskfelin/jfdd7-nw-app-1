@@ -32,6 +32,7 @@
 }
 
 .Result .ResultItem {
+    background-color: white;
     margin:0 0 4em 0;
     border: 1px solid #ff4a2f;
     border-radius: 1em;
