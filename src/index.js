@@ -14,6 +14,7 @@ import Auth from './components/Auth'
 import { syncUser } from './state/auth'
 
 
+import 'bootstrap/dist/css/bootstrap.css'
 
 
 firebase.initializeApp({
