@@ -37,8 +37,9 @@ export default connect(
     render() {
 
       return (
-        <div className="ResultFilter">
 
+        <div className="ResultFilter">
+          <span> Wybierz opcję filtrowania: </span>
           <ButtonGroup vertical block>
             <DropdownButton title="Producent"
                             id="bg-vertical-dropdown-1"
