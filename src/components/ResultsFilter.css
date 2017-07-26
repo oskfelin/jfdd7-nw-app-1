@@ -1,7 +1,6 @@
-
 .ResultFilter{
-    padding: 5em 2em;
-    border: 1px solid #ff4a2f;
+    background-color: white;
+    padding: 3em 2em 2em 2em;
     border-radius: 1em;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
     text-align: center;
@@ -9,9 +8,17 @@
     margin-bottom: 4em;
 }
 
+.ResultFilter .ButtonGroup{
+    margin-top: 1em;
+}
+
+.FilterText{
+    color: black;
+    margin: 1em;
+}
+
 .ResultFilter .btn-default{
     background-image: none;
-    background-color: #ffca25;
     color: black;
     text-shadow: none;
 }
@@ -19,13 +26,13 @@
 .ResultFilter .btn-default:hover{
     color: black;
     text-shadow: none;
-    background-color: #ffb822;
+    background-color: lightgray;
     background-image: none;
 }
 
 .ResultFilter .btn-default:focus{
     color: black;
     text-shadow: none;
-    background-color: #ffb822;
+    background-color: rgba(89, 89, 126, 0.8);
     background-image: none;
 }

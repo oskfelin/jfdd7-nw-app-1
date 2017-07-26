@@ -7,8 +7,8 @@
 }
 .category{
     position: relative;
-    max-height: 350px;
-    max-width: 350px;
+    max-height: 500px;
+    max-width: 500px;
     margin: 10px;
     cursor: pointer;
 }
@@ -21,7 +21,6 @@
 
     }
 .category > img {
-    height: 220px;
     position: relative;
 }
 
