@@ -27,37 +27,36 @@ export default connect(
       )
       return (
         <div>
+          <Menu noOverlay right width={ '20%' } customBurgerIcon={<span>ZUPA</span>}>
             {
               dataToDisplay.filter(
                 product => this.props.productsIds.includes(product.id)
               ).map(
                 product =>
-                  <div>
-                    <Menu noOverlay right>
-                      <Grid fluid>
-                        <Link to={'/product-page-view/' + product.name}>
-                          <Image
-                            width="100"
-                            src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive
-                            thumbnail/>
-                        </Link>
-                        <div>{product.name}</div>
-                        <Button bsSize="xsmall"
-                                onClick={event => {
-                                  this.props.toggleCompare(product.id)
-                                  event.preventDefault()
-                                }}>
-                          Usuń z porównania
-                        </Button>
-                      <Button bsSize="xsmall">
-                        <Link to="/comparison">Przejdź do porównywarki</Link>
+                  <div key="product.id">
+                    <Grid fluid>
+                      <Link to={'/product-page-view/' + product.name}>
+                        <Image
+                          width="100"
+                          src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive
+                          thumbnail/>
+                      </Link>
+                      <div>{product.name}</div>
+                      <Button bsSize="xsmall"
+                              onClick={event => {
+                                this.props.toggleCompare(product.id)
+                                event.preventDefault()
+                              }}>
+                        Usuń z porównania
                       </Button>
-                      </Grid>
-                    </Menu>
-                    <div id="button">Produkty do porównania</div>
+                    </Grid>
+                    <Button bsSize="xsmall">
+                      <Link to="/comparison">Przejdź do porównywarki</Link>
+                    </Button>
                   </div>
               )}
-          </div>
+          </Menu>
+        </div>
       )
     }
   }
