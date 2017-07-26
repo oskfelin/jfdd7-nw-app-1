@@ -1,20 +1,23 @@
 .panel {
     text-align: center;
     padding: 10px 0;
+    border: 2px solid #ffb822;
 }
 div.panel.panel-default {
-    background-color: #e8e8e8;
+    background-color: white;
 }
 div.panel.panel-default:hover {
-    background-color: #eee;
+    background-color: white;
+
 }
 .carousel-inner {
     margin-bottom: 20px;
 }
 .oferts {
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2em;
+    font-size: 3em;
+    border: 2px solid  #ffb822;
+    border-radius: 0.2em;
+    color: black;
+
 }
