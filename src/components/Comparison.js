@@ -4,11 +4,13 @@ import uniqBy from 'lodash.uniqby'
 import {toggle} from '../state/comparedProducts'
 import {Table, Grid, Image, Button} from 'react-bootstrap'
 import './comparison.css'
+import comparisonLegend from './comparisonLegend'
 
 export default connect(
   state => ({
     productsIds: state.comparedProducts.productsIds,
     shops: state.shops
+
   }),
   dispatch => ({
     toggleCompare: id => dispatch(toggle(id)),
@@ -44,7 +46,7 @@ export default connect(
 
           <Table condensed hover striped bordered>
 
-            <thead>
+            <thead className="tableComparisonHead">
             <tr>
               <td></td>
               {
@@ -73,11 +75,11 @@ export default connect(
               ).map(
                 attribute => (
                   <tr style={{background: attribute.uniqueValues === 1 ? 'white': '#fdffb5' }}>
-                    <td>{attribute.name}</td>
+                    <td>{comparisonLegend[attribute.name]}</td>
                     {
                       dataToDisplay.map(
                         product => (
-                          <td className="zupa">{product[attribute.name]}</td>
+                          <td>{product[attribute.name]}</td>
                         )
                       )
                     }
