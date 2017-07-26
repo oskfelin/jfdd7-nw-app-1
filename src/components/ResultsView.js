@@ -58,12 +58,9 @@ export default connect(
         slot_yes: product => product.slotSD === "Tak",
         slot_no: product => product.slotSD === "Nie",
 
-        size_3p9: product => product.screenSize === 3.9,
         size_4p2: product => product.screenSize === 4.2,
-        size_4p5: product => product.screenSize === 4.5,
         size_4p8: product => product.screenSize === 4.8,
         size_5p1: product => product.screenSize === 5.1,
-        size_5p2: product => product.screenSize === 5.2,
         size_6: product => product.screenSize === 6
       }
       const allProducts = shops.map(

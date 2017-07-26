@@ -22,5 +22,10 @@ export default {
   camera_24: '24 mpx',
 
   slot_yes: 'Tak',
-  slot_no: 'Nie'
+  slot_no: 'Nie',
+
+  size_4p2: "4.2",
+  size_4p8: "4.8",
+  size_5p1: "5.1",
+  size_6: "6.0"
 }

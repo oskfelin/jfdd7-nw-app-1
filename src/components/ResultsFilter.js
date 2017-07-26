@@ -54,10 +54,13 @@ export default connect(
         slot => filterNames[slot] !== undefined && slot.indexOf('slot') === 0
       )
 
+      const selectedScrnSizeFilter = this.props.activeFilterNames.find(
+        size => filterNames[size] !== undefined && size.indexOf('size') === 0
+      )
+
 
       return (
         <div className="ResultFilter">
-
           <ButtonGroup vertical block>
             <DropdownButton title={selectedNameFilter ? filterNames[selectedNameFilter] : 'Producent'}
                             id="bg-vertical-dropdown-1"
@@ -73,7 +76,6 @@ export default connect(
                 )
               }
             </DropdownButton>
-
             <DropdownButton title={selectedShopNameFilter ? filterNames[selectedShopNameFilter] : 'Sklep'}
                             id="bg-vertical-dropdown-2"
                             onSelect={key => this.props.activateFilter(key)} >
@@ -86,11 +88,7 @@ export default connect(
                   )
                 )
               }
-
             </DropdownButton>
-
-
-
             <DropdownButton title={selectedCameraFilter ? filterNames[selectedCameraFilter] : 'Aparat'}
                             id="bg-vertical-dropdown-3"
                             onSelect={key => this.props.activateFilter(key)} >
@@ -103,10 +101,7 @@ export default connect(
                   )
                 )
               }
-
             </DropdownButton>
-
-
             <DropdownButton title={selectedSDslotFilter ? filterNames[selectedSDslotFilter] : 'Dodatkowa karta pamięci'}
                             id="bg-vertical-dropdown-4"
                             onSelect={key => this.props.activateFilter(key)}>
@@ -119,21 +114,22 @@ export default connect(
                   )
                 )
               }
-
-
             </DropdownButton>
 
 
 
-            <DropdownButton title="Przekątna ekranu (cale)" id="bg-vertical-dropdown-5"
+            <DropdownButton title={selectedScrnSizeFilter ? filterNames[selectedScrnSizeFilter] : 'Przekątna ekranu (cale)'}
+                            id="bg-vertical-dropdown-5"
                             onSelect={key => this.props.activateFilter(key)}>
-              <MenuItem eventKey="size_3p9">3.9</MenuItem>
-              <MenuItem eventKey="size_4p2">4.2</MenuItem>
-              <MenuItem eventKey="size_4p5">4.5</MenuItem>
-              <MenuItem eventKey="size_4p8">4.8</MenuItem>
-              <MenuItem eventKey="size_5p1">5.1</MenuItem>
-              <MenuItem eventKey="size_5p2">5.2</MenuItem>
-              <MenuItem eventKey="size_6">6</MenuItem>
+              {
+                Object.entries(filterNames).filter(
+                  ([key]) => key.indexOf('size') === 0
+                ).map(
+                  ([key, value]) => (
+                    <MenuItem eventKey={key}>{value}</MenuItem>
+                  )
+                )
+              }
             </DropdownButton>
           </ButtonGroup>
 
