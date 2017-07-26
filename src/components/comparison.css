@@ -1,5 +1,6 @@
 .productImgComparison{
 margin: 0 auto;
+
 }
 .tableComparison{
     padding: 20px;
@@ -16,4 +17,6 @@ margin: 0 auto;
     font-weight: bolder;
 
 }
-
+.tableComparisonHead>tr>td{
+background-color: white;
+}
