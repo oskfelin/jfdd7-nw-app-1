@@ -17,7 +17,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
-          <Grid>
+          <Grid fluid>
             <ComparePreview />
             <Home/>
             <SearchMain/>

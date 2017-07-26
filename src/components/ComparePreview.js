@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {slide as Menu} from 'react-burger-menu'
-import {Grid, Col, Panel, Button, Image} from 'react-bootstrap'
+import {Grid, Button, Image} from 'react-bootstrap'
 import {toggle} from '../state/comparedProducts'
 import './ComparePreview.css'
 
@@ -26,40 +26,38 @@ export default connect(
         (total, next) => total.concat(next), []
       )
       return (
-        <Grid>
-          <div>
+        <div>
             {
               dataToDisplay.filter(
                 product => this.props.productsIds.includes(product.id)
               ).map(
                 product =>
                   <div>
-                    <Menu right width={ '20%' }>
-                      <div>
+                    <Menu noOverlay right>
+                      <Grid fluid>
                         <Link to={'/product-page-view/' + product.name}>
                           <Image
                             width="100"
                             src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive
                             thumbnail/>
                         </Link>
-                          <div>{product.name}</div>
-                          <Button bsSize="xsmall"
-                                  onClick={event => {
-                                    this.props.toggleCompare(product.id)
-                                    event.preventDefault()
-                                  }}>
-                            Nie porównuj
-                          </Button>
-                      </div>
+                        <div>{product.name}</div>
+                        <Button bsSize="xsmall"
+                                onClick={event => {
+                                  this.props.toggleCompare(product.id)
+                                  event.preventDefault()
+                                }}>
+                          Usuń z porównania
+                        </Button>
                       <Button bsSize="xsmall">
                         <Link to="/comparison">Przejdź do porównywarki</Link>
                       </Button>
+                      </Grid>
                     </Menu>
                     <div id="button">Produkty do porównania</div>
                   </div>
               )}
           </div>
-        </Grid>
       )
     }
   }
