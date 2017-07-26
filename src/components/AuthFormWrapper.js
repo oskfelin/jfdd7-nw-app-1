@@ -1,6 +1,7 @@
 import React from 'react'
 import LogIn from './LogIn'
 import SignUp from './SignUp'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 import CSSTransitionGroup from 'react-addons-css-transition-group'
 import './firstpage.css'
@@ -15,18 +16,24 @@ class AuthFormWrapper extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="background-window">
-        <LogIn/>
-        <div className="main" onClick={() => this.setState({ showSignUp: !this.state.showSignUp })}>
-          <span className="btn-singup">Nie posiadasz konta?</span>
+      <div className="nowe">
+        <div className="nowe2">
+          <div className="nowe3">
+            <p>Zrób sobie prezent...</p>
+          </div>
+          <div>
+            <LogIn/>
+            <div onClick={() => this.setState({showSignUp: !this.state.showSignUp})}>
+              <p className="btn-signup">Nie posiadasz konta? - kliknij tutaj</p>
+            </div>
+            <CSSTransitionGroup transitionName="example">
+              {
+                this.state.showSignUp === false ? null : <SignUp/>
+              }
+            </CSSTransitionGroup>
+
+          </div>
         </div>
-      </div>
-        <CSSTransitionGroup transitionName="example">
-        {
-          this.state.showSignUp === false ? null : <SignUp/>
-        }
-        </CSSTransitionGroup>
       </div>
     )
   }
