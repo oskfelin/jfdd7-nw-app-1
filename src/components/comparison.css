@@ -1,0 +1,19 @@
+.productImgComparison{
+margin: 0 auto;
+}
+.tableComparison{
+    padding: 20px;
+}
+.table-condensed > tbody > tr > td.zupa{
+    text-align: center;
+}
+
+
+.table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > th, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {
+    font-size: 20px;
+    padding: 20px;
+    text-align: right;
+    font-weight: bolder;
+
+}
+
