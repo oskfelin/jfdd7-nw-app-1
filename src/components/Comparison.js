@@ -72,7 +72,7 @@ export default connect(
                 (a, b) => a.uniqueValues < b.uniqueValues
               ).map(
                 attribute => (
-                  <tr style={{background: attribute.uniqueValues === 1 ? '#e3ffd4': 'white' }}>
+                  <tr style={{background: attribute.uniqueValues === 1 ? 'white': '#fdffb5' }}>
                     <td>{attribute.name}</td>
                     {
                       dataToDisplay.map(
