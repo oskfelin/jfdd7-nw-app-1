@@ -30,13 +30,12 @@
 .Result .ResultItem {
     background-color: white;
     margin:0 0 4em 0;
-    border: 1px solid #ff4a2f;
     border-radius: 1em;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
 }
 
 .ResultItem:hover {
-    border-color: #e72907;
+    border: #e72907;
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 5px 9px rgba(0,0,0,0.5);

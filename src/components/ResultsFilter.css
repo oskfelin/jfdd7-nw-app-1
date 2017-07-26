@@ -1,8 +1,6 @@
-
 .ResultFilter{
     background-color: white;
     padding: 3em 2em 2em 2em;
-    border: 1px solid #ff4a2f;
     border-radius: 1em;
     box-shadow: 0 1px 5px rgba(0,0,0,0.2);
     text-align: center;
@@ -10,9 +8,13 @@
     margin-bottom: 4em;
 }
 
+.FilterText{
+    color: black;
+    margin-bottom: 20px;
+}
+
 .ResultFilter .btn-default{
     background-image: none;
-    background-color: #ffca25;
     color: black;
     text-shadow: none;
 }
