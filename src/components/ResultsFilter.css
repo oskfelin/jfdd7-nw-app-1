@@ -29,3 +29,15 @@
     background-color: #ffb822;
     background-image: none;
 }
+
+
+#header-filter-result {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.filter-list {
+    color: black;
+    line-height: 2;
+    font-weight: 800;
+}
