@@ -10,6 +10,7 @@ import {
 import './ResultsFilter.css'
 import {fetchShops} from '../state/shops'
 import {activateFilter} from '../state/productFilters'
+import {resetFilter} from '../state/productFilters'
 import { updatePrice } from '../state/sliderPrice'
 
 import {Range} from 'rc-slider';
@@ -27,7 +28,8 @@ export default connect(
   dispatch => ({
     fetchShops: () => dispatch(fetchShops()),
     activateFilter: (key) => dispatch(activateFilter(key)),
-    updatePrice: (price) => dispatch(updatePrice(price))
+    updatePrice: (price) => dispatch(updatePrice(price)),
+    resetFilter: () => dispatch(resetFilter())
   })
 )(
   class ResultFilter extends React.Component {
@@ -136,6 +138,12 @@ export default connect(
               }
             </DropdownButton>
           </ButtonGroup>
+
+          <button
+            onClick={this.props.resetFilter}
+          >
+          reset
+          </button>
 
           <div className="slider">
             <span>Zakres cenowy</span>
