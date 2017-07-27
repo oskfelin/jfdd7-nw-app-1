@@ -67,7 +67,10 @@ export default connect(
       ).reduce(
         (total, next) => total.concat(next), []
       ).filter(
-        product => product.name.includes(this.props.searchPhrase)
+        /* wyszukiwanie po pierwszych znakach
+       product => product.name.toLowerCase().indexOf(this.props.searchPhrase.toLowerCase()) === 0
+      ).filter(*/
+        product => product.name.toLowerCase().includes(this.props.searchPhrase.toLowerCase())
       ).filter(
         product => product.category === this.props.activeFilter
       ).filter(
@@ -81,6 +84,7 @@ export default connect(
       ).filter(
         item => item.price < this.props.price[1] && item.price > this.props.price[0]
       )
+
 
       const uniqueProducts = uniqBy(allProducts, 'name')
 

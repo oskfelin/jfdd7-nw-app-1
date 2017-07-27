@@ -53,10 +53,10 @@ export default connect(
             onSelect={this.props.activateFilter}
           >
             <MenuItem eventKey="Telefony">Telefony</MenuItem>
-            <MenuItem eventKey="smartphones2">Samochody</MenuItem>
-            <MenuItem eventKey="smartphones3">Moda</MenuItem>
-            <MenuItem eventKey="smartphones4">Sport</MenuItem>
-            <MenuItem eventKey="smartphones5">Uroda</MenuItem>
+            <MenuItem eventKey="Samochody">Samochody</MenuItem>
+            <MenuItem eventKey="Moda">Moda</MenuItem>
+            <MenuItem eventKey="Sport">Sport</MenuItem>
+            <MenuItem eventKey="Uroda">Uroda</MenuItem>
           </DropdownButton>
           <InputGroup.Button>
             <Link to="/result-view">
