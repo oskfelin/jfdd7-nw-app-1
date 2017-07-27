@@ -33,7 +33,7 @@ export default connect(
   render() {
     return (
 <Grid className="searchbar">
-      <Col mdOffset={2} md={8} >
+      <Col mdOffset={2}  md={8} >
       <FormGroup>
         <InputGroup >
           <FormControl
@@ -71,4 +71,3 @@ export default connect(
   }
 }
 )
-

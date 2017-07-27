@@ -22,8 +22,7 @@ export default connect(
     price: state.sliderPrice.price,
   }),
   dispatch => ({
-    toggleCompare: id => dispatch(toggle(id)),
-
+    toggleCompare: id => dispatch(toggle(id))
   })
 )(
   class ResultsView extends React.Component {

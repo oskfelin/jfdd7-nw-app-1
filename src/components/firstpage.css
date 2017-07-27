@@ -1,10 +1,21 @@
+.main-window {
+    padding: 20px 0;
+    text-align: center;
+
+
+}
 
 .main p {
     font-size: 18px;
+    text-align: center;
+    color: white;
+}
+.main h1 {
+    color:white;
 }
 
 .main {
-    background-color: #F78E69;
+    background-color: rgba(89, 89, 126, 0.8);
     max-width: 700px;
     margin: 0 -15px 20px -15px;
     padding: 20px;
@@ -14,10 +25,11 @@
     font-weight: 800;
     text-align: center;
     font-size: 16px;
+    color: white;
 }
 
 .datalog {
-    color: #566b70;
+    color: white;
     font-weight: 800 !important;
     font-size: 16px;
 }
@@ -47,8 +59,8 @@
 }
 
 .form-group .btns-firstpage {
-    background-color: #F78E69;
-    color: black;
+    background-color: rgba(89, 89, 126, 0.8);
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
@@ -58,8 +70,8 @@
 .form-group .btns-firstpage:hover,
 .form-group .btns-firstpage:focus,
 .form-group .btns-firstpage:active:focus {
-    background-color: #F7EF99;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 .datalog.form-horizontal .checkbox {
@@ -89,7 +101,7 @@
     align-Self: center;
     direction: inherit;
     background-color: white;
-    box-shadow: 0px 11px 38px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 11px 38px -10px rgba(0, 0, 0, 0.95);
 }
 
 .left-side {

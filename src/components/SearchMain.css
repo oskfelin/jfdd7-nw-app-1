@@ -1,7 +1,6 @@
-
 .searchbar {
-    background-color: #ff4a2f;
+    background-color: rgba(89, 89, 126, 0.8);
     padding:1em 1em 0;
     border-radius: 1em;
-    margin:0 0 1em 1em;
+    margin:0 auto 1em auto;
 }

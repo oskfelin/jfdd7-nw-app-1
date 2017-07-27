@@ -2,14 +2,15 @@ import React from 'react'
 import {connect} from 'react-redux'
 import uniqBy from 'lodash.uniqby'
 import {toggle} from '../state/comparedProducts'
-import {Table, Grid} from 'react-bootstrap'
-
-import './Comparison.css'
+import {Table, Grid, Image, Button} from 'react-bootstrap'
+import './comparison.css'
+import comparisonLegend from './comparisonLegend'
 
 export default connect(
   state => ({
     productsIds: state.comparedProducts.productsIds,
     shops: state.shops
+
   }),
   dispatch => ({
     toggleCompare: id => dispatch(toggle(id)),
@@ -26,7 +27,6 @@ export default connect(
       }
 
 
-
       const dataToDisplay = data.map(
         shop => shop.products
       ).reduce(
@@ -40,25 +40,30 @@ export default connect(
       }
 
       const attributes = Object.keys(dataToDisplay[0])
-console.log(dataToDisplay)
+      console.log(dataToDisplay)
       return (
         <Grid>
-          <Table striped bordered condensed hover>
-            {/*<thead>*/}
-            {/*<tr>*/}
-            {/*<td>*/}
-              {/*123*/}
-            {/*</td>*/}
-              {/*<td>*/}
-                {/*<img width={300} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>*/}
-              {/*</td>*/}
-              {/*<td>*/}
-                {/*<img width={300} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>*/}
-              {/*</td>*/}
-            {/*</tr>*/}
 
-            {/*</thead>*/}
-            <tbody className="tbodyCss">
+          <Table condensed hover striped bordered>
+
+            <thead className="tableComparisonHead">
+            <tr>
+              <td></td>
+              {
+                dataToDisplay.filter(
+                  product => this.props.productsIds.includes(product.id)
+                ).map(
+                  product =>
+                    <td>
+                      <Image className="productImgComparison" alt=""
+                             src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive/>
+
+                    </td>
+                )}
+            </tr>
+            </thead>
+            <Button className="ShowDifferences">Podświetl różnice</Button>
+            <tbody className="tableComparison">
             {
               attributes.map(
                 attribute => ({
@@ -69,8 +74,8 @@ console.log(dataToDisplay)
                 (a, b) => a.uniqueValues < b.uniqueValues
               ).map(
                 attribute => (
-                  <tr style={{background: attribute.uniqueValues === 1 ? 'lightgreen' : '#FF5659'}}>
-                    <td>{attribute.name}</td>
+                  <tr style={{background: attribute.uniqueValues === 1 ? 'white': '#fdffb5' }}>
+                    <td>{comparisonLegend[attribute.name]}</td>
                     {
                       dataToDisplay.map(
                         product => (
