@@ -1,5 +1,5 @@
-.body{
-    background-color: #555C5C;
+body{
+    padding:0;
 }
 
 .grid{
@@ -7,9 +7,7 @@
 }
 .category{
     position: relative;
-    max-height: 500px;
-    max-width: 500px;
-    margin: 10px;
+    margin: 5em 1em 1em 1em;
     cursor: pointer;
 }
 
