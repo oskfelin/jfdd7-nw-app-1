@@ -69,5 +69,12 @@
 }
 
 .slider {
-    margin-top: 5em;
+    margin-top: 7em;
+    color: black;
+    font-weight: 800;
 }
+
+.slider-price {
+    color: red;
+}
+
