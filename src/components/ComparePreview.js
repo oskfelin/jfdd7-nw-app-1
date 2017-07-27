@@ -1,11 +1,10 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {slide as Menu} from 'react-burger-menu'
-import {Grid, Button, Image} from 'react-bootstrap'
+import {stack as Menu} from 'react-burger-menu'
+import {Button, Image} from 'react-bootstrap'
 import {toggle} from '../state/comparedProducts'
 import './ComparePreview.css'
-
 
 export default connect(
   state => ({
@@ -26,36 +25,48 @@ export default connect(
         (total, next) => total.concat(next), []
       )
       return (
-        <div>
-          <Menu noOverlay right width={ '20%' } customBurgerIcon={<span>ZUPA</span>}>
+        <div id="outer-container">
+          <Menu
+            right
+            width={ "200px" }
+            pageWrapId={"page-wrap"}
+            outerContainerId={"outer-container"}
+            customBurgerIcon={<Button>Porównanie</Button>}>
+            <Link to="/comparison">
+              Przejdź do porównywarki
+            </Link>
+            <br/>
             {
               dataToDisplay.filter(
                 product => this.props.productsIds.includes(product.id)
               ).map(
                 product =>
                   <div key="product.id">
-                    <Grid fluid>
-                      <Link to={'/product-page-view/' + product.name}>
-                        <Image
-                          width="100"
-                          src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive
-                          thumbnail/>
-                      </Link>
-                      <div>{product.name}</div>
-                      <Button bsSize="xsmall"
-                              onClick={event => {
-                                this.props.toggleCompare(product.id)
-                                event.preventDefault()
-                              }}>
-                        Usuń z porównania
-                      </Button>
-                    </Grid>
-                    <Button bsSize="xsmall">
-                      <Link to="/comparison">Przejdź do porównywarki</Link>
+                    <Link to={'/product-page-view/' + product.name}>
+                      <Image
+                        width="100"
+                        src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive
+                        thumbnail/>
+                    </Link>
+                    <br/>
+                    <span>{product.name}</span>
+                    <br/>
+                    <Button  style={{
+                      marginBottom: "15px",
+                      padding: "0"
+                    }}
+                          onClick={event => {
+                          this.props.toggleCompare(product.id)
+                              event.preventDefault()
+                          }}>
+                      Usuń z porównania
                     </Button>
                   </div>
               )}
           </Menu>
+          <main id="page-wrap">
+            {this.props.children}
+          </main>
         </div>
       )
     }

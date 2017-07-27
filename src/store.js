@@ -14,7 +14,7 @@ const reducer = combineReducers({
    sliderPrice,
   productFilters,
   comparedProducts,
-  auth
+  auth,
 })
 
 

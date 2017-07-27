@@ -16,9 +16,9 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Router>
+        <Router>
           <Grid fluid>
-            <ComparePreview />
+            <ComparePreview/>
             <Home/>
             <SearchMain/>
             <Route exact path="/" component={CategoriesMain}/>
@@ -28,7 +28,7 @@ export default class App extends React.Component {
             <Route path="/product-page-view/:productName" component={ProductPageView}/>
             <Footer />
           </Grid>
-      </Router>
+        </Router>
     )
   }
 }
