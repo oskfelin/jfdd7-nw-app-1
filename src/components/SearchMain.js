@@ -11,7 +11,7 @@ import {
   Grid,
   Button
 } from 'react-bootstrap'
-
+  
 import './SearchMain.css'
 import { updateSearchPhrase } from '../state/searchEngine'
 import { activeFilter } from '../state/searchEngine'
@@ -52,10 +52,10 @@ export default connect(
             onSelect={this.props.activateFilter}
           >
             <MenuItem eventKey="Telefony">Telefony</MenuItem>
-            <MenuItem eventKey="smartphones2">Kategoria2</MenuItem>
-            <MenuItem eventKey="smartphones3">Kategoria3</MenuItem>
-            <MenuItem eventKey="smartphones4">Kategoria4</MenuItem>
-            <MenuItem eventKey="smartphones5">Kategoria5</MenuItem>
+            <MenuItem eventKey="smartphones2">Samochody</MenuItem>
+            <MenuItem eventKey="smartphones3">Moda</MenuItem>
+            <MenuItem eventKey="smartphones4">Sport</MenuItem>
+            <MenuItem eventKey="smartphones5">Uroda</MenuItem>
           </DropdownButton>
           <InputGroup.Button>
             <Link to="/result-view">

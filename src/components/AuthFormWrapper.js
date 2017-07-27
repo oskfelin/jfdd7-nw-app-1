@@ -15,9 +15,9 @@ class AuthFormWrapper extends React.Component {
 
   render() {
     return (
-      <div className="nowe">
-        <div className="nowe2">
-          <div className="nowe3">
+      <div className="first-page">
+        <div className="main-window">
+          <div className="left-side">
             <p>Zrób sobie prezent...</p>
           </div>
           <div>

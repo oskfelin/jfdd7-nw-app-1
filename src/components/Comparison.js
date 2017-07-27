@@ -4,11 +4,13 @@ import uniqBy from 'lodash.uniqby'
 import {toggle} from '../state/comparedProducts'
 import {Table, Grid, Image, Button} from 'react-bootstrap'
 import './comparison.css'
+import comparisonLegend from './comparisonLegend'
 
 export default connect(
   state => ({
     productsIds: state.comparedProducts.productsIds,
     shops: state.shops
+
   }),
   dispatch => ({
     toggleCompare: id => dispatch(toggle(id)),
@@ -16,6 +18,10 @@ export default connect(
   })
 )(
   class Comparison extends React.Component {
+
+    state = {
+      highlightDiff: false
+    }
 
     render() {
       const {data} = this.props.shops
@@ -44,9 +50,9 @@ export default connect(
 
           <Table condensed hover striped bordered>
 
-            <thead>
+            <thead className="tableComparisonHead">
             <tr>
-              <td></td>
+              <td className="invisible"></td>
               {
                 dataToDisplay.filter(
                   product => this.props.productsIds.includes(product.id)
@@ -60,7 +66,9 @@ export default connect(
                 )}
             </tr>
             </thead>
-            <Button className="ShowDifferences">Podświetl różnice</Button>
+            <Button className="ShowDifferences" onClick={() => this.setState({ highlightDiff: !this.state.highlightDiff })}>
+              Podświetl różnice
+            </Button>
             <tbody className="tableComparison">
             {
               attributes.map(
@@ -72,12 +80,12 @@ export default connect(
                 (a, b) => a.uniqueValues < b.uniqueValues
               ).map(
                 attribute => (
-                  <tr style={{background: attribute.uniqueValues === 1 ? 'white': '#fdffb5' }}>
-                    <td>{attribute.name}</td>
+                  <tr style={{background: attribute.uniqueValues > 1 && this.state.highlightDiff ? '#fdffb5' : 'white' }}>
+                    <td>{comparisonLegend[attribute.name]}</td>
                     {
                       dataToDisplay.map(
                         product => (
-                          <td className="zupa">{product[attribute.name]}</td>
+                          <td>{product[attribute.name]}</td>
                         )
                       )
                     }

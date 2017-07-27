@@ -19,11 +19,10 @@ export default connect(
     searchPhrase: state.searchEngine.searchPhrase,
     activeFilter: state.searchEngine.activeFilterName,
     activeFilterNames: state.productFilters.activeFilterNames,
-    price: state.searchFilters.price,
+    price: state.sliderPrice.price,
   }),
   dispatch => ({
-    toggleCompare: id => dispatch(toggle(id)),
-
+    toggleCompare: id => dispatch(toggle(id))
   })
 )(
   class ResultsView extends React.Component {
@@ -55,15 +54,12 @@ export default connect(
         camera_12: product => product.camera === 12,
         camera_24: product => product.camera === 24,
 
-        slot_sd: product => product.slotSD === "Tak",
-        no_slot: product => product.slotSD === "Nie",
+        slot_yes: product => product.slotSD === "Tak",
+        slot_no: product => product.slotSD === "Nie",
 
-        size_3p9: product => product.screenSize === 3.9,
         size_4p2: product => product.screenSize === 4.2,
-        size_4p5: product => product.screenSize === 4.5,
         size_4p8: product => product.screenSize === 4.8,
         size_5p1: product => product.screenSize === 5.1,
-        size_5p2: product => product.screenSize === 5.2,
         size_6: product => product.screenSize === 6
       }
       const allProducts = shops.map(
