@@ -48,7 +48,7 @@ export default connect(
 
             <thead className="tableComparisonHead">
             <tr>
-              <td></td>
+              <td className="invisible"></td>
               {
                 dataToDisplay.filter(
                   product => this.props.productsIds.includes(product.id)
