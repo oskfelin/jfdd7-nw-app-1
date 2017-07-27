@@ -1,7 +1,7 @@
 import React from 'react'
 import LogIn from './LogIn'
 import SignUp from './SignUp'
-import { Grid, Row, Col } from 'react-bootstrap'
+// import { Grid, Row, Col } from 'react-bootstrap'
 
 import CSSTransitionGroup from 'react-addons-css-transition-group'
 import './firstpage.css'
