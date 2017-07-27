@@ -26,17 +26,9 @@
 .ResultFilter .btn-default:hover{
     color: black;
     text-shadow: none;
-    background-color: lightgray;
-    background-image: none;
-}
-
-.ResultFilter .btn-default:focus{
-    color: black;
-    text-shadow: none;
     background-color: rgba(89, 89, 126, 0.8);
     background-image: none;
 }
-
 
 #header-filter-result {
     color: black;
