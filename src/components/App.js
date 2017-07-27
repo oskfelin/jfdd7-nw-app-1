@@ -11,13 +11,15 @@ import ResultView from './ResultsView'
 import SearchMain from './SearchMain'
 import Footer from './Footer'
 
+import './App.css'
+
 import SignUp from './SignUp'
 export default class App extends React.Component {
 
   render() {
     return (
       <Router>
-          <Grid fluid>
+          <Grid fluid className="Page">
             <ComparePreview />
             <Home/>
             <SearchMain/>
