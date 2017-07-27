@@ -1,5 +1,6 @@
 #outer-container {
     text-align: center;
+    font-weight: bold;
 }
 .bm-burger-button {
     position: fixed;
@@ -27,7 +28,8 @@
 
 /* General sidebar styles */
 .bm-menu {
-    background: #373a47;
+    background: whitesmoke;
+    border-left: 10px solid rgb(89, 89, 126);
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
 }
@@ -39,8 +41,8 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-    color: #b8b7ad;
-    padding: 0.8em;
+    /*color: #b8b7ad;*/
+    /*padding: 3em 0;*/
 }
 
 /* Styling of overlay */
