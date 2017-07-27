@@ -56,7 +56,7 @@ class LogIn extends React.Component {
               <span className="form-desription"> E-mail</span>
             </Col>
             <Col sm={6}>
-              <FormControl placeholder="email@exmaple.com"
+              <FormControl
                            type="text"
                            value={this.state.email}
                            onChange={this.handleEmailChange}
@@ -70,7 +70,6 @@ class LogIn extends React.Component {
             </Col>
             <Col sm={6}>
               <FormControl
-                placeholder="Twoje hasło"
                 type="password"
                 value={this.state.password}
                 onChange={this.handlePasswordChange}

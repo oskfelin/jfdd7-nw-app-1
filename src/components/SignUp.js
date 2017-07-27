@@ -42,45 +42,44 @@ class SignUp extends React.Component {
     return (
       <Grid fluid>
         <p className="text-form">Rejestracja</p>
-          <Form horizontal className="datalog"
-                onSubmit={this.handleSubmit}>
-            <FormGroup controlId="formHorizontalEmail" className="text-form">
-              <Col componentClass={ControlLabel}  sm={3}>
-                <span className="form-desription">E-mail</span>
-              </Col>
-              <Col sm={6}>
-                <FormControl placeholder="email@exmaple.com"
-                             type="text"
-                             value={this.state.email}
-                             onChange={this.handleEmailChange}
-                />
-              </Col>
-            </FormGroup>
+        <Form horizontal className="datalog"
+              onSubmit={this.handleSubmit}>
+          <FormGroup controlId="formHorizontalEmail" className="text-form">
+            <Col componentClass={ControlLabel} sm={3}>
+              <span className="form-desription">E-mail</span>
+            </Col>
+            <Col sm={6}>
+              <FormControl
+                type="text"
+                value={this.state.email}
+                onChange={this.handleEmailChange}
+              />
+            </Col>
+          </FormGroup>
 
-            <FormGroup controlId="formHorizontalPassword">
-              <Col componentClass={ControlLabel}  sm={3}>
-                <span className="form-desription">Hasło</span>
-              </Col>
-              <Col sm={6}>
-                <FormControl
-                  placeholder="Twoje hasło"
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.handlePasswordChange}
-                />
-              </Col>
-            </FormGroup>
+          <FormGroup controlId="formHorizontalPassword">
+            <Col componentClass={ControlLabel} sm={3}>
+              <span className="form-desription">Hasło</span>
+            </Col>
+            <Col sm={6}>
+              <FormControl
+                type="password"
+                value={this.state.password}
+                onChange={this.handlePasswordChange}
+              />
+            </Col>
+          </FormGroup>
 
-            <FormGroup>
-              <Col smOffset={4} sm={4}>
-                <Button className="btns-firstpage" bsStyle="primary" type="submit" block center-block>
-                  Zarejestruj
-                </Button>
-              </Col>
-            </FormGroup>
-          </Form>
+          <FormGroup>
+            <Col smOffset={4} sm={4}>
+              <Button className="btns-firstpage" bsStyle="primary" type="submit" block center-block>
+                Zarejestruj
+              </Button>
+            </Col>
+          </FormGroup>
+        </Form>
 
-        </Grid>
+      </Grid>
     )
   }
 }
