@@ -41,7 +41,6 @@ export default connect(
                 ).map(
                   product =>
               <Carousel>
-
                 <Carousel.Item>
                   <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>
                 </Carousel.Item>
@@ -51,7 +50,6 @@ export default connect(
                 <Carousel.Item>
                   <img width={500} alt="" src={process.env.PUBLIC_URL + '/images/smartphones/'+product.name+'.jpg'}/>
                 </Carousel.Item>
-
               </Carousel>
                   )}
             </Col>
@@ -61,7 +59,6 @@ export default connect(
               <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
                 <Tab eventKey={1} title="Cechy produktu">
                   <Table bordered condensed hover>
-
                     {
                       data !== null && uniqBy(data.map(
                         shop => shop.products

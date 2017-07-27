@@ -43,7 +43,6 @@ export default connect(
             placeholder="Czego potrzebujesz?"
             onChange={this.props.updateSearchPhrase}
           />
-
           <DropdownButton
             componentClass={InputGroup.Button}
             id="input-dropdown-addon"

@@ -11,8 +11,6 @@ import ResultView from './ResultsView'
 import SearchMain from './SearchMain'
 import Footer from './Footer'
 
-import './App.css'
-
 import SignUp from './SignUp'
 export default class App extends React.Component {
 
