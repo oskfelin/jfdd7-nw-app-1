@@ -48,7 +48,7 @@ export default connect(
 
             <thead className="tableComparisonHead">
             <tr>
-              <td></td>
+              <td className="invisible"></td>
               {
                 dataToDisplay.filter(
                   product => this.props.productsIds.includes(product.id)
@@ -62,7 +62,7 @@ export default connect(
                 )}
             </tr>
             </thead>
-            <Button className="ShowDifferences">Podświetl różnice</Button>
+            <Button className="container-fluid ShowDifferences">Podświetl różnice</Button>
             <tbody className="tableComparison">
             {
               attributes.map(
