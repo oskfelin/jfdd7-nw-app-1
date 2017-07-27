@@ -62,7 +62,7 @@ export default connect(
                 )}
             </tr>
             </thead>
-            <Button className="container-fluid ShowDifferences">Podświetl różnice</Button>
+            <Button className="ShowDifferences">Podświetl różnice</Button>
             <tbody className="tableComparison">
             {
               attributes.map(
