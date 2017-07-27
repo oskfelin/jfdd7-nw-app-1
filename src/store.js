@@ -2,7 +2,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import shops, {fetchShops} from './state/shops'
 import searchEngine from './state/searchEngine'
-import searchFilters from './state/sliderPrice'
+import sliderPrice from './state/sliderPrice'
 import productFilters from './state/productFilters'
 import comparedProducts from './state/comparedProducts'
 import localstorage from 'redux-localstorage'
@@ -11,7 +11,7 @@ import auth from './state/auth'
 const reducer = combineReducers({
   shops,
   searchEngine,
-  searchFilters,
+   sliderPrice,
   productFilters,
   comparedProducts,
   auth

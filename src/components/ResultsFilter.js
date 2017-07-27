@@ -64,7 +64,7 @@ export default connect(
           <span id="header-filter-result">Zawęź wyniki wyszukiwania:</span>
           <ButtonGroup vertical block>
             <span className="filter-list">Producent</span>
-            <DropdownButton title={selectedNameFilter ? filterNames[selectedNameFilter] : 'Producent'}
+            <DropdownButton title={selectedNameFilter ? filterNames[selectedNameFilter] : ''}
                             id="bg-vertical-dropdown-1"
                             onSelect={key => this.props.activateFilter(key)}>
 
@@ -79,7 +79,7 @@ export default connect(
               }
             </DropdownButton>
             <span className="filter-list">Sklep</span>
-            <DropdownButton title={selectedShopNameFilter ? filterNames[selectedShopNameFilter] : 'Sklepy'}
+            <DropdownButton title={selectedShopNameFilter ? filterNames[selectedShopNameFilter] : ''}
                             id="bg-vertical-dropdown-2"
                             onSelect={key => this.props.activateFilter(key)} >
               {
@@ -93,7 +93,7 @@ export default connect(
               }
             </DropdownButton>
             <span className="filter-list">Aparat</span>
-            <DropdownButton title={selectedCameraFilter ? filterNames[selectedCameraFilter] : 'Aparat'}
+            <DropdownButton title={selectedCameraFilter ? filterNames[selectedCameraFilter] : ''}
                             id="bg-vertical-dropdown-3"
                             onSelect={key => this.props.activateFilter(key)} >
               {
@@ -107,7 +107,7 @@ export default connect(
               }
             </DropdownButton>
             <span className="filter-list">Dodatkowa karta pamięci</span>
-            <DropdownButton title={selectedSDslotFilter ? filterNames[selectedSDslotFilter] : 'Dodatkowa karta pamięci'}
+            <DropdownButton title={selectedSDslotFilter ? filterNames[selectedSDslotFilter] : ''}
                             id="bg-vertical-dropdown-4"
                             onSelect={key => this.props.activateFilter(key)}>
               {
@@ -122,7 +122,7 @@ export default connect(
 
             </DropdownButton>
             <span className="filter-list">Przekątna ekranu</span>
-            <DropdownButton title={selectedScrnSizeFilter ? filterNames[selectedScrnSizeFilter] : 'Przekątna ekranu (cale)'}
+            <DropdownButton title={selectedScrnSizeFilter ? filterNames[selectedScrnSizeFilter] : ''}
                             id="bg-vertical-dropdown-5"
                             onSelect={key => this.props.activateFilter(key)}>
               {

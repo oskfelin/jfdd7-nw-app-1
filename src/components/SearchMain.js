@@ -11,7 +11,7 @@ import {
   Grid,
   Button
 } from 'react-bootstrap'
-
+  
 import './SearchMain.css'
 import { updateSearchPhrase } from '../state/searchEngine'
 import { activeFilter } from '../state/searchEngine'
