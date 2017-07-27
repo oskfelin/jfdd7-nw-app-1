@@ -31,7 +31,7 @@ export default connect(
             width={ "200px" }
             pageWrapId={"page-wrap"}
             outerContainerId={"outer-container"}
-            customBurgerIcon={<span>Dodane do porównania</span>}>
+            customBurgerIcon={<Button>Porównanie</Button>}>
             <Link to="/comparison">
               Przejdź do porównywarki
             </Link>

@@ -14,7 +14,7 @@ const reducer = combineReducers({
   searchFilters,
   productFilters,
   comparedProducts,
-  auth
+  auth,
 })
 
 

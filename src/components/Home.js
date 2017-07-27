@@ -14,13 +14,10 @@ const Home = (props) => (
     <Button>
       <Link to="/comparison">Comparison</Link>
     </Button>
-    <button
+    <Button
       onClick={() => firebase.auth().signOut()}>
       Wyloguj
-    </button>
-    <Link to="/SignUp" className="login">
-    <Button bsStyle="primary" bsSize="large" >SignUp</Button>
-    </Link>
+    </Button>
   </Grid>
 )
 
