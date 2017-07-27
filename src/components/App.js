@@ -11,14 +11,18 @@ import ResultView from './ResultsView'
 import SearchMain from './SearchMain'
 import Footer from './Footer'
 
+import './App.css'
+
 import SignUp from './SignUp'
 export default class App extends React.Component {
 
+
+
   render() {
     return (
-        <Router>
-          <Grid fluid>
-            <ComparePreview/>
+      <Router>
+          <Grid fluid className="Page">
+            <ComparePreview />
             <Home/>
             <SearchMain/>
             <Route exact path="/" component={CategoriesMain}/>
@@ -28,7 +32,7 @@ export default class App extends React.Component {
             <Route path="/product-page-view/:productName" component={ProductPageView}/>
             <Footer />
           </Grid>
-        </Router>
+      </Router>
     )
   }
 }

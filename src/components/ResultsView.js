@@ -6,7 +6,8 @@ import {
   Col,
   Row,
   Grid,
-  Button
+  Button,
+  Table
 } from 'react-bootstrap'
 import './ResultsView.css'
 import ResultsFilter from './ResultsFilter'
@@ -111,6 +112,20 @@ export default connect(
                           </div>
                         </Col>
                         <Col sm={7}>
+                          <Table bordered condensed hover>
+                            <tr>
+                              <td>Przekątna ekranu: {product.screenSize} "</td>
+                            </tr>
+                            <tr>
+                              <td>Wbudowany aparat cyfrowy: {product.camera} Mpix</td>
+                            </tr>
+                            <tr>
+                              <td>Wbudowana pamięć: {product.memory} GB</td>
+                            </tr>
+                            <tr>
+                              <td>Obsługa kart pamięci: {product.slotSd}</td>
+                            </tr>
+                          </Table>
                         </Col>
                         <Col sm={3}>
                           <div>
