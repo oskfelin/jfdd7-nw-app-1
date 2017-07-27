@@ -1,15 +1,12 @@
-#button {
-    background-color: #555C5C;
-    position: fixed;
-    right: 20px;
-    top: 70px;
+#outer-container {
+    text-align: center;
 }
 .bm-burger-button {
     position: fixed;
-    width: 10%;
-    height: 20%;
-    right: 36px;
-    top: 36px;
+    width: 100px;
+    height: 50px;
+    right: 0px;
+    top: 62px;
 }
 
 /* Color/shape of burger icon bars */
@@ -48,5 +45,5 @@
 
 /* Styling of overlay */
 .bm-overlay {
-    background: rgba(0, 0, 0, 0.0);
+    background: rgba(0, 0, 0, 0.3);
 }

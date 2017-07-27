@@ -16,8 +16,6 @@ export default class App extends React.Component {
 
   render() {
     return (
-
-
         <Router>
           <Grid fluid>
             <ComparePreview/>
@@ -31,7 +29,6 @@ export default class App extends React.Component {
             <Footer />
           </Grid>
         </Router>
-
     )
   }
 }
