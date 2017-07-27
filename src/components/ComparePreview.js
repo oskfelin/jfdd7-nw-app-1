@@ -53,13 +53,13 @@ export default connect(
                     <br/>
                     <Button  style={{
                       marginBottom: "15px",
-                      padding: "0"
+                      padding: "1px 6px"
                     }}
                           onClick={event => {
                           this.props.toggleCompare(product.id)
                               event.preventDefault()
                           }}>
-                      Usuń z porównania
+                      Usuń
                     </Button>
                   </div>
               )}
