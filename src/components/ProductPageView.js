@@ -1,16 +1,19 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import uniqBy from 'lodash.uniqby'
-import {Grid, Col, Row, Carousel, Tab, Tabs, Panel, Table} from 'react-bootstrap'
+import {Grid, Col, Row, Carousel, Tab, Tabs, Panel, Table, Button} from 'react-bootstrap'
 import {fetchShops} from '../state/shops'
 import './ProductPageView.css'
+import {toggle } from '../state/comparedProducts'
 
 export default connect(
   state => ({
     shops: state.shops
   }),
   dispatch => ({
-    fetchShops: () => dispatch(fetchShops())
+    fetchShops: () => dispatch(fetchShops()),
+    toggleCompare: id => dispatch(toggle(id))
+
   })
 )(
   class ProductPageView extends React.Component {
@@ -57,7 +60,7 @@ export default connect(
             <Col xs={12} sm={6}>
               <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
                 <Tab eventKey={1} title="Cechy produktu">
-                  <Table striped bordered condensed hover>
+                  <Table bordered condensed hover>
 
                     {
                       data !== null && uniqBy(data.map(
@@ -69,6 +72,15 @@ export default connect(
                       ).map(
                         product =>
                           <tbody>
+                          <tr>
+                            <td>
+                          <Button className="ButtonCompare" onClick={event => {
+                            this.props.toggleCompare(product.id)
+                            event.preventDefault()
+                          }}>
+                            Porównaj
+                          </Button></td>
+                          </tr>
                           <tr>
                             <td>Przekątna ekranu: {product.screenSize} "</td>
                           </tr>

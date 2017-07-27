@@ -19,7 +19,7 @@ export default connect(
 
     render() {
       return (
-        <Grid fluid>
+        <Grid  fluid>
           <Grid>
              <Col xs={12} sm={6} lg={4}>
               <Link
