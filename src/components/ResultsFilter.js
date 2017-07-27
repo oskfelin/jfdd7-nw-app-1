@@ -10,17 +10,19 @@ import {
 import './ResultsFilter.css'
 import {fetchShops} from '../state/shops'
 import {activateFilter} from '../state/productFilters'
-import { updatePrice } from '../state/searchFilters'
+import { updatePrice } from '../state/sliderPrice'
 
 import {Range} from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
+import filterNames from '../_utils/filterNames'
 
 export default connect(
   state => ({
     shops: state.shops,
-    price: state.searchFilters.price,
-    activeFilter: state.searchEngine.activeFilterName
+    price: state.sliderPrice.price,
+    activeFilter: state.searchEngine.activeFilterName,
+    activeFilterNames: state.productFilters.activeFilterNames,
   }),
   dispatch => ({
     fetchShops: () => dispatch(fetchShops()),
@@ -36,74 +38,108 @@ export default connect(
 
     render() {
 
-      return (
+      const selectedNameFilter = this.props.activeFilterNames.find(
+        name => filterNames[name] !== undefined && name.indexOf('name') === 0
+      )
 
+      const selectedShopNameFilter = this.props.activeFilterNames.find(
+        shop => filterNames[shop] !== undefined && shop.indexOf('shopName') === 0
+      )
+
+      const selectedCameraFilter = this.props.activeFilterNames.find(
+        camera => filterNames[camera] !== undefined && camera.indexOf('camera') === 0
+      )
+
+      const selectedSDslotFilter = this.props.activeFilterNames.find(
+        slot => filterNames[slot] !== undefined && slot.indexOf('slot') === 0
+      )
+
+      const selectedScrnSizeFilter = this.props.activeFilterNames.find(
+        size => filterNames[size] !== undefined && size.indexOf('size') === 0
+      )
+
+
+      return (
         <div className="ResultFilter">
-          <span className="FilterText"> Wybierz opcję filtrowania: </span>
+          <span id="header-filter-result">Zawęź wyniki wyszukiwania:</span>
           <ButtonGroup vertical block>
-            <DropdownButton title="Producent"
+            <span className="filter-list">Producent</span>
+            <DropdownButton title={selectedNameFilter ? filterNames[selectedNameFilter] : ''}
                             id="bg-vertical-dropdown-1"
                             onSelect={key => this.props.activateFilter(key)}>
 
-              <MenuItem eventKey="name_xiaomi">Xiaomi</MenuItem>
-              <MenuItem eventKey="name_lenovo">Lenovo</MenuItem>
-              <MenuItem eventKey="name_htc">HTC</MenuItem>
-              <MenuItem eventKey="name_iphone">Iphone</MenuItem>
-              <MenuItem eventKey="name_lg">LG</MenuItem>
-              <MenuItem eventKey="name_samsung">Samsung</MenuItem>
-              <MenuItem eventKey="name_huawei">Huawei</MenuItem>
+              {
+                Object.entries(filterNames).filter(
+                  ([key]) => key.indexOf('name') === 0
+                ).map(
+                  ([key, value]) => (
+                    <MenuItem eventKey={key}>{value}</MenuItem>
+                  )
+                )
+              }
             </DropdownButton>
-
-            <DropdownButton title="Sklep"
+            <span className="filter-list">Sklep</span>
+            <DropdownButton title={selectedShopNameFilter ? filterNames[selectedShopNameFilter] : ''}
                             id="bg-vertical-dropdown-2"
                             onSelect={key => this.props.activateFilter(key)} >
-              <MenuItem eventKey="shopName_Biedronka">Biedronka</MenuItem>
-              <MenuItem eventKey="shopName_uMarcina">uMarcina</MenuItem>
-              <MenuItem eventKey="shopName_Zabka">Żabka</MenuItem>
-              <MenuItem eventKey="shopName_Malpka">Małpka</MenuItem>
-              <MenuItem eventKey="shopName_uJarka">uJarka</MenuItem>
-              <MenuItem eventKey="shopName_uOskara">uOskar</MenuItem>
-
+              {
+                Object.entries(filterNames).filter(
+                  ([key]) => key.indexOf('shopName') === 0
+                ).map(
+                  ([key, value]) => (
+                    <MenuItem eventKey={key}>{value}</MenuItem>
+                  )
+                )
+              }
             </DropdownButton>
-
-
-
-            <DropdownButton title="Aparat"
+            <span className="filter-list">Aparat</span>
+            <DropdownButton title={selectedCameraFilter ? filterNames[selectedCameraFilter] : ''}
                             id="bg-vertical-dropdown-3"
                             onSelect={key => this.props.activateFilter(key)} >
-              <MenuItem eventKey="camera_3p2">3.2 mpx</MenuItem>
-              <MenuItem eventKey="camera_4">4 mpx</MenuItem>
-              <MenuItem eventKey="camera_6">6 mpx</MenuItem>
-              <MenuItem eventKey="camera_6p4">6.4 mpx</MenuItem>
-              <MenuItem eventKey="camera_12">12 mpx</MenuItem>
-              <MenuItem eventKey="camera_24">24 mpx</MenuItem>
+              {
+                Object.entries(filterNames).filter(
+                  ([key]) => key.indexOf('camera') === 0
+                ).map(
+                  ([key, value]) => (
+                    <MenuItem eventKey={key}>{value}</MenuItem>
+                  )
+                )
+              }
             </DropdownButton>
-
-
-            <DropdownButton title="Dodatkowa karta pamięci"
+            <span className="filter-list">Dodatkowa karta pamięci</span>
+            <DropdownButton title={selectedSDslotFilter ? filterNames[selectedSDslotFilter] : ''}
                             id="bg-vertical-dropdown-4"
                             onSelect={key => this.props.activateFilter(key)}>
-              <MenuItem eventKey="slot_sd">Tak</MenuItem>
-              <MenuItem eventKey="no_slot">Nie</MenuItem>
+              {
+                Object.entries(filterNames).filter(
+                  ([key]) => key.indexOf('slot') === 0
+                ).map(
+                  ([key, value]) => (
+                    <MenuItem eventKey={key}>{value}</MenuItem>
+                  )
+                )
+              }
+
             </DropdownButton>
-
-
-
-            <DropdownButton title="Przekątna ekranu (cale)" id="bg-vertical-dropdown-5"
+            <span className="filter-list">Przekątna ekranu</span>
+            <DropdownButton title={selectedScrnSizeFilter ? filterNames[selectedScrnSizeFilter] : ''}
+                            id="bg-vertical-dropdown-5"
                             onSelect={key => this.props.activateFilter(key)}>
-              <MenuItem eventKey="size_3p9">3.9</MenuItem>
-              <MenuItem eventKey="size_4p2">4.2</MenuItem>
-              <MenuItem eventKey="size_4p5">4.5</MenuItem>
-              <MenuItem eventKey="size_4p8">4.8</MenuItem>
-              <MenuItem eventKey="size_5p1">5.1</MenuItem>
-              <MenuItem eventKey="size_5p2">5.2</MenuItem>
-              <MenuItem eventKey="size_6">6</MenuItem>
+              {
+                Object.entries(filterNames).filter(
+                  ([key]) => key.indexOf('size') === 0
+                ).map(
+                  ([key, value]) => (
+                    <MenuItem eventKey={key}>{value}</MenuItem>
+                  )
+                )
+              }
             </DropdownButton>
           </ButtonGroup>
 
           <div className="slider">
-            <p>Zakres cenowy</p>
-            <p>{this.props.price[0]} - {this.props.price[1]} zł</p>
+            <span>Zakres cenowy</span>
+            <p className="slider-price">{this.props.price[0]} - {this.props.price[1]} zł</p>
             <Range max={1000} value={this.props.price} onChange={this.props.updatePrice}/>
           </div>
         </div>
