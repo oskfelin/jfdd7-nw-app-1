@@ -140,9 +140,10 @@ export default connect(
           </ButtonGroup>
 
           <button
+            className="btn-reset"
             onClick={this.props.resetFilter}
           >
-          reset
+          usuń filtry
           </button>
 
           <div className="slider">
