@@ -5,6 +5,8 @@ import {toggle} from '../state/comparedProducts'
 import {Table, Grid, Image, Button} from 'react-bootstrap'
 import './comparison.css'
 import comparisonLegend from './comparisonLegend'
+import { Link } from 'react-router-dom'
+
 
 export default connect(
   state => ({
@@ -43,8 +45,8 @@ export default connect(
         return <p>Brak produktów do porównania</p>
       }
 
-      const attributes = Object.keys(dataToDisplay[0])
-      console.log(dataToDisplay)
+      const attributes = Object.keys(dataToDisplay[0]).filter(key => key !== 'id' )
+
       return (
         <Grid>
 
@@ -59,9 +61,10 @@ export default connect(
                 ).map(
                   product =>
                     <td>
+                      <Link to={'/product-page-view/' + product.name}>
                       <Image className="productImgComparison" alt=""
                              src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'} responsive/>
-
+                      </Link>
                     </td>
                 )}
             </tr>
@@ -85,7 +88,7 @@ export default connect(
                     {
                       dataToDisplay.map(
                         product => (
-                          <td>{product[attribute.name]}</td>
+                          <td className="comparisonAttributes">{product[attribute.name]}</td>
                         )
                       )
                     }
