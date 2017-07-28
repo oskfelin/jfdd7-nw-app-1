@@ -88,7 +88,7 @@ export default connect(
                     {
                       dataToDisplay.map(
                         product => (
-                          <td>{product[attribute.name]}</td>
+                          <td className="comparisonAttributes">{product[attribute.name]}</td>
                         )
                       )
                     }
