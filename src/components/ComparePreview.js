@@ -27,7 +27,6 @@ export default connect(
       return (
         <div id="outer-container">
           <Menu
-            right
             width={ "200px" }
             pageWrapId={"page-wrap"}
             outerContainerId={"outer-container"}

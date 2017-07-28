@@ -6,7 +6,7 @@
     position: fixed;
     width: 100px;
     height: 34px;
-    right: 0px;
+    left: 0px;
     top: 0px;
 }
 
@@ -29,7 +29,7 @@
 /* General sidebar styles */
 .bm-menu {
     background: whitesmoke;
-    border-left: 10px solid rgb(89, 89, 126);
+    border-right: 10px solid rgb(89, 89, 126);
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
 }
