@@ -43,6 +43,7 @@ export default connect(
             placeholder="Czego potrzebujesz?"
             onChange={this.props.updateSearchPhrase}
           />
+
           <DropdownButton
             componentClass={InputGroup.Button}
             id="input-dropdown-addon"
@@ -59,9 +60,10 @@ export default connect(
           </DropdownButton>
           <InputGroup.Button>
             <Link to="/result-view">
-              <Button bsSize="large"><img alt="" src={process.env.PUBLIC_URL + '/images/magnifier.png'} height="20"/></Button>
+              <Button className="btn-magnifier" bsSize="large"><img alt="" src={process.env.PUBLIC_URL + '/images/magnifier.png'} height="20"/></Button>
             </Link>
           </InputGroup.Button>
+
         </InputGroup>
       </FormGroup>
       </Col>
