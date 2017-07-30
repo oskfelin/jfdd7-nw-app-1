@@ -3,9 +3,7 @@ body{
     padding:0;
 }
 .main-window {
-    padding: 20px 0;
     text-align: center;
-
 
 }
 .main p {
@@ -18,7 +16,7 @@ body{
 }
 
 .main {
-    background-color: rgba(89, 89, 126, 0.8);
+    background-color: rgba(89, 89, 126, 0.6);
     max-width: 700px;
     margin: 0 -15px 20px -15px;
     padding: 20px;
@@ -28,7 +26,7 @@ body{
     font-weight: 800;
     text-align: center;
     font-size: 16px;
-    color: white;
+    color: black;
 }
 
 .datalog {
@@ -105,27 +103,11 @@ body{
     direction: inherit;
     background-color: white;
     box-shadow: 0px 11px 38px -10px rgba(0, 0, 0, 0.95);
-}
-
-.left-side {
-    min-Width: 300px;
-    background: #000;
-    font-Size: 32px;
-    display: flex;
-    justify-Content: center;
-    align-Items: center;
-    text-Align: center;
-    background-image: url('/images/for_you.png');
+    background-image: url("/images/background_first_window.jpg");
+    background-size: auto;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
+    background-position: left;
+    background-position-y: 1%;
 }
 
-.left-side p {
-    align-self: flex-end;
-    font-family: 'Allura', cursive;
-    color: white;
-
-}
 
