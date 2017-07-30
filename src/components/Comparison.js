@@ -45,7 +45,7 @@ export default connect(
         return <p>Brak produktów do porównania</p>
       }
 
-      const attributes = Object.keys(dataToDisplay[0]).filter(key => key !== 'id' )
+      const attributes = Object.keys(dataToDisplay[0]).filter(key => key !== 'id').filter(key => key !== 'category')
 
       return (
         <Grid>
