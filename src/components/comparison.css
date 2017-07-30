@@ -1,6 +1,5 @@
 .productImgComparison {
     margin: 0 auto;
-
 }
 
 .tableComparison {
@@ -17,30 +16,10 @@
     padding: 1%;
     text-align: right;
     font-weight: bolder;
-
 }
 
 .tableComparisonHead > tr > td {
     background-color: white;
     margin-top: 1em;
-}
-
-.ShowDifferences.btn-default,
-.ShowDifferences.btn-default:active,
-.ShowDifferences.btn-default:focus,
-.ShowDifferences.btn-default:visited,
-.ShowDifferences.btn-default:active:focus {
-    width: 100%;
     text-align: center;
-    background-image: none;
-    background-color: white;
-    color: black;
-    text-shadow: none;
-}
-
-.ShowDifferences.btn-default:hover,
-.ShowDifferences.btn-default.active:hover,
-.ShowDifferences.btn-default:active:hover {
-    background-color: rgba(89, 89, 126, 0.8);
-    background-image: none;
 }
