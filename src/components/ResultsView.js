@@ -105,14 +105,14 @@ export default connect(
                       <Link to={'/product-page-view/' + product.name}>
 
                       <Row className="ResultItem">
-                        <Col sm={2} className="resultPhoto">
+                        <Col sm={4} className="resultPhoto">
                           <div>
                             <img width={200} height={200} alt=""
                                  src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/>
                           </div>
                         </Col>
-                        <Col sm={7}>
-                          <Table bordered condensed hover>
+                        <Col sm={4} className="ResultSpec">
+                          <Table condensed>
                             <tr>
                               <td>Przekątna ekranu: {product.screenSize} "</td>
                             </tr>
@@ -127,7 +127,7 @@ export default connect(
                             </tr>
                           </Table>
                         </Col>
-                        <Col sm={3}>
+                        <Col sm={4}>
                           <div>
                             <h1 className="resultName">{product.name} </h1>
                           </div>
