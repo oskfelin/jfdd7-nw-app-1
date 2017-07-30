@@ -17,9 +17,6 @@ class AuthFormWrapper extends React.Component {
     return (
       <div className="first-page">
         <div className="main-window">
-          <div className="left-side">
-            <p>Zrób sobie prezent...</p>
-          </div>
           <div>
             <LogIn/>
             <div onClick={() => this.setState({showSignUp: !this.state.showSignUp})}>
