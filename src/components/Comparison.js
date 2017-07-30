@@ -70,31 +70,32 @@ export default connect(
                                 )}
                         </tr>
                         </thead>
-<tr>
-    <td>
-                        <Button className="ShowDifferences"
-                                onClick={() => this.setState({highlightDiff: !this.state.highlightDiff})}>
-                            Podświetl różnice
-                        </Button>
-    </td>
-                        {
-                            dataToDisplay.filter(
-                                product => this.props.productsIds.includes(product.id)
-                            ).map(
-                                product =>
-                                    <td>
-                        <Button
-                            block
-                            onClick={event => {
-                                this.props.toggleCompare(product.id)
-                                event.preventDefault()
-                            }}>
-                            Usuń
-                        </Button>
-                                    </td>
-                            )}
+                        <tr>
+                            <td>
+                                <Button block
+                                    className="ShowDifferences"
+                                        onClick={() => this.setState({highlightDiff: !this.state.highlightDiff})}>
+                                    Podświetl różnice
+                                </Button>
+                            </td>
+                            {
+                                dataToDisplay.filter(
+                                    product => this.props.productsIds.includes(product.id)
+                                ).map(
+                                    product =>
+                                        <td>
+                                            <Button
+                                                block
+                                                onClick={event => {
+                                                    this.props.toggleCompare(product.id)
+                                                    event.preventDefault()
+                                                }}>
+                                                Usuń
+                                            </Button>
+                                        </td>
+                                )}
 
-</tr>
+                        </tr>
                         <tbody className="tableComparison">
                         {
                             attributes.map(
