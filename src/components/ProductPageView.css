@@ -14,10 +14,14 @@ div.panel.panel-default:hover {
     margin-bottom: 20px;
 }
 .oferts {
+    background-color: white;
     text-align: center;
     font-size: 3em;
     border: 2px solid  #ffb822;
     border-radius: 0.2em;
     color: black;
 
+}
+.ButtonCompare{
+    margin-top: 1.7em;
 }

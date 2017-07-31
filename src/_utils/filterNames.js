@@ -2,7 +2,7 @@ export default {
   name_xiaomi: 'Xiaomi',
   name_lenovo: 'Lenovo',
   name_htc: 'HTC',
-  name_iphone: 'Iphone',
+  name_iphone: 'Apple',
   name_lg: 'LG',
   name_samsung: 'Samsung',
   name_huawei: 'Huawei',

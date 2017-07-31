@@ -53,7 +53,7 @@
 
 .resultPrice{
     color:  #e72907;
-    font-size: 3em;
+    font-size: 2em;
     border-top: 2px solid;
     text-align: center;
     padding: 0;
@@ -70,8 +70,9 @@
 
 .ResultSpec{
     color:  #e72907;
-    font-size: 1.1em;
-    text-align: left;
+    font-size: 1em;
+    text-align: center;
+    text-justify: inter-cluster;
     padding: 0;
     margin-top: 1.5em;
     text-decoration: none;
@@ -88,3 +89,18 @@
     color: red;
 }
 
+@media screen and (max-width: 991px) and (min-width: 779px){
+.ResultItem{
+    width: 110%;
+}
+}
+@media screen and (max-width: 779px){
+    .resultPhoto{
+        text-align: center;
+    }
+    .ResultSpec{
+
+        text-align: center;
+
+    }
+}

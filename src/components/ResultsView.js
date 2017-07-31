@@ -92,7 +92,6 @@ export default connect(
       return (
         <div className="Result">
           <Grid>
-            <Row>
               <Col sm={3}>
                 <ResultsFilter/>
               </Col>
@@ -147,7 +146,6 @@ export default connect(
                   )
                 }
               </Col>
-            </Row>
           </Grid>
         </div>
       )
