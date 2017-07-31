@@ -61,7 +61,7 @@ export default connect(
             <Col xs={12} sm={6}>
               <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
                 <Tab eventKey={1} title="Cechy produktu">
-                  <Table bordered condensed hover>
+                  <Table bordered condensed hover style={{backgroundColor: 'white'}}>
                     {
                       data !== null && uniqBy(data.map(
                         shop => shop.products

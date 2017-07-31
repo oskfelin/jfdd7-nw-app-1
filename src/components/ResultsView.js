@@ -91,7 +91,6 @@ export default connect(
       return (
         <div className="Result">
           <Grid>
-            <Row>
               <Col sm={3}>
                 <ResultsFilter/>
               </Col>
@@ -113,20 +112,20 @@ export default connect(
                         <Col sm={4} className="ResultSpec">
                           <Table condensed>
                             <tr>
-                              <td>Przekątna ekranu: {product.screenSize} "</td>
+                              <td>-Przekątna ekranu: {product.screenSize} "</td>
                             </tr>
                             <tr>
-                              <td>Aparat cyfrowy: {product.camera} Mpix</td>
+                              <td>-Aparat cyfrowy: {product.camera} Mpix</td>
                             </tr>
                             <tr>
-                              <td>Wbudowana pamięć: {product.memory} GB</td>
+                              <td>-Wbudowana pamięć: {product.memory} GB</td>
                             </tr>
                             <tr>
-                              <td>Obsługa kart pamięci: {product.slotSD}</td>
+                              <td>-Obsługa kart pamięci: {product.slotSD}</td>
                             </tr>
                           </Table>
                         </Col>
-                        <Col sm={4}>
+                        <Col sm={4} className="priceAndName">
                           <div>
                             <h1 className="resultName">{product.name} </h1>
                           </div>
@@ -146,7 +145,6 @@ export default connect(
                   )
                 }
               </Col>
-            </Row>
           </Grid>
         </div>
       )
