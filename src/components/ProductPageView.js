@@ -47,11 +47,11 @@ export default connect(
                       </Carousel.Item>
                       <Carousel.Item>
                         <img width={500} alt=""
-                             src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/>
+                             src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '2.jpg'}/>
                       </Carousel.Item>
                       <Carousel.Item>
                         <img width={500} alt=""
-                             src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}/>
+                             src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '3.jpg'}/>
                       </Carousel.Item>
                     </Carousel>
                 )}
