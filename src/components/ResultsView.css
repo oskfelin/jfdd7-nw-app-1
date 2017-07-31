@@ -71,11 +71,10 @@
 .ResultSpec{
     color:  #e72907;
     font-size: 1em;
-    text-align: center;
-    text-justify: inter-cluster;
-    padding: 0;
+    text-align: left;
     margin-top: 1.5em;
     text-decoration: none;
+    width: 25%;
 }
 
 
@@ -94,13 +93,23 @@
     width: 110%;
 }
 }
-@media screen and (max-width: 779px){
+@media screen and (max-width: 769px){
     .resultPhoto{
         text-align: center;
     }
     .ResultSpec{
-
+        width: auto;
         text-align: center;
 
+    }
+}
+
+
+@media screen and (min-width: 991px){
+    .priceAndName{
+        margin-left: 3.7em;
+    }
+    .ResultSpec{
+        width: 25%;
     }
 }
