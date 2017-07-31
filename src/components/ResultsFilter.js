@@ -75,7 +75,7 @@ export default connect(
                   ([key]) => key.indexOf('name') === 0
                 ).map(
                   ([key, value]) => (
-                    <MenuItem eventKey={key}>{value}</MenuItem>
+                    <MenuItem key={key} eventKey={key}>{value}</MenuItem>
                   )
                 )
               }
@@ -89,7 +89,7 @@ export default connect(
                   ([key]) => key.indexOf('shopName') === 0
                 ).map(
                   ([key, value]) => (
-                    <MenuItem eventKey={key}>{value}</MenuItem>
+                    <MenuItem key={key} eventKey={key}>{value}</MenuItem>
                   )
                 )
               }
@@ -103,7 +103,7 @@ export default connect(
                   ([key]) => key.indexOf('camera') === 0
                 ).map(
                   ([key, value]) => (
-                    <MenuItem eventKey={key}>{value}</MenuItem>
+                    <MenuItem key={key} eventKey={key}>{value}</MenuItem>
                   )
                 )
               }
@@ -117,7 +117,7 @@ export default connect(
                   ([key]) => key.indexOf('slot') === 0
                 ).map(
                   ([key, value]) => (
-                    <MenuItem eventKey={key}>{value}</MenuItem>
+                    <MenuItem key={key} eventKey={key}>{value}</MenuItem>
                   )
                 )
               }
@@ -132,7 +132,7 @@ export default connect(
                   ([key]) => key.indexOf('size') === 0
                 ).map(
                   ([key, value]) => (
-                    <MenuItem eventKey={key}>{value}</MenuItem>
+                    <MenuItem key={key} eventKey={key}>{value}</MenuItem>
                   )
                 )
               }

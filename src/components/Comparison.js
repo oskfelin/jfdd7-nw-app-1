@@ -60,7 +60,7 @@ export default connect(
                                     product => this.props.productsIds.includes(product.id)
                                 ).map(
                                     product =>
-                                        <td>
+                                        <td key={product.id}>
                                             <Link to={'/product-page-view/' + product.name}>
                                                 <Image className="productImgComparison" alt=""
                                                        src={process.env.PUBLIC_URL + '/images/smartphones/' + product.name + '.jpg'}
@@ -70,6 +70,7 @@ export default connect(
                                 )}
                         </tr>
                         </thead>
+                        <tbody>
                         <tr>
                             <td>
                                 <Button block
@@ -83,7 +84,7 @@ export default connect(
                                     product => this.props.productsIds.includes(product.id)
                                 ).map(
                                     product =>
-                                        <td>
+                                        <td key={product.id}>
                                             <Button
                                                 block
                                                 onClick={event => {
@@ -96,6 +97,7 @@ export default connect(
                                 )}
 
                         </tr>
+                        </tbody>
                         <tbody className="tableComparison">
                         {
                             attributes.map(
@@ -107,12 +109,12 @@ export default connect(
                                 (a, b) => a.uniqueValues < b.uniqueValues
                             ).map(
                                 attribute => (
-                                    <tr style={{background: attribute.uniqueValues > 1 && this.state.highlightDiff ? '#fdffb5' : 'white'}}>
+                                    <tr key={attribute.name} style={{background: attribute.uniqueValues > 1 && this.state.highlightDiff ? '#fdffb5' : 'white'}}>
                                         <td>{comparisonLegend[attribute.name]}</td>
                                         {
                                             dataToDisplay.map(
                                                 product => (
-                                                    <td className="comparisonAttributes">{product[attribute.name]}</td>
+                                                    <td key={product.id} className="comparisonAttributes">{product[attribute.name]}</td>
                                                 )
                                             )
                                         }
