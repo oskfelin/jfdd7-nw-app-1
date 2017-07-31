@@ -28,7 +28,6 @@ export default connect(
 )(
   class ResultsView extends React.Component {
 
-
     render() {
       const {data, fetching, error} = this.props.shops
       const shops = data === null ? [] : data
