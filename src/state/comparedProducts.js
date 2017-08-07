@@ -16,7 +16,7 @@ export default (state = initialState, action = {}) => {
     case TOGGLE:
       return {
         ...state,
-        productsIds: state.productsIds.includes(action.productId) ?
+        productsIds: state.productsIds.includes(action.productId) || state.productsIds.length>2 ?
           state.productsIds.filter(
           productId => action.productId !== productId
         ) :
