@@ -16,10 +16,10 @@ export default (state = initialState, action = {}) => {
         case TOGGLE:
             return {
                 ...state,
-                productsIds: state.productsIds.length < 3 ? state.productsIds.includes(action.productId) ?
+                productsIds: state.productsIds.includes(action.productId) ?
                     state.productsIds.filter(
                         productId => action.productId !== productId
-                    ) :
+                    ) : state.productsIds.length < 3 ?
                     state.productsIds.concat(action.productId) :(
                         alert('Można porównac maksymalnie 3 produkty.'),
                     state.productsIds.filter(
