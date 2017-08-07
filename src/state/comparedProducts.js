@@ -21,7 +21,7 @@ export default (state = initialState, action = {}) => {
                         productId => action.productId !== productId
                     ) :
                     state.productsIds.concat(action.productId) :(
-                        alert('m'),
+                        alert('Można porównac maksymalnie 3 produkty.'),
                     state.productsIds.filter(
                         productId => action.productId !== productId
                     )
