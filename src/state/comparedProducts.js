@@ -20,10 +20,12 @@ export default (state = initialState, action = {}) => {
                     state.productsIds.filter(
                         productId => action.productId !== productId
                     ) :
-                    state.productsIds.concat(action.productId) :
+                    state.productsIds.concat(action.productId) :(
+                        alert('m'),
                     state.productsIds.filter(
                         productId => action.productId !== productId
                     )
+                )
             }
         default:
             return state
