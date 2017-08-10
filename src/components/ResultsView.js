@@ -6,8 +6,7 @@ import {
   Col,
   Row,
   Grid,
-  Button,
-  Table
+  Button
 } from 'react-bootstrap'
 import './ResultsView.css'
 import ResultsFilter from './ResultsFilter'
